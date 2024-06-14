@@ -1,0 +1,1 @@
+Select * FROM LINK1.QLDSV_TC.dbo.SINHVIEN
