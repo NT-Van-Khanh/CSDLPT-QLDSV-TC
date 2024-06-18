@@ -16,12 +16,14 @@ namespace QLDSV_TC1
         public frmKhoa()
         {
             InitializeComponent();
+/*            this.TopLevel = false; // Đảm bảo rằng nó không phải là form top-level
+            this.FormBorderStyle = FormBorderStyle.None; // Loại bỏ border của form
+            this.Dock = DockStyle.Fill; // Đặt form con dock đầy đủ trong form chính*/
         }
 
         private void frmKhoa_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

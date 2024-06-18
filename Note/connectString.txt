@@ -1,0 +1,2 @@
+Data Source=DESKTOP-4KFD9TE\MSSQLSERVER0;Initial Catalog=QLDSV_TC;User ID=sa;Encrypt=False
+QLDSV_TCConnectionString0

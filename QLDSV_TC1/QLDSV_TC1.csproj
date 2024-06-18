@@ -65,6 +65,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLopTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLopTC.Designer.cs">
+      <DependentUpon>frmLopTC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmMain.cs">
@@ -74,11 +80,24 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="QLDSV_TCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_TCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDSV_TCDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmKhoa.resx">
       <DependentUpon>frmKhoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLopTC.resx">
+      <DependentUpon>frmLopTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -103,6 +122,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLDSV_TCDataSet.xsc">
+      <DependentUpon>QLDSV_TCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_TCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_TCDataSet.xss">
+      <DependentUpon>QLDSV_TCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCDataSet1.xsc">
+      <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_TCDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_TCDataSet1.xss">
+      <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

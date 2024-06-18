@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtChiNhanh = new System.Windows.Forms.ComboBox();
+            this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.chkHienMatKhau = new System.Windows.Forms.CheckBox();
@@ -41,9 +41,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 92);
+            this.label1.Location = new System.Drawing.Point(94, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 29);
+            this.label1.Size = new System.Drawing.Size(115, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chi nhánh :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -71,15 +71,16 @@
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtChiNhanh
+            // cmbChiNhanh
             // 
-            this.txtChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtChiNhanh.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChiNhanh.FormattingEnabled = true;
-            this.txtChiNhanh.Location = new System.Drawing.Point(215, 93);
-            this.txtChiNhanh.Name = "txtChiNhanh";
-            this.txtChiNhanh.Size = new System.Drawing.Size(325, 29);
-            this.txtChiNhanh.TabIndex = 3;
+            this.cmbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbChiNhanh.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbChiNhanh.FormattingEnabled = true;
+            this.cmbChiNhanh.Location = new System.Drawing.Point(215, 93);
+            this.cmbChiNhanh.Name = "cmbChiNhanh";
+            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 29);
+            this.cmbChiNhanh.TabIndex = 3;
+            this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
             // txtTaiKhoan
             // 
@@ -99,6 +100,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(325, 28);
             this.txtMatKhau.TabIndex = 5;
+            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
@@ -124,6 +126,7 @@
             this.btnDangNhap.TabIndex = 7;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // frmLogin
             // 
@@ -136,7 +139,7 @@
             this.Controls.Add(this.chkHienMatKhau);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtChiNhanh);
+            this.Controls.Add(this.cmbChiNhanh);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
@@ -153,7 +156,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox txtChiNhanh;
+        private System.Windows.Forms.ComboBox cmbChiNhanh;
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.CheckBox chkHienMatKhau;

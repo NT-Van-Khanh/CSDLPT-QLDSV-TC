@@ -24,10 +24,12 @@ D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.Pdf.v22.
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.csproj.AssemblyReference.cache
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmLogin.resources
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.Properties.Resources.resources
-D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.RibbonForm1.resources
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.csproj.GenerateResource.cache
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.exe.licenses
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.csproj.CoreCompileInputs.cache
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.csproj.Up2Date
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.exe
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.pdb
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmMain.resources
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmKhoa.resources
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmLopTC.resources

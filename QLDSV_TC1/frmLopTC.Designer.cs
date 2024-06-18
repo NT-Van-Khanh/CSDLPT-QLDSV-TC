@@ -1,6 +1,6 @@
 ﻿namespace QLDSV_TC1
 {
-    partial class frmKhoa
+    partial class frmLopTC
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // frmKhoa
+            // frmLopTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 446);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "frmKhoa";
-            this.Text = "Khoa";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-            this.Load += new System.EventHandler(this.frmKhoa_Load);
+            this.ClientSize = new System.Drawing.Size(939, 512);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Name = "frmLopTC";
+            this.Text = "frmLopTC";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
