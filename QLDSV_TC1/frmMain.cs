@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,28 +26,38 @@ namespace QLDSV_TC1
         {
             if (Program.mGroup.Equals("PGV"))
             {
+                pageQuanLy.Visible = true;
                 pageKeToan.Visible = false;
                 pageSinhVien.Visible = false;
-               /* ribbon.SelectedPage = pageQuanLy;*/
+                ribbon.SelectedPage = pageQuanLy;
             }
-            else if ((Program.mGroup.Equals("KHOA")))
+            else if (Program.mGroup.Equals("KHOA"))
             {
+                pageQuanLy.Visible = true;
+                pageKeToan.Visible = true;
                 pageSinhVien.Visible = false;
-               /* ribbon.SelectedPage = pageQuanLy;*/
+                ribbon.SelectedPage = pageQuanLy;
             }
             else if (Program.mGroup.Equals("SV"))
             {
-                pageKeToan.Visible = false;
                 pageQuanLy.Visible = false;
-
-           /*     ribbon.SelectedPage = pageSinhVien;*/
+                pageKeToan.Visible = false;
+                pageSinhVien.Visible = true;
+                ribbon.SelectedPage = pageSinhVien;
             }
             else if (Program.mGroup.Equals("PKT"))
             {
-                pageSinhVien.Visible = false;
                 pageQuanLy.Visible = false;
-      /*          ribbon.SelectedPage = pageKeToan;*/
+                pageKeToan.Visible = true;
+                pageSinhVien.Visible = false;
+                ribbon.SelectedPage = pageKeToan;
             }
+        }
+        public void setStatusThongTin(String maTK, String hoTen, String nhom)
+        {
+            statusMaTK.Text= "Mã: "+ maTK;
+            statusHoTen.Text = "Họ và tên: "+hoTen;
+            statusNhom.Text = "Nhóm: "+ nhom;
         }
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -101,6 +112,31 @@ namespace QLDSV_TC1
                 f.MdiParent = this;
                 f.Show();
             }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DialogResult dialog = XtraMessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo!", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                Program.resetConnect();
+                Program.frmRun.Hide();
+                foreach (Form f in this.MdiChildren)
+                {
+                    f.Close();
+                    f.Dispose();
+                }
+                Form frm = this.checkExists(typeof(frmLogin));
+                if (frm != null) frm.Activate();
+                else
+                {
+                    
+                    frmLogin f = new frmLogin();
+                    f.Show();
+                }
+
+            }
+
         }
     }
 }

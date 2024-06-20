@@ -33,9 +33,28 @@ namespace QLDSV_TC1
 
         public static int mChinhanh = 0;
 
+        private static String loginSV = "SV1";
+        private static String passwordSV = "123456";
+        public static String getLoginSV()
+        {
+            return loginSV;
+        }
+        public static String getPasswordSV()
+        {
+            return passwordSV;
+        }
         public static BindingSource bds_dspm = new BindingSource();  // giữ bdsPM khi đăng nhập
         public static frmMain frmRun;
 
+        public static void resetConnect()
+        {
+            servername = "";
+            username = "";
+            mlogin = "";
+            password = "";
+            mGroup = "";
+            mHoten = "";
+        }
         public static int KetNoi()
         {
             if (Program.conn != null && Program.conn.State == ConnectionState.Open)
@@ -43,8 +62,8 @@ namespace QLDSV_TC1
             try
             {
                 Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
-                      Program.database + ";User ID=" +
-                      Program.mlogin + ";Password=" + Program.password;
+                Program.database + ";User ID=" +
+                Program.mlogin + ";Password=" + Program.password;
                 Console.WriteLine(Program.connstr);
                 Program.conn.ConnectionString = Program.connstr;
                 Program.conn.Open();
@@ -122,7 +141,9 @@ namespace QLDSV_TC1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmRun = new frmMain();
-            Application.Run(frmRun);
+            /*            Application.Run(frmRun);*/
+            frmLopTC f_test1 = new frmLopTC();
+            Application.Run(f_test1);
         }
     }
 }

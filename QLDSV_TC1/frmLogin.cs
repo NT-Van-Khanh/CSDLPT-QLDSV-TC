@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QLDSV_TC1
 {
@@ -99,7 +100,61 @@ namespace QLDSV_TC1
         {
  
         }
+/*        private int getLoginServer()
+        {
+            Program.mlogin = txtTaiKhoan.Text;
+            Program.password = txtMatKhau.Text;
+            if (Program.KetNoi() == 0) 
+            {
+                Program.mlogin = Program.getLoginSV();
+                Program.password = Program.getPasswordSV();
+                if (Program.KetNoi() == 0) return 1;//Loi ket noi server
 
+                Program.mChinhanh = cmbChiNhanh.SelectedIndex;
+                Program.mloginDN = Program.mlogin;
+                Program.passwordDN = Program.password;
+                string strQuery1 = "EXEC SP_LayThongTinDangNhap_SV '"+ Program.mlogin +"','"+ txtTaiKhoan.Text+"','"+ txtMatKhau.Text+"'";
+                Program.myReader = Program.ExecSqlDataReader(strQuery1);
+                if (Program.myReader == null) return 2;//Khong tim thay login
+                Program.myReader.Read();
+                Console.WriteLine(Program.myReader.GetString(0)); 
+                Program.username = Program.myReader.GetString(0);
+                if (Convert.IsDBNull(Program.username))
+                {
+                    MessageBox.Show("Tài khoản không có quyền truy cập dữ liệu." +
+                        "\nVui lòng xem lại tài khoản, mật khẩu.", "", MessageBoxButtons.OK);
+                    return 3;//Tài khoản không có quyền truy cập dữ liệu
+                }
+                Program.mHoten = Program.myReader.GetString(1);
+                Program.mGroup = Program.myReader.GetString(2);
+                Program.myReader.Close();
+                Program.conn.Close();
+                return 0;//0 co loi
+            }
+
+            Program.mChinhanh = cmbChiNhanh.SelectedIndex;
+            Program.mloginDN = Program.mlogin;
+            Program.passwordDN = Program.password;
+            string strQuery = "EXEC SP_LayThongTinDangNhap '" + Program.mlogin + "'";
+
+            Program.myReader = Program.ExecSqlDataReader(strQuery);
+            if (Program.myReader == null) return 2;//Khong tim thay login
+            Program.myReader.Read();
+            Program.username = Program.myReader.GetString(0);
+            if (Convert.IsDBNull(Program.username))
+            {
+                MessageBox.Show("Tài khoản không có quyền truy cập dữ liệu." +
+                    "\nVui lòng xem lại tài khoản, mật khẩu.", "", MessageBoxButtons.OK);
+                return 3;//Tài khoản không có quyền truy cập dữ liệu
+            }
+            Program.mHoten = Program.myReader.GetString(1);
+            Program.mGroup = Program.myReader.GetString(2);
+            Program.myReader.Close();
+            Program.conn.Close();
+            return 0;//0 co loi
+
+
+        }*/
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if (txtTaiKhoan.Text.Trim() == "" || txtMatKhau.Text.Trim() == "")
@@ -109,44 +164,61 @@ namespace QLDSV_TC1
             }
             else
             {
-               
-                Program.mlogin=txtTaiKhoan.Text;
-                
-                Program.password=txtMatKhau.Text;
-                if (Program.KetNoi() == 0) return;
-                Program.mChinhanh = cmbChiNhanh.SelectedIndex;
-                Program.mloginDN = Program.mlogin;
-                Program.passwordDN = Program.password;
-                string strQuery = "EXEC SP_LayThongTinDangNhap'" + Program.mlogin + "'";
-                
-                Program.myReader = Program.ExecSqlDataReader(strQuery);
-                if (Program.myReader == null) return;
-                Program.myReader.Read();
-                Program.username = Program.myReader.GetString(0);
-                if (Convert.IsDBNull(Program.username))
+                if (checkSinhVien.Checked)
                 {
-                    MessageBox.Show("Tài khoản không có quyền truy cập dữ liệu." +
-                        "\nVui lòng xem lại tài khoản, mật khẩu.", "", MessageBoxButtons.OK);
-                    return;
+                    Program.mlogin = Program.getLoginSV();
+                    Program.password = Program.getPasswordSV();
+                    if (Program.KetNoi() == 0) return;
+                    Program.mChinhanh = cmbChiNhanh.SelectedIndex;
+                    Program.mloginDN = Program.mlogin;
+                    Program.passwordDN = Program.password;
+                    string strQuery1 = "EXEC SP_LayThongTinDangNhap_SV '" + Program.mlogin + "','" + txtTaiKhoan.Text + "','" + txtMatKhau.Text + "'";
+                    Program.myReader = Program.ExecSqlDataReader(strQuery1);
+                    if (Program.myReader == null) return;
+                    Program.myReader.Read();
+                    Console.WriteLine(Program.myReader.GetString(0));
+                    Program.username = Program.myReader.GetString(0);
+                    if (Convert.IsDBNull(Program.username))
+                    {
+                        MessageBox.Show("Tài khoản không có quyền truy cập dữ liệu." +
+                            "\nVui lòng xem lại tài khoản, mật khẩu.", "", MessageBoxButtons.OK);
+                    }
+                    Program.mHoten = Program.myReader.GetString(1);
+                    Program.mGroup = Program.myReader.GetString(2);
                 }
+                else
+                {
+                    Program.mlogin = txtTaiKhoan.Text;
+                    Program.password = txtMatKhau.Text;
+                    if (Program.KetNoi() == 0) return;
+                    Program.mChinhanh = cmbChiNhanh.SelectedIndex;
+                    Program.mloginDN = Program.mlogin;
+                    Program.passwordDN = Program.password;
+                    string strQuery = "EXEC SP_LayThongTinDangNhap'" + Program.mlogin + "'";
 
-                Program.mHoten = Program.myReader.GetString(1);
-                Program.mGroup = Program.myReader.GetString(2);
-                
+                    Program.myReader = Program.ExecSqlDataReader(strQuery);
+                    if (Program.myReader == null) return;
+                    Program.myReader.Read();
+                    Program.username = Program.myReader.GetString(0);
+                    if (Convert.IsDBNull(Program.username))
+                    {
+                        MessageBox.Show("Tài khoản không có quyền truy cập dữ liệu." +
+                            "\nVui lòng xem lại tài khoản, mật khẩu.", "", MessageBoxButtons.OK);
+                        return;
+                    }
+                    
+                    Program.mHoten = Program.myReader.GetString(1);
+                    Program.mGroup = Program.myReader.GetString(2);
+
+                    /*                Program.frmRun.MASV.Text = "MSSV =" + Program.username;*/
+                }
                 Program.myReader.Close();
                 Program.conn.Close();
                 Program.frmRun.HideMenu();
                 Program.frmRun.Show();
                 this.Close();
-                /*                */
-
-
-                /*                Program.frmRun.MASV.Text = "MSSV =" + Program.username;*/
-
+                Program.frmRun.setStatusThongTin(Program.username, Program.mHoten, Program.mGroup);
             }
-
-/*                frmMain f = new frmMain();
-                f.Show();*/
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,5 +1,5 @@
 ﻿------------------------SITE CHỦ---------------------------
-
+GRANT EXECUTE ON OBJECT::[dbo].[SP_LayThongTinDangNhap_SV] TO SV; -- CAN XEM CAI NAY==============================================================
 CREATE VIEW [dbo].[V_DS_PHANMANH]
 AS
 SELECT  TENCN=PUBS.description, TENSERVER= subscriber_server

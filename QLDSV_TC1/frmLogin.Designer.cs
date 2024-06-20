@@ -36,6 +36,7 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.chkHienMatKhau = new System.Windows.Forms.CheckBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.checkSinhVien = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -106,9 +107,9 @@
             // 
             // chkHienMatKhau
             // 
-            this.chkHienMatKhau.Location = new System.Drawing.Point(409, 221);
+            this.chkHienMatKhau.Location = new System.Drawing.Point(424, 221);
             this.chkHienMatKhau.Name = "chkHienMatKhau";
-            this.chkHienMatKhau.Size = new System.Drawing.Size(131, 26);
+            this.chkHienMatKhau.Size = new System.Drawing.Size(116, 26);
             this.chkHienMatKhau.TabIndex = 6;
             this.chkHienMatKhau.Text = "Hiện mật khẩu";
             this.chkHienMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -128,11 +129,23 @@
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
+            // checkSinhVien
+            // 
+            this.checkSinhVien.AutoSize = true;
+            this.checkSinhVien.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkSinhVien.Location = new System.Drawing.Point(215, 224);
+            this.checkSinhVien.Name = "checkSinhVien";
+            this.checkSinhVien.Size = new System.Drawing.Size(98, 25);
+            this.checkSinhVien.TabIndex = 8;
+            this.checkSinhVien.Text = "Sinh viên";
+            this.checkSinhVien.UseVisualStyleBackColor = true;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 372);
+            this.Controls.Add(this.checkSinhVien);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
@@ -161,6 +174,7 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.CheckBox chkHienMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.CheckBox checkSinhVien;
     }
 }
 

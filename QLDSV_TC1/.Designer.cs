@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -44,6 +45,8 @@
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.btnDiemSV = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnQLLopTC = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.pageQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.menuToChuc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.menuMonHoc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,13 +60,13 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.statusMaTK = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusHoTen = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusNhom = new System.Windows.Forms.ToolStripStatusLabel();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -86,7 +89,7 @@
             this.btnDangXuat,
             this.btnDiemSV,
             this.barButtonItem2,
-            this.barButtonItem4,
+            this.btnQLLopTC,
             this.barButtonItem5});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 20;
@@ -188,6 +191,7 @@
             this.btnDangXuat.Id = 13;
             this.btnDangXuat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDangXuat.ImageOptions.SvgImage")));
             this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
             // 
             // btnDiemSV
             // 
@@ -201,6 +205,21 @@
             this.barButtonItem2.Caption = "Học ";
             this.barButtonItem2.Id = 16;
             this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // btnQLLopTC
+            // 
+            this.btnQLLopTC.Caption = "Lớp tín chỉ";
+            this.btnQLLopTC.Id = 18;
+            this.btnQLLopTC.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnQLLopTC.ImageOptions.SvgImage")));
+            this.btnQLLopTC.Name = "btnQLLopTC";
+            this.btnQLLopTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "barButtonItem5";
+            this.barButtonItem5.Id = 19;
+            this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
+            this.barButtonItem5.Name = "barButtonItem5";
             // 
             // pageQuanLy
             // 
@@ -218,7 +237,7 @@
             this.menuToChuc.ItemLinks.Add(this.btnQLKhoa);
             this.menuToChuc.ItemLinks.Add(this.btnQLLop);
             this.menuToChuc.ItemLinks.Add(this.btnQLSinhVien);
-            this.menuToChuc.ItemLinks.Add(this.barButtonItem4);
+            this.menuToChuc.ItemLinks.Add(this.btnQLLopTC);
             this.menuToChuc.Name = "menuToChuc";
             this.menuToChuc.Text = "Tổ chức";
             // 
@@ -296,48 +315,37 @@
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripStatusLabel3});
+            this.statusMaTK,
+            this.statusHoTen,
+            this.statusNhom});
             this.statusStrip1.Location = new System.Drawing.Point(0, 551);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1077, 26);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // statusMaTK
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(33, 20);
-            this.toolStripStatusLabel1.Text = "Mã:";
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            this.statusMaTK.Name = "statusMaTK";
+            this.statusMaTK.Size = new System.Drawing.Size(33, 20);
+            this.statusMaTK.Text = "Mã:";
+            this.statusMaTK.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
-            // toolStripStatusLabel2
+            // statusHoTen
             // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(76, 20);
-            this.toolStripStatusLabel2.Text = "Họ và tên:";
+            this.statusHoTen.Name = "statusHoTen";
+            this.statusHoTen.Size = new System.Drawing.Size(76, 20);
+            this.statusHoTen.Text = "Họ và tên:";
             // 
-            // toolStripStatusLabel3
+            // statusNhom
             // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(53, 20);
-            this.toolStripStatusLabel3.Text = "Nhóm:";
+            this.statusNhom.Name = "statusNhom";
+            this.statusNhom.Size = new System.Drawing.Size(53, 20);
+            this.statusNhom.Text = "Nhóm:";
             // 
-            // barButtonItem4
+            // xtraTabbedMdiManager1
             // 
-            this.barButtonItem4.Caption = "Lớp tín chỉ";
-            this.barButtonItem4.Id = 18;
-            this.barButtonItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "barButtonItem5";
-            this.barButtonItem5.Id = 19;
-            this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
+            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // frmMain
             // 
@@ -358,6 +366,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,10 +402,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup menuKTBaoCao;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private System.Windows.Forms.ToolStripStatusLabel statusMaTK;
+        private System.Windows.Forms.ToolStripStatusLabel statusHoTen;
+        private System.Windows.Forms.ToolStripStatusLabel statusNhom;
+        private DevExpress.XtraBars.BarButtonItem btnQLLopTC;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }

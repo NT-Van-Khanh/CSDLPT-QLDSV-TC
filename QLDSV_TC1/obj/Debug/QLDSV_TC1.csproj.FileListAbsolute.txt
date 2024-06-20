@@ -33,3 +33,16 @@ D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.pdb
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmMain.resources
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmKhoa.resources
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmLopTC.resources
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.XtraGrid.v22.2.dll
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.XtraLayout.v22.2.dll
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.XtraTreeList.v22.2.dll
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.Office.v22.2.Core.dll
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.XtraGrid.v22.2.xml
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.XtraLayout.v22.2.xml
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.XtraPrinting.v22.2.xml
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.XtraTreeList.v22.2.xml
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\bin\Debug\DevExpress.Office.v22.2.Core.xml
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.XtraForm1.resources

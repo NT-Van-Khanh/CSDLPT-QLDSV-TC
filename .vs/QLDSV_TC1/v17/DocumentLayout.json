@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmkhoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmkhoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\xtraform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\xtraform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +30,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLogin.cs",
               "RelativeDocumentMoniker": "QLDSV_TC1\\frmLogin.cs",
               "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLogin.cs",
               "RelativeToolTip": "QLDSV_TC1\\frmLogin.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAAAIkAAAAoAAAA",
+              "ViewState": "AQIAAOQAAAAAAAAAAAAEwOQAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T06:49:23.197Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-06-20T12:42:00.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "frmLopTC.cs",
+              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLopTC.cs",
+              "RelativeDocumentMoniker": "QLDSV_TC1\\frmLopTC.cs",
+              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLopTC.cs",
+              "RelativeToolTip": "QLDSV_TC1\\frmLopTC.cs",
+              "ViewState": "AQIAANcAAAAAAAAAAAAAANgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:40:25.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frmLopTC.cs [Design]",
               "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLopTC.cs",
               "RelativeDocumentMoniker": "QLDSV_TC1\\frmLopTC.cs",
               "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLopTC.cs [Design]",
               "RelativeToolTip": "QLDSV_TC1\\frmLopTC.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T11:00:31.348Z",
+              "WhenOpened": "2024-06-20T11:59:18.364Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmKhoa.cs [Design]",
-              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmKhoa.cs",
-              "RelativeDocumentMoniker": "QLDSV_TC1\\frmKhoa.cs",
-              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmKhoa.cs [Design]",
-              "RelativeToolTip": "QLDSV_TC1\\frmKhoa.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "XtraForm1.cs [Design]",
+              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\XtraForm1.cs",
+              "RelativeDocumentMoniker": "QLDSV_TC1\\XtraForm1.cs",
+              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\XtraForm1.cs [Design]",
+              "RelativeToolTip": "QLDSV_TC1\\XtraForm1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T10:56:27.582Z",
+              "WhenOpened": "2024-06-20T11:44:52.665Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmMain.cs",
-              "RelativeDocumentMoniker": "QLDSV_TC1\\frmMain.cs",
-              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmMain.cs [Design]",
-              "RelativeToolTip": "QLDSV_TC1\\frmMain.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLogin.cs",
+              "RelativeDocumentMoniker": "QLDSV_TC1\\frmLogin.cs",
+              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLogin.cs [Design]",
+              "RelativeToolTip": "QLDSV_TC1\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T06:20:12.169Z",
+              "WhenOpened": "2024-06-20T11:33:22.443Z",
               "EditorCaption": " [Design]"
             }
           ]

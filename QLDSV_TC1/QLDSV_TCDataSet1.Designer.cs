@@ -438,6 +438,63 @@ namespace QLDSV_TC1 {
             base.Tables.Add(this.tableSP_LayThongTinDangNhap);
             this.tableSP_LayThongTinDangNhap_SV = new SP_LayThongTinDangNhap_SVDataTable();
             base.Tables.Add(this.tableSP_LayThongTinDangNhap_SV);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_CTLTC_SINHVIEN", new global::System.Data.DataColumn[] {
+                        this.tableSINHVIEN.MASVColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDANGKY.MASVColumn});
+            this.tableDANGKY.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_DANGKY_LOPTINCHI", new global::System.Data.DataColumn[] {
+                        this.tableLOPTINCHI.MALTCColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDANGKY.MALTCColumn});
+            this.tableDANGKY.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_GIANGVIEN_KHOA", new global::System.Data.DataColumn[] {
+                        this.tableKHOA.MAKHOAColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGIANGVIEN.MAKHOAColumn});
+            this.tableGIANGVIEN.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_LOP_KHOA", new global::System.Data.DataColumn[] {
+                        this.tableKHOA.MAKHOAColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLOP.MAKHOAColumn});
+            this.tableLOP.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_LOPTINCHI_GIANGVIEN", new global::System.Data.DataColumn[] {
+                        this.tableGIANGVIEN.MAGVColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLOPTINCHI.MAGVColumn});
+            this.tableLOPTINCHI.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_LOPTINCHI_KHOA", new global::System.Data.DataColumn[] {
+                        this.tableKHOA.MAKHOAColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLOPTINCHI.MAKHOAColumn});
+            this.tableLOPTINCHI.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_LOPTINCHI_MONHOC", new global::System.Data.DataColumn[] {
+                        this.tableMONHOC.MAMHColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLOPTINCHI.MAMHColumn});
+            this.tableLOPTINCHI.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_SINHVIEN_LOP", new global::System.Data.DataColumn[] {
+                        this.tableLOP.MALOPColumn}, new global::System.Data.DataColumn[] {
+                        this.tableSINHVIEN.MALOPColumn});
+            this.tableSINHVIEN.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             this.relationFK_CTLTC_SINHVIEN = new global::System.Data.DataRelation("FK_CTLTC_SINHVIEN", new global::System.Data.DataColumn[] {
                         this.tableSINHVIEN.MASVColumn}, new global::System.Data.DataColumn[] {
                         this.tableDANGKY.MASVColumn}, false);
@@ -4043,12 +4100,12 @@ namespace QLDSV_TC1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GIANGVIENRow[] GetGIANGVIENRows() {
-                if ((this.Table.ChildRelations["FK_GIANGVIEN_KHOA"] == null)) {
-                    return new GIANGVIENRow[0];
+            public LOPTINCHIRow[] GetLOPTINCHIRows() {
+                if ((this.Table.ChildRelations["FK_LOPTINCHI_KHOA"] == null)) {
+                    return new LOPTINCHIRow[0];
                 }
                 else {
-                    return ((GIANGVIENRow[])(base.GetChildRows(this.Table.ChildRelations["FK_GIANGVIEN_KHOA"])));
+                    return ((LOPTINCHIRow[])(base.GetChildRows(this.Table.ChildRelations["FK_LOPTINCHI_KHOA"])));
                 }
             }
             
@@ -4065,12 +4122,12 @@ namespace QLDSV_TC1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LOPTINCHIRow[] GetLOPTINCHIRows() {
-                if ((this.Table.ChildRelations["FK_LOPTINCHI_KHOA"] == null)) {
-                    return new LOPTINCHIRow[0];
+            public GIANGVIENRow[] GetGIANGVIENRows() {
+                if ((this.Table.ChildRelations["FK_GIANGVIEN_KHOA"] == null)) {
+                    return new GIANGVIENRow[0];
                 }
                 else {
-                    return ((LOPTINCHIRow[])(base.GetChildRows(this.Table.ChildRelations["FK_LOPTINCHI_KHOA"])));
+                    return ((GIANGVIENRow[])(base.GetChildRows(this.Table.ChildRelations["FK_GIANGVIEN_KHOA"])));
                 }
             }
         }
