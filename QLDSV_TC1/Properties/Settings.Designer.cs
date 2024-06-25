@@ -37,11 +37,22 @@ namespace QLDSV_TC1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4KFD9TE\\MSSQLSERVER1;Initial Catalog=QLDSV_TC;User ID=sa;Encr" +
-            "ypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4KFD9TE\\MSSQLSERVER1;Initial Catalog=QLDSV_TC;User ID=sa;Pass" +
+            "word=123456;Encrypt=False")]
         public string QLDSV_TCConnectionString {
             get {
                 return ((string)(this["QLDSV_TCConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4KFD9TE\\MSSQLSERVER3;Initial Catalog=QLDSV_TC;User ID=sa;Pass" +
+            "word=123456;Encrypt=False")]
+        public string QLDSV_TCConnectionString1 {
+            get {
+                return ((string)(this["QLDSV_TCConnectionString1"]));
             }
         }
     }

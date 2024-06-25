@@ -29,20 +29,20 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="QLDSV_TCDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QLDSV_TCDataSet" msprop:Generator_DataSetName="QLDSV_TCDataSet">
+  <xs:element name="QLDSV_TCDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="QLDSV_TCDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLDSV_TCDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_DS_PHANMANH" msprop:Generator_RowEvHandlerName="V_DS_PHANMANHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DS_PHANMANHRowDeleted" msprop:Generator_RowDeletingName="V_DS_PHANMANHRowDeleting" msprop:Generator_RowEvArgName="V_DS_PHANMANHRowChangeEvent" msprop:Generator_TablePropName="V_DS_PHANMANH" msprop:Generator_RowChangedName="V_DS_PHANMANHRowChanged" msprop:Generator_RowChangingName="V_DS_PHANMANHRowChanging" msprop:Generator_TableClassName="V_DS_PHANMANHDataTable" msprop:Generator_RowClassName="V_DS_PHANMANHRow" msprop:Generator_TableVarName="tableV_DS_PHANMANH" msprop:Generator_UserTableName="V_DS_PHANMANH">
+        <xs:element name="V_DS_PHANMANH" msprop:Generator_RowClassName="V_DS_PHANMANHRow" msprop:Generator_RowEvHandlerName="V_DS_PHANMANHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DS_PHANMANHRowDeleted" msprop:Generator_RowDeletingName="V_DS_PHANMANHRowDeleting" msprop:Generator_RowEvArgName="V_DS_PHANMANHRowChangeEvent" msprop:Generator_TablePropName="V_DS_PHANMANH" msprop:Generator_RowChangedName="V_DS_PHANMANHRowChanged" msprop:Generator_UserTableName="V_DS_PHANMANH" msprop:Generator_RowChangingName="V_DS_PHANMANHRowChanging" msprop:Generator_TableClassName="V_DS_PHANMANHDataTable" msprop:Generator_TableVarName="tableV_DS_PHANMANH">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="TENCN" msprop:Generator_ColumnPropNameInRow="TENCN" msprop:Generator_ColumnPropNameInTable="TENCNColumn" msprop:Generator_ColumnVarNameInTable="columnTENCN" msprop:Generator_UserColumnName="TENCN" minOccurs="0">
+              <xs:element name="TENCN" msprop:Generator_UserColumnName="TENCN" msprop:Generator_ColumnPropNameInTable="TENCNColumn" msprop:Generator_ColumnPropNameInRow="TENCN" msprop:Generator_ColumnVarNameInTable="columnTENCN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TENSERVER" msprop:Generator_ColumnPropNameInRow="TENSERVER" msprop:Generator_ColumnPropNameInTable="TENSERVERColumn" msprop:Generator_ColumnVarNameInTable="columnTENSERVER" msprop:Generator_UserColumnName="TENSERVER" minOccurs="0">
+              <xs:element name="TENSERVER" msprop:Generator_UserColumnName="TENSERVER" msprop:Generator_ColumnPropNameInTable="TENSERVERColumn" msprop:Generator_ColumnPropNameInRow="TENSERVER" msprop:Generator_ColumnVarNameInTable="columnTENSERVER" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="128" />

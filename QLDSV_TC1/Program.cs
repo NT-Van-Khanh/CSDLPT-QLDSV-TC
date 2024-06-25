@@ -133,6 +133,35 @@ namespace QLDSV_TC1
                 return ex.State; // trang thai lỗi gởi từ RAISERROR trong SQL Server qua
             }
         }
+        public static DataTable dt_cmb = new DataTable();
+        public static void setCN()
+        {
+            if (Program.bds_dspm.Count > 0)
+            {
+                dt_cmb = ((DataView)Program.bds_dspm.List).ToTable();
+                for (int i = dt_cmb.Rows.Count - 1; i >= 0; --i)
+                {
+                    if (dt_cmb.Rows[i]["TENCN"].ToString() == "Phòng Kế toán")
+                    {
+                        Console.WriteLine("Ton tai PKT");
+                        dt_cmb.Rows[i].Delete();
+                        break;
+                    }
+                }
+                dt_cmb.AcceptChanges();
+            }
+        }
+        public static int CheckDataHelper(String query)
+        {
+            SqlDataReader dataReader = Program.ExecSqlDataReader(query);
+            if (dataReader == null)
+                return -1;
+
+            dataReader.Read();
+            int result = dataReader.GetInt32(0);
+            dataReader.Close();
+            return result;
+        }
 
 
         [STAThread]
@@ -141,9 +170,15 @@ namespace QLDSV_TC1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmRun = new frmMain();
-            /*            Application.Run(frmRun);*/
-            frmLopTC f_test1 = new frmLopTC();
-            Application.Run(f_test1);
+            Application.Run(frmRun);
+            /*            frmLopTC f_test1 = new frmLopTC();
+                        Application.Run(f_test1);*/
+            /*            XtraForm1 test1= new XtraForm1();
+                        Application.Run(test1);*/
+            /*            frmNhapDiem ft3= new frmNhapDiem();
+                        Application.Run(ft3);*/
+            /*       Application.Run(new rpfromDSSV_LTC());*/
+        /*    Application.Run(new frmThemTaiKhoan());*/
         }
     }
 }

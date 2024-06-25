@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnQLKhoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLLop = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLSinhVien = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLMonHoc = new DevExpress.XtraBars.BarButtonItem();
@@ -46,7 +45,10 @@
             this.btnDiemSV = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLLopTC = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPhieuDiem = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHocPhiQL = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBDTK = new DevExpress.XtraBars.BarButtonItem();
             this.pageQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.menuToChuc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.menuMonHoc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,6 +59,7 @@
             this.pageSinhVien = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pageTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -76,7 +79,6 @@
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
             this.barButtonItem1,
-            this.btnQLKhoa,
             this.btnQLLop,
             this.btnQLSinhVien,
             this.btnQLMonHoc,
@@ -90,16 +92,19 @@
             this.btnDiemSV,
             this.barButtonItem2,
             this.btnQLLopTC,
-            this.barButtonItem5});
+            this.btnPhieuDiem,
+            this.barButtonItem4,
+            this.btnHocPhiQL,
+            this.btnBDTK});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 20;
+            this.ribbon.MaxItemId = 23;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.pageQuanLy,
             this.pageKeToan,
             this.pageSinhVien,
             this.pageTaiKhoan});
-            this.ribbon.Size = new System.Drawing.Size(1077, 217);
+            this.ribbon.Size = new System.Drawing.Size(1096, 217);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -110,21 +115,13 @@
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // btnQLKhoa
-            // 
-            this.btnQLKhoa.Caption = "Khoa";
-            this.btnQLKhoa.Id = 3;
-            this.btnQLKhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLKhoa.ImageOptions.Image")));
-            this.btnQLKhoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLKhoa.ImageOptions.LargeImage")));
-            this.btnQLKhoa.Name = "btnQLKhoa";
-            this.btnQLKhoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhoa_ItemClick);
-            // 
             // btnQLLop
             // 
             this.btnQLLop.Caption = "Lớp";
             this.btnQLLop.Id = 4;
             this.btnQLLop.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnQLLop.ImageOptions.SvgImage")));
             this.btnQLLop.Name = "btnQLLop";
+            this.btnQLLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLLop_ItemClick);
             // 
             // btnQLSinhVien
             // 
@@ -141,6 +138,7 @@
             this.btnQLMonHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLMonHoc.ImageOptions.Image")));
             this.btnQLMonHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLMonHoc.ImageOptions.LargeImage")));
             this.btnQLMonHoc.Name = "btnQLMonHoc";
+            this.btnQLMonHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLMonHoc_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -162,6 +160,7 @@
             this.btnQLDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLDiem.ImageOptions.Image")));
             this.btnQLDiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLDiem.ImageOptions.LargeImage")));
             this.btnQLDiem.Name = "btnQLDiem";
+            this.btnQLDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLDiem_ItemClick);
             // 
             // btnDangKy
             // 
@@ -214,12 +213,37 @@
             this.btnQLLopTC.Name = "btnQLLopTC";
             this.btnQLLopTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
-            // barButtonItem5
+            // btnPhieuDiem
             // 
-            this.barButtonItem5.Caption = "barButtonItem5";
-            this.barButtonItem5.Id = 19;
-            this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
+            this.btnPhieuDiem.Caption = "Phiếu điểm";
+            this.btnPhieuDiem.Id = 19;
+            this.btnPhieuDiem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPhieuDiem.ImageOptions.SvgImage")));
+            this.btnPhieuDiem.Name = "btnPhieuDiem";
+            this.btnPhieuDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhieuDiem_ItemClick);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Tạo tài khoản";
+            this.barButtonItem4.Id = 20;
+            this.barButtonItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick_1);
+            // 
+            // btnHocPhiQL
+            // 
+            this.btnHocPhiQL.Caption = "Cập nhật học phí";
+            this.btnHocPhiQL.Id = 21;
+            this.btnHocPhiQL.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHocPhiQL.ImageOptions.Image")));
+            this.btnHocPhiQL.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHocPhiQL.ImageOptions.LargeImage")));
+            this.btnHocPhiQL.Name = "btnHocPhiQL";
+            this.btnHocPhiQL.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHocPhiQL_ItemClick);
+            // 
+            // btnBDTK
+            // 
+            this.btnBDTK.Caption = "Bảng điểm tổng kết";
+            this.btnBDTK.Id = 22;
+            this.btnBDTK.Name = "btnBDTK";
+            this.btnBDTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBDTK_ItemClick);
             // 
             // pageQuanLy
             // 
@@ -234,7 +258,6 @@
             // menuToChuc
             // 
             this.menuToChuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("menuToChuc.ImageOptions.Image")));
-            this.menuToChuc.ItemLinks.Add(this.btnQLKhoa);
             this.menuToChuc.ItemLinks.Add(this.btnQLLop);
             this.menuToChuc.ItemLinks.Add(this.btnQLSinhVien);
             this.menuToChuc.ItemLinks.Add(this.btnQLLopTC);
@@ -250,7 +273,8 @@
             // 
             // menuQLBaoCao
             // 
-            this.menuQLBaoCao.ItemLinks.Add(this.barButtonItem5);
+            this.menuQLBaoCao.ItemLinks.Add(this.btnPhieuDiem);
+            this.menuQLBaoCao.ItemLinks.Add(this.btnBDTK);
             this.menuQLBaoCao.Name = "menuQLBaoCao";
             this.menuQLBaoCao.Text = "Báo Cáo";
             // 
@@ -265,6 +289,7 @@
             // 
             // menuKTHocPhi
             // 
+            this.menuKTHocPhi.ItemLinks.Add(this.btnHocPhiQL);
             this.menuKTHocPhi.Name = "menuKTHocPhi";
             this.menuKTHocPhi.Text = "Học phí";
             // 
@@ -283,19 +308,25 @@
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnMonHocSV);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnDiemSV);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnDangKy);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnDiemSV);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Môn học";
             // 
             // pageTaiKhoan
             // 
             this.pageTaiKhoan.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
             this.ribbonPageGroup6});
             this.pageTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("pageTaiKhoan.ImageOptions.Image")));
             this.pageTaiKhoan.Name = "pageTaiKhoan";
             this.pageTaiKhoan.Text = "Tài khoản";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Quản lý";
             // 
             // ribbonPageGroup6
             // 
@@ -309,7 +340,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 577);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1077, 30);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1096, 30);
             // 
             // statusStrip1
             // 
@@ -320,7 +351,7 @@
             this.statusNhom});
             this.statusStrip1.Location = new System.Drawing.Point(0, 551);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1077, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1096, 26);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -351,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 607);
+            this.ClientSize = new System.Drawing.Size(1096, 607);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -384,7 +415,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup menuMonHoc;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup menuKTHocPhi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem btnQLKhoa;
         private DevExpress.XtraBars.BarButtonItem btnQLLop;
         private DevExpress.XtraBars.BarButtonItem btnQLSinhVien;
         private DevExpress.XtraBars.BarButtonItem btnQLMonHoc;
@@ -406,7 +436,11 @@
         private System.Windows.Forms.ToolStripStatusLabel statusHoTen;
         private System.Windows.Forms.ToolStripStatusLabel statusNhom;
         private DevExpress.XtraBars.BarButtonItem btnQLLopTC;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem btnPhieuDiem;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem btnHocPhiQL;
+        private DevExpress.XtraBars.BarButtonItem btnBDTK;
     }
 }

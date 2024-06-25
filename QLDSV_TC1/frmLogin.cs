@@ -14,7 +14,7 @@ namespace QLDSV_TC1
     public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
         private SqlConnection con_publisher = new SqlConnection();
-
+        private Boolean updatecmb = false;
         private void getPhanManh(String cmd)
         {
             DataTable dt = new DataTable();
@@ -23,9 +23,12 @@ namespace QLDSV_TC1
             da.Fill(dt);
             con_publisher.Close();
             Program.bds_dspm.DataSource = dt;
+            updatecmb = true;
             cmbChiNhanh.DataSource = Program.bds_dspm;
             cmbChiNhanh.DisplayMember = "TENCN"; 
             cmbChiNhanh.ValueMember = "TENSERVER";
+
+            updatecmb = false;
         }
 
         private int connect_DBGoc()
@@ -62,6 +65,7 @@ namespace QLDSV_TC1
             if (connect_DBGoc() == 0) return;
             getPhanManh("SELECT * FROM V_DS_PHANMANH");
             cmbChiNhanh.SelectedIndex = 0;
+            Program.servername = cmbChiNhanh.SelectedValue.ToString();
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -185,6 +189,7 @@ namespace QLDSV_TC1
                     }
                     Program.mHoten = Program.myReader.GetString(1);
                     Program.mGroup = Program.myReader.GetString(2);
+
                 }
                 else
                 {
@@ -192,6 +197,7 @@ namespace QLDSV_TC1
                     Program.password = txtMatKhau.Text;
                     if (Program.KetNoi() == 0) return;
                     Program.mChinhanh = cmbChiNhanh.SelectedIndex;
+                    Console.WriteLine(cmbChiNhanh.SelectedIndex);
                     Program.mloginDN = Program.mlogin;
                     Program.passwordDN = Program.password;
                     string strQuery = "EXEC SP_LayThongTinDangNhap'" + Program.mlogin + "'";
@@ -218,20 +224,38 @@ namespace QLDSV_TC1
                 Program.frmRun.Show();
                 this.Close();
                 Program.frmRun.setStatusThongTin(Program.username, Program.mHoten, Program.mGroup);
+                Program.setCN();
+                
             }
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                DataRowView drv = (DataRowView) cmbChiNhanh.SelectedValue;
-                Program.servername = drv["TENSERVER"].ToString();
+            if (updatecmb == false) { 
+                Program.servername = cmbChiNhanh.SelectedValue.ToString();
+                Console.WriteLine(Program.servername);
             }
-            catch(Exception ex) 
+            /*            try
+                        {
+                            DataRowView drv = (DataRowView) cmbChiNhanh.SelectedValue;
+                            Program.servername = drv["TENSERVER"].ToString();
+                            Console.WriteLine(Program.servername);
+                        }*/
+            /*            catch(Exception ex) 
+                        {
+
+                        }*/
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Program.frmRun.Visible==false)
             {
 
+                Program.frmRun.Close();
+                Program.frmRun.Dispose();
             }
+
         }
     }
 }
