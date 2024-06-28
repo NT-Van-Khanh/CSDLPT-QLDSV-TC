@@ -15,9 +15,9 @@ namespace QLDSV_TC1
     {
         private int vitri = 0;
         private int positionSV = -1;
-        private String flagmodeClass = "";
+      /*  private String flagmodeClass = "";*/
         private String flagmodeSV = "";
-        private String catcheTenLOP = "";
+/*        private String catcheTenLOP = "";*/
         public frmSinhVien()
         {
             InitializeComponent();
@@ -51,6 +51,8 @@ namespace QLDSV_TC1
             {
                 cmbMAKHOA.Enabled = true;
             }
+            if (bdsSinhVien.Count == 0) btnXoa.Enabled = false;
+
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -90,10 +92,17 @@ namespace QLDSV_TC1
                 btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = true;
                 btnPhuchoi.Enabled = btnSave.Enabled = false;
                 btnXoa.Enabled = btnSua.Enabled = true;
+                }
+                 else
+                {
 
-
-            }
+                    this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet1.LOP);
+                    this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet1.SINHVIEN);
+                    bdsSinhVien.AddNew();
+                    positionSV = bdsSinhVien.Count - 1;
+                }
         }
+        
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -103,7 +112,7 @@ namespace QLDSV_TC1
 
             vitri = bdsSinhVien.Position;
             panelNhaplieuSinhVien.Enabled = true;
-            gcSinhVien.Enabled = false;
+            gcSinhVien.Enabled = gcLop.Enabled = false;
             txtMALOP.Enabled = false;
             btnThem.Enabled = btnSua.Enabled = btnReload.Enabled = btnXoa.Enabled = false;
             btnSave.Enabled = btnPhuchoi.Enabled = btnHuy.Enabled = true;
@@ -120,14 +129,12 @@ namespace QLDSV_TC1
 
         private void btnPhuchoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (panelNhaplieuSinhVien.Enabled)
-            {
-                bdsSinhVien.CancelEdit();
-                bdsSinhVien.RemoveAt(bdsSinhVien.Count - 1);
-            }
+            this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet1.LOP);
+            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet1.SINHVIEN);
             btnThem.Enabled = btnSua.Enabled = btnReload.Enabled = btnXoa.Enabled =
             btnSave.Enabled = btnPhuchoi.Enabled = btnHuy.Enabled = true;
-            panelNhaplieuSinhVien.Enabled = false;
+            panelNhaplieuSinhVien.Enabled = true;
+            gcSinhVien.Enabled = gcLop.Enabled = true;
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -173,6 +180,8 @@ namespace QLDSV_TC1
                     return;
                 }
             }
+            if (bdsSinhVien.Count == 0)
+                btnXoa.Enabled = btnSua.Enabled = false;
         }
 
         private void btnExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -294,6 +303,23 @@ namespace QLDSV_TC1
                 this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.dANGKYTableAdapter.Fill(this.qLDSV_TCDataSet1.DANGKY);
 
+            }
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gcLop_Click_1(object sender, EventArgs e)
+        {
+            if(bdsSinhVien.Count > 0)
+            {
+                btnXoa.Enabled = true;
+            }
+            else
+            {
+                btnXoa.Enabled = false;
             }
         }
     }

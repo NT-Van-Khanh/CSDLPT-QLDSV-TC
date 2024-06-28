@@ -14,7 +14,7 @@ namespace QLDSV_TC1
 {
     public partial class Frpt_BangDiemTongKet : Form
     {
-        Boolean updateCmb = false;
+      /*  Boolean updateCmb = false;*/
         string maLop;
         public Frpt_BangDiemTongKet()
         {
@@ -51,12 +51,12 @@ namespace QLDSV_TC1
 
         private void cmbTenLop_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
+/*            try
+            {*/
                 txtMaLop.Text = ("" + cmbTenLop.SelectedValue).Replace(" ", "");
                 maLop = txtMaLop.Text;
-            }
-            catch (Exception ex) { }
+/*            }
+            catch () { }*/
         }
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)

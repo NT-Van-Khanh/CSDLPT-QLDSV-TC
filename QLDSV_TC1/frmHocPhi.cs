@@ -17,8 +17,9 @@ namespace QLDSV_TC1
     public partial class frmHocPhi : DevExpress.XtraEditors.XtraForm
     {
         int vitri = 0;
+        int tongHocPhiDaDong = 0;
         String chucNang = null;
-        String mssv = null;
+        String masv = null;
         public frmHocPhi()
         {
             InitializeComponent();
@@ -61,8 +62,21 @@ namespace QLDSV_TC1
             }
             try
             {
+                
                 this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, txtMASV.Text);
-                mssv = txtMASV.Text;
+                masv = txtMASV.Text;
+                foreach (DataRowView rowView in bdsSinhVien)
+                {
+                    if (rowView["MASV"].ToString() == masv)
+                    {
+                        string TEN = rowView["TEN"].ToString();
+                        string HO = rowView["HO"].ToString();
+                        string MALOP = rowView["MALOP"].ToString();
+                        txtHOTENSV.Text = HO + " " + TEN;
+                        txtMALOPSV.Text = MALOP;
+                        break;
+                    }
+                }
                 pnlHP.Enabled = true;
                 btnThem.Enabled = btnSua.Enabled = btnReset.Enabled = true;
                 btnGhi.Enabled = btnPhucHoi.Enabled = false;
@@ -70,14 +84,13 @@ namespace QLDSV_TC1
                 {
                     btnXoa.Enabled = true;
                     pnlHPCT.Enabled = true;
-                    // bat cho them hpct hay khong
                     DataRowView currentRowView = (DataRowView)bdsHocPhiSV.Current;
                     String NIENKHOA = currentRowView["NIENKHOA"].ToString();
                     int HOCKY = int.Parse(currentRowView["HOCKY"].ToString());
                     try
                     {
                         this.sP_LayCTDongHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayCTDongHocPhi_SV,
-                            mssv, NIENKHOA, HOCKY);
+                            masv, NIENKHOA, HOCKY);
                     }
                     catch (System.Exception ex)
                     {
@@ -98,6 +111,11 @@ namespace QLDSV_TC1
 
         private void frmHocPhi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsDSV_TC.SINHVIEN' table. You can move, or remove it, as needed.
+            this.sP_LayHocPhi_SVTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.sP_LayCTDongHocPhi_SVTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.sINHVIENTableAdapter.Fill(this.dsDSV_TC.SINHVIEN);
 
         }
 
@@ -108,8 +126,9 @@ namespace QLDSV_TC1
             int HOCKY = int.Parse(currentRowView["HOCKY"].ToString());
             try
             {
-                this.sP_LayCTDongHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayCTDongHocPhi_SV, 
-                    mssv, NIENKHOA, HOCKY);
+                this.sP_LayCTDongHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayCTDongHocPhi_SV,
+                    masv, NIENKHOA, HOCKY);
+
             }
             catch (System.Exception ex)
             {
@@ -130,6 +149,8 @@ namespace QLDSV_TC1
         private void txtMASV_MouseClick(object sender, MouseEventArgs e)
         {
             pnlHP.Enabled = false;
+            pnlHPCT.Enabled = false;
+            btnThem.Enabled = btnSua.Enabled = btnReset.Enabled = btnXoa.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled = false;
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -187,7 +208,7 @@ namespace QLDSV_TC1
         {
             try
             {
-                this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, mssv);
+                this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, masv);
             }
             catch (System.Exception ex)
             {
@@ -244,12 +265,12 @@ namespace QLDSV_TC1
                 {
                     try
                     {
-                        String query = "EXEC SP_XoaHocPhi '" + mssv + "', '" + NIENKHOA + "', " + HOCKY;
+                        String query = "EXEC SP_XoaHocPhi '" + masv + "', '" + NIENKHOA + "', " + HOCKY;
                         Program.myReader = Program.ExecSqlDataReader(query);
                        
                         try
                         {
-                            this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, mssv);
+                            this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, masv);
                         }
                         catch (System.Exception ex)
                         {
@@ -258,6 +279,11 @@ namespace QLDSV_TC1
                         }
                         if (Program.myReader == null) return;
                         MessageBox.Show("Xóa thành công!", "", MessageBoxButtons.OK);
+                        if (bdsHocPhiSV.Count == 0)
+                        {
+                            btnXoa.Enabled = true;
+                            pnlHPCT.Enabled = true;
+                        }
                         Program.myReader.Close();
                     }
                     catch (Exception e1)
@@ -265,7 +291,7 @@ namespace QLDSV_TC1
                         MessageBox.Show("Lỗi xóa nhân viên, hãy thử lại!\n" + e1.Message, "", MessageBoxButtons.OK);
                         try
                         {
-                            this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, mssv);
+                            this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, masv);
                            
                         }
                         catch (System.Exception ex)
@@ -324,7 +350,7 @@ namespace QLDSV_TC1
             if (chucNang == "btnThem")
             {
                 bdsHocPhiSV.EndEdit();
-                String query = "EXEC SP_ThemHocPhi '" + mssv + "', '" + txtNienKhoa.Text + "', "
+                String query = "EXEC SP_ThemHocPhi '" + masv + "', '" + txtNienKhoa.Text + "', "
                     + int.Parse(spinHocKy.Text) + ", " + int.Parse(txtHocPhi.Text);
                 try
                 {
@@ -339,7 +365,12 @@ namespace QLDSV_TC1
                 MessageBox.Show("Thêm thành công!", "", MessageBoxButtons.OK);
                 try
                 {
-                    this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, mssv);
+                    this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, masv);
+                    if (bdsHocPhiSV.Count > 0)
+                    {
+                        btnXoa.Enabled = true;
+                        pnlHPCT.Enabled = true;
+                    }
                 }
                 catch (System.Exception ex)
                 {
@@ -356,12 +387,12 @@ namespace QLDSV_TC1
                 try
                 {
                     bdsHocPhiSV.EndEdit();
-                    String query = "EXEC SP_CapNhatHocPhi '" + mssv + "', '" + txtNienKhoa.Text + "', "
+                    String query = "EXEC SP_CapNhatHocPhi '" + masv + "', '" + txtNienKhoa.Text + "', "
                         + int.Parse(spinHocKy.Text) + ", " + int.Parse(txtHocPhi.Text);
                     Program.myReader = Program.ExecSqlDataReader(query);
                     try
                     {
-                        this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, mssv);
+                        this.sP_LayHocPhi_SVTableAdapter.Fill(this.dsDSV_TC.SP_LayHocPhi_SV, masv);
                     }
                     catch (System.Exception ex)
                     {
@@ -399,24 +430,44 @@ namespace QLDSV_TC1
 
         private void btnThemTTHPCT_Click(object sender, EventArgs e)
         {
-            if (dateNgayDong.Text =="")
+            if (dateNgayDong.Text.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập niên khóa!", "", MessageBoxButtons.OK);
                 dateNgayDong.Focus();
                 return;
             }
-            if (txtSoTienDong.Text == "")
+            if (txtSoTienDong.Text.Trim()=="")
             {
                 MessageBox.Show("Vui lòng nhập niên khóa!", "", MessageBoxButtons.OK);
                 txtSoTienDong.Focus();
                 return;
             }
+            
+            DataRowView currentRowView = (DataRowView)bdsHocPhiSV.Current;
+            int HP = int.Parse(currentRowView["HOCPHI"].ToString());
+            int HPConLai =  int.Parse(currentRowView["HPCONLAI"].ToString());
+            int TienDong = int.Parse(txtSoTienDong.Text);
+            Console.WriteLine(int.Parse(currentRowView["HOCPHI"].ToString())+" "+ int.Parse(txtSoTienDong.Text));
+            if (TienDong + HPConLai>HP)
+            {
+                if(MessageBox.Show("Số tiền nhập vào vượt quá số tiền cần phải đóng." +
+                    "\n Số tiền đóng sẽ tự làm tròn thành "+ (HP-HPConLai)
+                    +"\nBạn có muốn tiếp tục thêm chi tiết học phí này không?",
+                    "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    TienDong = HP - HPConLai;
+                }
+                else
+                {
+                    return;
+                }
+            }
             bdsCTDongHocPhiSV.EndEdit();
             DateTime ngayDong = DateTime.Parse(dateNgayDong.Text);
             string formattedNgayDong = ngayDong.ToString("yyyy-MM-dd");
-            String query = "EXEC SP_ThemCTDongHocPhi '" + mssv + "', '" + txtNienKhoa.Text + "', "
+            String query = "EXEC SP_ThemCTDongHocPhi '" + masv + "', '" + txtNienKhoa.Text + "', "
                 + int.Parse(spinHocKy.Text) + ", '"
-                + formattedNgayDong + "', " + int.Parse(txtSoTienDong.Text);
+                + formattedNgayDong + "', " + TienDong;
             Console.WriteLine(query);
             try
             {
@@ -440,6 +491,11 @@ namespace QLDSV_TC1
         }
 
         private void nGAYDONGDateEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bdsSinhVien_CurrentChanged(object sender, EventArgs e)
         {
 
         }

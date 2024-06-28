@@ -3447,8 +3447,6 @@ namespace QLDSV_TC1 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SP_BaoCaoHocPhiDataTable : global::System.Data.TypedTableBase<SP_BaoCaoHocPhiRow> {
             
-            private global::System.Data.DataColumn columnSTT;
-            
             private global::System.Data.DataColumn columnMASV;
             
             private global::System.Data.DataColumn columnHOTEN;
@@ -3488,14 +3486,6 @@ namespace QLDSV_TC1 {
             protected SP_BaoCaoHocPhiDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn STTColumn {
-                get {
-                    return this.columnSTT;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3567,10 +3557,9 @@ namespace QLDSV_TC1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_BaoCaoHocPhiRow AddSP_BaoCaoHocPhiRow(long STT, string MASV, string HOTEN, int HOCPHI, int HPDADONG) {
+            public SP_BaoCaoHocPhiRow AddSP_BaoCaoHocPhiRow(string MASV, string HOTEN, int HOCPHI, int HPDADONG) {
                 SP_BaoCaoHocPhiRow rowSP_BaoCaoHocPhiRow = ((SP_BaoCaoHocPhiRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        STT,
                         MASV,
                         HOTEN,
                         HOCPHI,
@@ -3604,7 +3593,6 @@ namespace QLDSV_TC1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnSTT = base.Columns["STT"];
                 this.columnMASV = base.Columns["MASV"];
                 this.columnHOTEN = base.Columns["HOTEN"];
                 this.columnHOCPHI = base.Columns["HOCPHI"];
@@ -3614,8 +3602,6 @@ namespace QLDSV_TC1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnSTT = new global::System.Data.DataColumn("STT", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSTT);
                 this.columnMASV = new global::System.Data.DataColumn("MASV", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMASV);
                 this.columnHOTEN = new global::System.Data.DataColumn("HOTEN", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3626,7 +3612,6 @@ namespace QLDSV_TC1 {
                 base.Columns.Add(this.columnHPDADONG);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMASV}, true));
-                this.columnSTT.ReadOnly = true;
                 this.columnMASV.AllowDBNull = false;
                 this.columnMASV.Unique = true;
                 this.columnMASV.MaxLength = 10;
@@ -4557,22 +4542,6 @@ namespace QLDSV_TC1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long STT {
-                get {
-                    try {
-                        return ((long)(this[this.tableSP_BaoCaoHocPhi.STTColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'STT\' in table \'SP_BaoCaoHocPhi\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_BaoCaoHocPhi.STTColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string MASV {
                 get {
                     return ((string)(this[this.tableSP_BaoCaoHocPhi.MASVColumn]));
@@ -4623,18 +4592,6 @@ namespace QLDSV_TC1 {
                 set {
                     this[this.tableSP_BaoCaoHocPhi.HPDADONGColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSTTNull() {
-                return this.IsNull(this.tableSP_BaoCaoHocPhi.STTColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSTTNull() {
-                this[this.tableSP_BaoCaoHocPhi.STTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8062,7 +8019,6 @@ SELECT MASV, HO, TEN, NGAYSINH, MALOP, DANGHIHOC, rowguid FROM SINHVIEN WHERE (M
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "SP_BaoCaoHocPhi";
-            tableMapping.ColumnMappings.Add("STT", "STT");
             tableMapping.ColumnMappings.Add("MASV", "MASV");
             tableMapping.ColumnMappings.Add("HOTEN", "HOTEN");
             tableMapping.ColumnMappings.Add("HOCPHI", "HOCPHI");

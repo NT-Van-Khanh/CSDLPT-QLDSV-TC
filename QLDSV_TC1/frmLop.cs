@@ -14,9 +14,9 @@ namespace QLDSV_TC1
     public partial class frmLop : DevExpress.XtraEditors.XtraForm
     {
         private int vitri;
-        private int position = -1;
+     /*   private int position = -1;*/
         private String flagmodeClass = "";
-        private String flagmodeSV = "";
+    /*    private String flagmodeSV = "";*/
         private String catcheTenLOP = "";  // giữ lại tên lớp lúc ấn public static String servername = "DUYTIEN\\MSQLSEVER1";
         public frmLop()
         {
@@ -112,6 +112,10 @@ namespace QLDSV_TC1
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if(bdsSV.Count > 0)
+            {
+                MessageBox.Show("Lớp đã có sinh viên, không thể sửa!", "", MessageBoxButtons.OK);
+            }
             vitri = bdsLop.Position;
             panelNhapLieu.Enabled = true;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
@@ -156,6 +160,7 @@ namespace QLDSV_TC1
             gcLop.Enabled = true;
             panelNhapLieu.Enabled = false;
             btnThem.Enabled = true;
+            if (bdsLop.Count > 0) { btnXoa.Enabled =  btnSua.Enabled =true; }
             btnSave.Enabled = btnPhuchoi.Enabled = false;
             cmbMAKHOA.Enabled = true;
             catcheTenLOP = "";
@@ -338,6 +343,11 @@ namespace QLDSV_TC1
                 this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet2.SINHVIEN);
 
             }
+        }
+
+        private void panelNhapLieu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

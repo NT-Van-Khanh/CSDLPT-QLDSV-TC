@@ -475,7 +475,6 @@ SELECT MASV, HO, TEN, NGAYSINH, MALOP, DANGHIHOC, rowguid FROM SINHVIEN WHERE (M
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="STT" DataSetColumn="STT" />
               <Mapping SourceColumn="MASV" DataSetColumn="MASV" />
               <Mapping SourceColumn="HOTEN" DataSetColumn="HOTEN" />
               <Mapping SourceColumn="HOCPHI" DataSetColumn="HOCPHI" />
@@ -810,30 +809,29 @@ SELECT MASV, HO, TEN, NGAYSINH, MALOP, DANGHIHOC, rowguid FROM SINHVIEN WHERE (M
               <xs:element name="HOCKY" msprop:Generator_ColumnPropNameInTable="HOCKYColumn" msprop:Generator_ColumnPropNameInRow="HOCKY" msprop:Generator_UserColumnName="HOCKY" msprop:Generator_ColumnVarNameInTable="columnHOCKY" type="xs:int" />
               <xs:element name="HOCPHI" msprop:Generator_ColumnPropNameInTable="HOCPHIColumn" msprop:Generator_ColumnPropNameInRow="HOCPHI" msprop:Generator_UserColumnName="HOCPHI" msprop:Generator_ColumnVarNameInTable="columnHOCPHI" type="xs:int" />
               <xs:element name="HPDADONG" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="HPDADONGColumn" msprop:Generator_ColumnPropNameInRow="HPDADONG" msprop:Generator_UserColumnName="HPDADONG" msprop:Generator_ColumnVarNameInTable="columnHPDADONG" type="xs:int" minOccurs="0" />
-              <xs:element name="HPCONLAI" msdata:ReadOnly="true" msprop:Generator_UserColumnName="HPCONLAI" msprop:Generator_ColumnPropNameInTable="HPCONLAIColumn" msprop:Generator_ColumnPropNameInRow="HPCONLAI" msprop:Generator_ColumnVarNameInTable="columnHPCONLAI" type="xs:int" minOccurs="0" />
+              <xs:element name="HPCONLAI" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="HPCONLAIColumn" msprop:Generator_ColumnPropNameInRow="HPCONLAI" msprop:Generator_UserColumnName="HPCONLAI" msprop:Generator_ColumnVarNameInTable="columnHPCONLAI" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SP_BaoCaoHocPhi" msprop:Generator_RowEvHandlerName="SP_BaoCaoHocPhiRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_BaoCaoHocPhiRowDeleted" msprop:Generator_RowDeletingName="SP_BaoCaoHocPhiRowDeleting" msprop:Generator_RowEvArgName="SP_BaoCaoHocPhiRowChangeEvent" msprop:Generator_TablePropName="SP_BaoCaoHocPhi" msprop:Generator_RowChangedName="SP_BaoCaoHocPhiRowChanged" msprop:Generator_RowChangingName="SP_BaoCaoHocPhiRowChanging" msprop:Generator_TableClassName="SP_BaoCaoHocPhiDataTable" msprop:Generator_RowClassName="SP_BaoCaoHocPhiRow" msprop:Generator_TableVarName="tableSP_BaoCaoHocPhi" msprop:Generator_UserTableName="SP_BaoCaoHocPhi">
+        <xs:element name="SP_BaoCaoHocPhi" msprop:Generator_RowClassName="SP_BaoCaoHocPhiRow" msprop:Generator_RowEvHandlerName="SP_BaoCaoHocPhiRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_BaoCaoHocPhiRowDeleted" msprop:Generator_RowDeletingName="SP_BaoCaoHocPhiRowDeleting" msprop:Generator_RowEvArgName="SP_BaoCaoHocPhiRowChangeEvent" msprop:Generator_TablePropName="SP_BaoCaoHocPhi" msprop:Generator_RowChangedName="SP_BaoCaoHocPhiRowChanged" msprop:Generator_UserTableName="SP_BaoCaoHocPhi" msprop:Generator_RowChangingName="SP_BaoCaoHocPhiRowChanging" msprop:Generator_TableClassName="SP_BaoCaoHocPhiDataTable" msprop:Generator_TableVarName="tableSP_BaoCaoHocPhi">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="STT" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="STT" msprop:Generator_ColumnPropNameInTable="STTColumn" msprop:Generator_ColumnVarNameInTable="columnSTT" msprop:Generator_UserColumnName="STT" type="xs:long" minOccurs="0" />
-              <xs:element name="MASV" msprop:Generator_ColumnPropNameInRow="MASV" msprop:Generator_ColumnPropNameInTable="MASVColumn" msprop:Generator_ColumnVarNameInTable="columnMASV" msprop:Generator_UserColumnName="MASV">
+              <xs:element name="MASV" msprop:Generator_UserColumnName="MASV" msprop:Generator_ColumnPropNameInTable="MASVColumn" msprop:Generator_ColumnPropNameInRow="MASV" msprop:Generator_ColumnVarNameInTable="columnMASV">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HOTEN" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="HOTEN" msprop:Generator_ColumnPropNameInTable="HOTENColumn" msprop:Generator_ColumnVarNameInTable="columnHOTEN" msprop:Generator_UserColumnName="HOTEN" minOccurs="0">
+              <xs:element name="HOTEN" msdata:ReadOnly="true" msprop:Generator_UserColumnName="HOTEN" msprop:Generator_ColumnPropNameInTable="HOTENColumn" msprop:Generator_ColumnPropNameInRow="HOTEN" msprop:Generator_ColumnVarNameInTable="columnHOTEN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="61" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HOCPHI" msprop:Generator_ColumnPropNameInRow="HOCPHI" msprop:Generator_ColumnPropNameInTable="HOCPHIColumn" msprop:Generator_ColumnVarNameInTable="columnHOCPHI" msprop:Generator_UserColumnName="HOCPHI" type="xs:int" />
-              <xs:element name="HPDADONG" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="HPDADONG" msprop:Generator_ColumnPropNameInTable="HPDADONGColumn" msprop:Generator_ColumnVarNameInTable="columnHPDADONG" msprop:Generator_UserColumnName="HPDADONG" type="xs:int" minOccurs="0" />
+              <xs:element name="HOCPHI" msprop:Generator_UserColumnName="HOCPHI" msprop:Generator_ColumnPropNameInTable="HOCPHIColumn" msprop:Generator_ColumnPropNameInRow="HOCPHI" msprop:Generator_ColumnVarNameInTable="columnHOCPHI" type="xs:int" />
+              <xs:element name="HPDADONG" msdata:ReadOnly="true" msprop:Generator_UserColumnName="HPDADONG" msprop:Generator_ColumnPropNameInTable="HPDADONGColumn" msprop:Generator_ColumnPropNameInRow="HPDADONG" msprop:Generator_ColumnVarNameInTable="columnHPDADONG" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -875,11 +873,11 @@ SELECT MASV, HO, TEN, NGAYSINH, MALOP, DANGHIHOC, rowguid FROM SINHVIEN WHERE (M
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_CT_DONGHOCPHI_HOCPHI" msdata:parent="HOCPHI" msdata:child="CT_DONGHOCPHI" msdata:parentkey="MASV NIENKHOA HOCKY" msdata:childkey="MASV NIENKHOA HOCKY" msprop:Generator_UserParentTable="HOCPHI" msprop:Generator_UserChildTable="CT_DONGHOCPHI" msprop:Generator_RelationVarName="relationFK_CT_DONGHOCPHI_HOCPHI" msprop:Generator_ChildPropName="GetCT_DONGHOCPHIRows" msprop:Generator_ParentPropName="HOCPHIRowParent" msprop:Generator_UserRelationName="FK_CT_DONGHOCPHI_HOCPHI" />
-      <msdata:Relationship name="FK_GIANGVIEN_KHOA" msdata:parent="KHOA" msdata:child="GIANGVIEN" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_UserChildTable="GIANGVIEN" msprop:Generator_RelationVarName="relationFK_GIANGVIEN_KHOA" msprop:Generator_ChildPropName="GetGIANGVIENRows" msprop:Generator_ParentPropName="KHOARow" msprop:Generator_UserRelationName="FK_GIANGVIEN_KHOA" />
-      <msdata:Relationship name="FK_HOCPHI_SINHVIEN" msdata:parent="SINHVIEN" msdata:child="HOCPHI" msdata:parentkey="MASV" msdata:childkey="MASV" msprop:Generator_UserParentTable="SINHVIEN" msprop:Generator_UserChildTable="HOCPHI" msprop:Generator_RelationVarName="relationFK_HOCPHI_SINHVIEN" msprop:Generator_ChildPropName="GetHOCPHIRows" msprop:Generator_ParentPropName="SINHVIENRow" msprop:Generator_UserRelationName="FK_HOCPHI_SINHVIEN" />
-      <msdata:Relationship name="FK_LOP_KHOA" msdata:parent="KHOA" msdata:child="LOP" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_UserChildTable="LOP" msprop:Generator_RelationVarName="relationFK_LOP_KHOA" msprop:Generator_ChildPropName="GetLOPRows" msprop:Generator_UserRelationName="FK_LOP_KHOA" msprop:Generator_ParentPropName="KHOARow" />
-      <msdata:Relationship name="FK_SINHVIEN_LOP" msdata:parent="LOP" msdata:child="SINHVIEN" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserParentTable="LOP" msprop:Generator_UserChildTable="SINHVIEN" msprop:Generator_RelationVarName="relationFK_SINHVIEN_LOP" msprop:Generator_ChildPropName="GetSINHVIENRows" msprop:Generator_UserRelationName="FK_SINHVIEN_LOP" msprop:Generator_ParentPropName="LOPRow" />
+      <msdata:Relationship name="FK_CT_DONGHOCPHI_HOCPHI" msdata:parent="HOCPHI" msdata:child="CT_DONGHOCPHI" msdata:parentkey="MASV NIENKHOA HOCKY" msdata:childkey="MASV NIENKHOA HOCKY" msprop:Generator_UserParentTable="HOCPHI" msprop:Generator_UserChildTable="CT_DONGHOCPHI" msprop:Generator_RelationVarName="relationFK_CT_DONGHOCPHI_HOCPHI" msprop:Generator_ChildPropName="GetCT_DONGHOCPHIRows" msprop:Generator_UserRelationName="FK_CT_DONGHOCPHI_HOCPHI" msprop:Generator_ParentPropName="HOCPHIRowParent" />
+      <msdata:Relationship name="FK_GIANGVIEN_KHOA" msdata:parent="KHOA" msdata:child="GIANGVIEN" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_UserChildTable="GIANGVIEN" msprop:Generator_RelationVarName="relationFK_GIANGVIEN_KHOA" msprop:Generator_ChildPropName="GetGIANGVIENRows" msprop:Generator_UserRelationName="FK_GIANGVIEN_KHOA" msprop:Generator_ParentPropName="KHOARow" />
+      <msdata:Relationship name="FK_HOCPHI_SINHVIEN" msdata:parent="SINHVIEN" msdata:child="HOCPHI" msdata:parentkey="MASV" msdata:childkey="MASV" msprop:Generator_UserParentTable="SINHVIEN" msprop:Generator_UserChildTable="HOCPHI" msprop:Generator_RelationVarName="relationFK_HOCPHI_SINHVIEN" msprop:Generator_ChildPropName="GetHOCPHIRows" msprop:Generator_UserRelationName="FK_HOCPHI_SINHVIEN" msprop:Generator_ParentPropName="SINHVIENRow" />
+      <msdata:Relationship name="FK_LOP_KHOA" msdata:parent="KHOA" msdata:child="LOP" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_UserChildTable="LOP" msprop:Generator_RelationVarName="relationFK_LOP_KHOA" msprop:Generator_ChildPropName="GetLOPRows" msprop:Generator_ParentPropName="KHOARow" msprop:Generator_UserRelationName="FK_LOP_KHOA" />
+      <msdata:Relationship name="FK_SINHVIEN_LOP" msdata:parent="LOP" msdata:child="SINHVIEN" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserParentTable="LOP" msprop:Generator_UserChildTable="SINHVIEN" msprop:Generator_RelationVarName="relationFK_SINHVIEN_LOP" msprop:Generator_ChildPropName="GetSINHVIENRows" msprop:Generator_ParentPropName="LOPRow" msprop:Generator_UserRelationName="FK_SINHVIEN_LOP" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

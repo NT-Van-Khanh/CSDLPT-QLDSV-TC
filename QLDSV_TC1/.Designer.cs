@@ -49,6 +49,10 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.btnHocPhiQL = new DevExpress.XtraBars.BarButtonItem();
             this.btnBDTK = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBCHocPhiQL = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDSLTC = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDSSVDKLTC = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBangDiemLTC = new DevExpress.XtraBars.BarButtonItem();
             this.pageQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.menuToChuc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.menuMonHoc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -95,9 +99,13 @@
             this.btnPhieuDiem,
             this.barButtonItem4,
             this.btnHocPhiQL,
-            this.btnBDTK});
+            this.btnBDTK,
+            this.btnBCHocPhiQL,
+            this.btnDSLTC,
+            this.btnDSSVDKLTC,
+            this.btnBangDiemLTC});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 23;
+            this.ribbon.MaxItemId = 27;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.pageQuanLy,
@@ -168,6 +176,7 @@
             this.btnDangKy.Id = 10;
             this.btnDangKy.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDangKy.ImageOptions.SvgImage")));
             this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangKy_ItemClick);
             // 
             // btnMonHocSV
             // 
@@ -242,8 +251,41 @@
             // 
             this.btnBDTK.Caption = "Bảng điểm tổng kết";
             this.btnBDTK.Id = 22;
+            this.btnBDTK.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBDTK.ImageOptions.SvgImage")));
             this.btnBDTK.Name = "btnBDTK";
             this.btnBDTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBDTK_ItemClick);
+            // 
+            // btnBCHocPhiQL
+            // 
+            this.btnBCHocPhiQL.Caption = "Học phí theo lớp";
+            this.btnBCHocPhiQL.Id = 23;
+            this.btnBCHocPhiQL.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBCHocPhiQL.ImageOptions.SvgImage")));
+            this.btnBCHocPhiQL.Name = "btnBCHocPhiQL";
+            this.btnBCHocPhiQL.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBCHocPhiQL_ItemClick);
+            // 
+            // btnDSLTC
+            // 
+            this.btnDSLTC.Caption = "Danh sách Lóp tín chỉ";
+            this.btnDSLTC.Id = 24;
+            this.btnDSLTC.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDSLTC.ImageOptions.SvgImage")));
+            this.btnDSLTC.Name = "btnDSLTC";
+            this.btnDSLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDSLTC_ItemClick);
+            // 
+            // btnDSSVDKLTC
+            // 
+            this.btnDSSVDKLTC.Caption = "Danh sách sinh viên đăng kí Lớp tín chỉ";
+            this.btnDSSVDKLTC.Id = 25;
+            this.btnDSSVDKLTC.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDSSVDKLTC.ImageOptions.SvgImage")));
+            this.btnDSSVDKLTC.Name = "btnDSSVDKLTC";
+            this.btnDSSVDKLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDSSVDKLTC_ItemClick);
+            // 
+            // btnBangDiemLTC
+            // 
+            this.btnBangDiemLTC.Caption = "Bảng điểm theo lớp tín chỉ";
+            this.btnBangDiemLTC.Id = 26;
+            this.btnBangDiemLTC.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBangDiemLTC.ImageOptions.SvgImage")));
+            this.btnBangDiemLTC.Name = "btnBangDiemLTC";
+            this.btnBangDiemLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBangDiemLTC_ItemClick);
             // 
             // pageQuanLy
             // 
@@ -275,6 +317,9 @@
             // 
             this.menuQLBaoCao.ItemLinks.Add(this.btnPhieuDiem);
             this.menuQLBaoCao.ItemLinks.Add(this.btnBDTK);
+            this.menuQLBaoCao.ItemLinks.Add(this.btnDSLTC);
+            this.menuQLBaoCao.ItemLinks.Add(this.btnDSSVDKLTC);
+            this.menuQLBaoCao.ItemLinks.Add(this.btnBangDiemLTC);
             this.menuQLBaoCao.Name = "menuQLBaoCao";
             this.menuQLBaoCao.Text = "Báo Cáo";
             // 
@@ -295,6 +340,7 @@
             // 
             // menuKTBaoCao
             // 
+            this.menuKTBaoCao.ItemLinks.Add(this.btnBCHocPhiQL);
             this.menuKTBaoCao.Name = "menuKTBaoCao";
             this.menuKTBaoCao.Text = "Báo cáo";
             // 
@@ -442,5 +488,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem btnHocPhiQL;
         private DevExpress.XtraBars.BarButtonItem btnBDTK;
+        private DevExpress.XtraBars.BarButtonItem btnBCHocPhiQL;
+        private DevExpress.XtraBars.BarButtonItem btnDSLTC;
+        private DevExpress.XtraBars.BarButtonItem btnDSSVDKLTC;
+        private DevExpress.XtraBars.BarButtonItem btnBangDiemLTC;
     }
 }

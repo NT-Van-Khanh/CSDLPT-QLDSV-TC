@@ -30,7 +30,7 @@ namespace QLDSV_TC1
         public static String passwordDN = "";
         public static String mGroup = "";
         public static String mHoten = "";
-
+        public static String maLopSV = "";
         public static int mChinhanh = 0;
 
         private static String loginSV = "SV1";

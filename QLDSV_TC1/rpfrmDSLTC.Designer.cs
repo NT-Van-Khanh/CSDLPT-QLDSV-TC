@@ -29,57 +29,52 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label mAKHOALabel;
             System.Windows.Forms.Label nIENKHOALabel;
             System.Windows.Forms.Label hOCKYLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rpfrmDSLTC));
+            System.Windows.Forms.Label label1;
             this.qLDSV_TCDataSet = new QLDSV_TC1.QLDSV_TCDataSet1();
             this.bdsKhoa = new System.Windows.Forms.BindingSource(this.components);
             this.kHOATableAdapter = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.KHOATableAdapter();
             this.tableAdapterManager = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.TableAdapterManager();
             this.dangkyTableAdapter1 = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.DANGKYTableAdapter();
             this.lOPTINCHITableAdapter = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.LOPTINCHITableAdapter();
-            this.cbKHOA = new System.Windows.Forms.ComboBox();
             this.lOPTINCHIBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbNIENKHOA = new System.Windows.Forms.ComboBox();
-            this.cbHOCKY = new System.Windows.Forms.ComboBox();
+            this.cmbNienKhoa = new System.Windows.Forms.ComboBox();
+            this.cmbHocKy = new System.Windows.Forms.ComboBox();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
-            mAKHOALabel = new System.Windows.Forms.Label();
+            this.cmbKHOA = new System.Windows.Forms.ComboBox();
             nIENKHOALabel = new System.Windows.Forms.Label();
             hOCKYLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // mAKHOALabel
-            // 
-            mAKHOALabel.AutoSize = true;
-            mAKHOALabel.Location = new System.Drawing.Point(376, 34);
-            mAKHOALabel.Name = "mAKHOALabel";
-            mAKHOALabel.Size = new System.Drawing.Size(62, 16);
-            mAKHOALabel.TabIndex = 1;
-            mAKHOALabel.Text = "MAKHOA:";
-            mAKHOALabel.Click += new System.EventHandler(this.mAKHOALabel_Click);
-            // 
             // nIENKHOALabel
             // 
+            nIENKHOALabel.AutoEllipsis = true;
             nIENKHOALabel.AutoSize = true;
-            nIENKHOALabel.Location = new System.Drawing.Point(367, 88);
+            nIENKHOALabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nIENKHOALabel.Location = new System.Drawing.Point(472, 116);
+            nIENKHOALabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nIENKHOALabel.Name = "nIENKHOALabel";
-            nIENKHOALabel.Size = new System.Drawing.Size(71, 16);
+            nIENKHOALabel.Size = new System.Drawing.Size(89, 21);
             nIENKHOALabel.TabIndex = 2;
-            nIENKHOALabel.Text = "NIENKHOA:";
+            nIENKHOALabel.Text = "Niên khóa:";
             // 
             // hOCKYLabel
             // 
             hOCKYLabel.AutoSize = true;
-            hOCKYLabel.Location = new System.Drawing.Point(387, 139);
+            hOCKYLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            hOCKYLabel.Location = new System.Drawing.Point(498, 182);
+            hOCKYLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             hOCKYLabel.Name = "hOCKYLabel";
-            hOCKYLabel.Size = new System.Drawing.Size(51, 16);
+            hOCKYLabel.Size = new System.Drawing.Size(65, 21);
             hOCKYLabel.TabIndex = 4;
-            hOCKYLabel.Text = "HOCKY:";
+            hOCKYLabel.Text = "Học kỳ:";
             // 
             // qLDSV_TCDataSet
             // 
@@ -115,74 +110,100 @@
             // 
             this.lOPTINCHITableAdapter.ClearBeforeFill = true;
             // 
-            // cbKHOA
-            // 
-            this.cbKHOA.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKhoa, "MAKHOA", true));
-            this.cbKHOA.FormattingEnabled = true;
-            this.cbKHOA.Location = new System.Drawing.Point(444, 31);
-            this.cbKHOA.Name = "cbKHOA";
-            this.cbKHOA.Size = new System.Drawing.Size(296, 24);
-            this.cbKHOA.TabIndex = 2;
-            this.cbKHOA.SelectedIndexChanged += new System.EventHandler(this.mAKHOAComboBox_SelectedIndexChanged);
-            // 
             // lOPTINCHIBindingSource
             // 
             this.lOPTINCHIBindingSource.DataMember = "LOPTINCHI";
             this.lOPTINCHIBindingSource.DataSource = this.qLDSV_TCDataSet;
             // 
-            // cbNIENKHOA
+            // cmbNienKhoa
             // 
-            this.cbNIENKHOA.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "NIENKHOA", true));
-            this.cbNIENKHOA.FormattingEnabled = true;
-            this.cbNIENKHOA.Location = new System.Drawing.Point(444, 85);
-            this.cbNIENKHOA.Name = "cbNIENKHOA";
-            this.cbNIENKHOA.Size = new System.Drawing.Size(296, 24);
-            this.cbNIENKHOA.TabIndex = 3;
+            this.cmbNienKhoa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "NIENKHOA", true));
+            this.cmbNienKhoa.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNienKhoa.FormattingEnabled = true;
+            this.cmbNienKhoa.Location = new System.Drawing.Point(571, 112);
+            this.cmbNienKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbNienKhoa.Name = "cmbNienKhoa";
+            this.cmbNienKhoa.Size = new System.Drawing.Size(379, 29);
+            this.cmbNienKhoa.TabIndex = 3;
+            this.cmbNienKhoa.SelectedIndexChanged += new System.EventHandler(this.cbNIENKHOA_SelectedIndexChanged);
             // 
-            // cbHOCKY
+            // cmbHocKy
             // 
-            this.cbHOCKY.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "HOCKY", true));
-            this.cbHOCKY.FormattingEnabled = true;
-            this.cbHOCKY.Location = new System.Drawing.Point(444, 136);
-            this.cbHOCKY.Name = "cbHOCKY";
-            this.cbHOCKY.Size = new System.Drawing.Size(296, 24);
-            this.cbHOCKY.TabIndex = 5;
+            this.cmbHocKy.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "HOCKY", true));
+            this.cmbHocKy.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbHocKy.FormattingEnabled = true;
+            this.cmbHocKy.Location = new System.Drawing.Point(571, 178);
+            this.cmbHocKy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHocKy.Name = "cmbHocKy";
+            this.cmbHocKy.Size = new System.Drawing.Size(379, 29);
+            this.cmbHocKy.TabIndex = 5;
             // 
             // btnPrint
             // 
+            this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrint.ImageOptions.SvgImage")));
-            this.btnPrint.Location = new System.Drawing.Point(340, 242);
+            this.btnPrint.Location = new System.Drawing.Point(437, 318);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(132, 60);
+            this.btnPrint.Size = new System.Drawing.Size(170, 64);
             this.btnPrint.TabIndex = 8;
             this.btnPrint.Text = "In";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnThoat
             // 
+            this.btnThoat.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Appearance.Options.UseFont = true;
             this.btnThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThoat.ImageOptions.SvgImage")));
-            this.btnThoat.Location = new System.Drawing.Point(666, 242);
+            this.btnThoat.Location = new System.Drawing.Point(856, 318);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(132, 60);
+            this.btnThoat.Size = new System.Drawing.Size(170, 64);
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // frmReportDSLTC
+            // label1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(507, 60);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(53, 21);
+            label1.TabIndex = 10;
+            label1.Text = "Khoa:";
+            // 
+            // cmbKHOA
+            // 
+            this.cmbKHOA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbKHOA.FormattingEnabled = true;
+            this.cmbKHOA.Location = new System.Drawing.Point(572, 60);
+            this.cmbKHOA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbKHOA.Name = "cmbKHOA";
+            this.cmbKHOA.Size = new System.Drawing.Size(378, 29);
+            this.cmbKHOA.TabIndex = 11;
+            this.cmbKHOA.SelectedIndexChanged += new System.EventHandler(this.cmbKHOA_SelectedIndexChanged);
+            // 
+            // rpfrmDSLTC
+            // 
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 601);
+            this.ClientSize = new System.Drawing.Size(1544, 789);
+            this.Controls.Add(this.cmbKHOA);
+            this.Controls.Add(label1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(hOCKYLabel);
-            this.Controls.Add(this.cbHOCKY);
+            this.Controls.Add(this.cmbHocKy);
             this.Controls.Add(nIENKHOALabel);
-            this.Controls.Add(this.cbNIENKHOA);
-            this.Controls.Add(mAKHOALabel);
-            this.Controls.Add(this.cbKHOA);
-            this.Name = "frmReportDSLTC";
-            this.Text = "frmReportDSLTC";
+            this.Controls.Add(this.cmbNienKhoa);
+            this.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "rpfrmDSLTC";
+            this.Text = "Báo cáo danh sách lớp tín chỉ";
             this.Load += new System.EventHandler(this.frmReportDSLTC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).EndInit();
@@ -198,13 +219,13 @@
         private System.Windows.Forms.BindingSource bdsKhoa;
         private QLDSV_TCDataSet1TableAdapters.KHOATableAdapter kHOATableAdapter;
         private QLDSV_TCDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ComboBox cbKHOA;
         private QLDSV_TCDataSet1TableAdapters.LOPTINCHITableAdapter lOPTINCHITableAdapter;
         private System.Windows.Forms.BindingSource lOPTINCHIBindingSource;
         private QLDSV_TCDataSet1TableAdapters.DANGKYTableAdapter dangkyTableAdapter1;
-        private System.Windows.Forms.ComboBox cbNIENKHOA;
-        private System.Windows.Forms.ComboBox cbHOCKY;
+        private System.Windows.Forms.ComboBox cmbNienKhoa;
+        private System.Windows.Forms.ComboBox cmbHocKy;
         private DevExpress.XtraEditors.SimpleButton btnPrint;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
+        private System.Windows.Forms.ComboBox cmbKHOA;
     }
 }

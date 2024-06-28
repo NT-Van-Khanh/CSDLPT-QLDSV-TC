@@ -118,11 +118,23 @@
     <Compile Include="Frpt_PhieuDiemSinhVien.Designer.cs">
       <DependentUpon>Frpt_PhieuDiemSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="rpBangDiemLTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpBangDiemLTC.Designer.cs">
+      <DependentUpon>rpBangDiemLTC.cs</DependentUpon>
+    </Compile>
     <Compile Include="rpDongHP.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rpDongHP.Designer.cs">
       <DependentUpon>rpDongHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpfrmBangDiemLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpfrmBangDiemLTC.Designer.cs">
+      <DependentUpon>rpfrmBangDiemLTC.cs</DependentUpon>
     </Compile>
     <Compile Include="rpfrmDongHP.cs">
       <SubType>Form</SubType>
@@ -211,6 +223,12 @@
     <Compile Include="XRPT_PhieuDiem.Designer.cs">
       <DependentUpon>XRPT_PhieuDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmHocPhi.resx">
       <DependentUpon>frmHocPhi.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,8 +253,14 @@
     <EmbeddedResource Include="Frpt_PhieuDiemSinhVien.resx">
       <DependentUpon>Frpt_PhieuDiemSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rpBangDiemLTC.resx">
+      <DependentUpon>rpBangDiemLTC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rpDongHP.resx">
       <DependentUpon>rpDongHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpfrmBangDiemLTC.resx">
+      <DependentUpon>rpfrmBangDiemLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rpfrmDongHP.resx">
       <DependentUpon>rpfrmDongHP.cs</DependentUpon>
@@ -280,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XRPT_PhieuDiem.resx">
       <DependentUpon>XRPT_PhieuDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

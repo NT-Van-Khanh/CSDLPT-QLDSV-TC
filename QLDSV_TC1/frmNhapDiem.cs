@@ -95,18 +95,26 @@ namespace QLDSV_TC1
         {
             if (cmbNienKhoa.SelectedItem == null)
             {
+                MessageBox.Show("Vui lòng chọn Niên khóa!\n", "", MessageBoxButtons.OK);
+                cmbNienKhoa.Focus();
                 return;
             }
             if(cmbHocKy.SelectedItem == null)
             {
+                MessageBox.Show("Vui lòng chọn Học kỳ!\n", "", MessageBoxButtons.OK);
+                cmbHocKy.Focus();
                 return;
             }
             if (cmbMonHoc.SelectedItem == null)
             {
+                MessageBox.Show("Vui lòng chọn Môn học!\n", "", MessageBoxButtons.OK);
+                cmbMonHoc.Focus();
                 return;
             }
             if (cmbNhom.SelectedItem == null)
             {
+                MessageBox.Show("Vui lòng chọn Nhóm!\n", "", MessageBoxButtons.OK);
+                cmbNhom.Focus();
                 return;
             }
             try

@@ -100,3 +100,6 @@ D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.Frpt_Bang
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.XRPT_BangDiemTongKet.resources
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmLop.resources
 D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.frmMonHoc.resources
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.XtraReport1.resources
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.rpfrmBangDiemLTC.resources
+D:\HK6\CSDL_Phan_tan\1_Bao_Cao\QLDSV_TC1\QLDSV_TC1\obj\Debug\QLDSV_TC1.rpBangDiemLTC.resources

@@ -43,7 +43,7 @@ namespace QLDSV_TC1
                 return 1;
             }catch(Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối với cơ sở dữ liệu gốc!");
+                MessageBox.Show("Lỗi kết nối với cơ sở dữ liệu gốc!\n"+ex);
             }
             return 0;
         }
@@ -180,7 +180,6 @@ namespace QLDSV_TC1
                     Program.myReader = Program.ExecSqlDataReader(strQuery1);
                     if (Program.myReader == null) return;
                     Program.myReader.Read();
-                    Console.WriteLine(Program.myReader.GetString(0));
                     Program.username = Program.myReader.GetString(0);
                     if (Convert.IsDBNull(Program.username))
                     {
@@ -188,7 +187,9 @@ namespace QLDSV_TC1
                             "\nVui lòng xem lại tài khoản, mật khẩu.", "", MessageBoxButtons.OK);
                     }
                     Program.mHoten = Program.myReader.GetString(1);
-                    Program.mGroup = Program.myReader.GetString(2);
+                    Program.maLopSV= Program.myReader.GetString(2);
+                    Program.mGroup = Program.myReader.GetString(3);
+                    Program.frmRun.setStatusThongTin("Mã: " + Program.username, "Họ và tên: " + Program.mHoten, "Lớp: " + Program.maLopSV);
 
                 }
                 else
@@ -197,7 +198,7 @@ namespace QLDSV_TC1
                     Program.password = txtMatKhau.Text;
                     if (Program.KetNoi() == 0) return;
                     Program.mChinhanh = cmbChiNhanh.SelectedIndex;
-                    Console.WriteLine(cmbChiNhanh.SelectedIndex);
+               
                     Program.mloginDN = Program.mlogin;
                     Program.passwordDN = Program.password;
                     string strQuery = "EXEC SP_LayThongTinDangNhap'" + Program.mlogin + "'";
@@ -215,6 +216,7 @@ namespace QLDSV_TC1
                     
                     Program.mHoten = Program.myReader.GetString(1);
                     Program.mGroup = Program.myReader.GetString(2);
+                    Program.frmRun.setStatusThongTin("Mã: " + Program.username, "Họ và tên: " + Program.mHoten, "Nhóm: " + Program.mGroup);
 
                     /*                Program.frmRun.MASV.Text = "MSSV =" + Program.username;*/
                 }
@@ -223,7 +225,7 @@ namespace QLDSV_TC1
                 Program.frmRun.HideMenu();
                 Program.frmRun.Show();
                 this.Close();
-                Program.frmRun.setStatusThongTin(Program.username, Program.mHoten, Program.mGroup);
+               
                 Program.setCN();
                 
             }

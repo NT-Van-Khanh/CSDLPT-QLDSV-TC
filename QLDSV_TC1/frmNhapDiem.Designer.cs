@@ -55,7 +55,6 @@
             this.sP_LayDSSV_LTCTableAdapter = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.SP_LayDSSV_LTCTableAdapter();
             this.sP_LayDSSV_LTCGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMALTC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMASV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIEM_CC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -334,7 +333,6 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMALTC,
             this.colMASV,
             this.colHOTEN,
             this.colDIEM_CC,
@@ -343,18 +341,6 @@
             this.colDIEM_TK});
             this.gridView1.GridControl = this.sP_LayDSSV_LTCGridControl;
             this.gridView1.Name = "gridView1";
-            // 
-            // colMALTC
-            // 
-            this.colMALTC.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.colMALTC.AppearanceCell.Options.UseBackColor = true;
-            this.colMALTC.FieldName = "MALTC";
-            this.colMALTC.MinWidth = 25;
-            this.colMALTC.Name = "colMALTC";
-            this.colMALTC.OptionsColumn.AllowEdit = false;
-            this.colMALTC.Visible = true;
-            this.colMALTC.VisibleIndex = 0;
-            this.colMALTC.Width = 94;
             // 
             // colMASV
             // 
@@ -365,7 +351,7 @@
             this.colMASV.Name = "colMASV";
             this.colMASV.OptionsColumn.AllowEdit = false;
             this.colMASV.Visible = true;
-            this.colMASV.VisibleIndex = 1;
+            this.colMASV.VisibleIndex = 0;
             this.colMASV.Width = 94;
             // 
             // colHOTEN
@@ -377,7 +363,7 @@
             this.colHOTEN.Name = "colHOTEN";
             this.colHOTEN.OptionsColumn.AllowEdit = false;
             this.colHOTEN.Visible = true;
-            this.colHOTEN.VisibleIndex = 2;
+            this.colHOTEN.VisibleIndex = 1;
             this.colHOTEN.Width = 94;
             // 
             // colDIEM_CC
@@ -387,7 +373,7 @@
             this.colDIEM_CC.MinWidth = 25;
             this.colDIEM_CC.Name = "colDIEM_CC";
             this.colDIEM_CC.Visible = true;
-            this.colDIEM_CC.VisibleIndex = 3;
+            this.colDIEM_CC.VisibleIndex = 2;
             this.colDIEM_CC.Width = 94;
             // 
             // repositoryItemTextEdit2
@@ -405,7 +391,7 @@
             this.colDIEM_GK.MinWidth = 25;
             this.colDIEM_GK.Name = "colDIEM_GK";
             this.colDIEM_GK.Visible = true;
-            this.colDIEM_GK.VisibleIndex = 4;
+            this.colDIEM_GK.VisibleIndex = 3;
             this.colDIEM_GK.Width = 94;
             // 
             // repositoryItemTextEdit1
@@ -426,7 +412,7 @@
             this.colDIEM_CK.MinWidth = 25;
             this.colDIEM_CK.Name = "colDIEM_CK";
             this.colDIEM_CK.Visible = true;
-            this.colDIEM_CK.VisibleIndex = 5;
+            this.colDIEM_CK.VisibleIndex = 4;
             this.colDIEM_CK.Width = 94;
             // 
             // colDIEM_TK
@@ -438,7 +424,7 @@
             this.colDIEM_TK.Name = "colDIEM_TK";
             this.colDIEM_TK.OptionsColumn.AllowEdit = false;
             this.colDIEM_TK.Visible = true;
-            this.colDIEM_TK.VisibleIndex = 6;
+            this.colDIEM_TK.VisibleIndex = 5;
             this.colDIEM_TK.Width = 94;
             // 
             // frmNhapDiem
@@ -494,7 +480,6 @@
         private QLDSV_TCDataSet1TableAdapters.SP_LayDSSV_LTCTableAdapter sP_LayDSSV_LTCTableAdapter;
         private DevExpress.XtraGrid.GridControl sP_LayDSSV_LTCGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMALTC;
         private DevExpress.XtraGrid.Columns.GridColumn colMASV;
         private DevExpress.XtraGrid.Columns.GridColumn colHOTEN;
         private DevExpress.XtraGrid.Columns.GridColumn colDIEM_CC;

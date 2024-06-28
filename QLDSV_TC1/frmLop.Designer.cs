@@ -33,8 +33,8 @@
             System.Windows.Forms.Label tENLOPLabel;
             System.Windows.Forms.Label kHOAHOCLabel;
             System.Windows.Forms.Label mAKHOALabel1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
             System.Windows.Forms.Label mAKHOALabel2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -66,12 +66,12 @@
             this.colKHOAHOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelNhapLieu = new System.Windows.Forms.Panel();
+            this.mAKHOAComboBox = new System.Windows.Forms.ComboBox();
             this.txtKHOAHOC = new System.Windows.Forms.TextBox();
             this.txtTENLOP = new System.Windows.Forms.TextBox();
             this.txtMALOP = new System.Windows.Forms.TextBox();
             this.bdsSV = new System.Windows.Forms.BindingSource(this.components);
             this.lOPTINCHITableAdapter = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.LOPTINCHITableAdapter();
-            this.mAKHOAComboBox = new System.Windows.Forms.ComboBox();
             mALOPLabel = new System.Windows.Forms.Label();
             tENLOPLabel = new System.Windows.Forms.Label();
             kHOAHOCLabel = new System.Windows.Forms.Label();
@@ -91,38 +91,52 @@
             // mALOPLabel
             // 
             mALOPLabel.AutoSize = true;
-            mALOPLabel.Location = new System.Drawing.Point(474, 37);
+            mALOPLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mALOPLabel.Location = new System.Drawing.Point(457, 37);
             mALOPLabel.Name = "mALOPLabel";
-            mALOPLabel.Size = new System.Drawing.Size(52, 16);
+            mALOPLabel.Size = new System.Drawing.Size(65, 21);
             mALOPLabel.TabIndex = 0;
-            mALOPLabel.Text = "MALOP:";
+            mALOPLabel.Text = "Mã lớp:";
             // 
             // tENLOPLabel
             // 
             tENLOPLabel.AutoSize = true;
-            tENLOPLabel.Location = new System.Drawing.Point(469, 75);
+            tENLOPLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tENLOPLabel.Location = new System.Drawing.Point(452, 72);
             tENLOPLabel.Name = "tENLOPLabel";
-            tENLOPLabel.Size = new System.Drawing.Size(57, 16);
+            tENLOPLabel.Size = new System.Drawing.Size(71, 21);
             tENLOPLabel.TabIndex = 2;
-            tENLOPLabel.Text = "TENLOP:";
+            tENLOPLabel.Text = "Tên lớp:";
             // 
             // kHOAHOCLabel
             // 
             kHOAHOCLabel.AutoSize = true;
-            kHOAHOCLabel.Location = new System.Drawing.Point(457, 112);
+            kHOAHOCLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            kHOAHOCLabel.Location = new System.Drawing.Point(439, 112);
             kHOAHOCLabel.Name = "kHOAHOCLabel";
-            kHOAHOCLabel.Size = new System.Drawing.Size(69, 16);
+            kHOAHOCLabel.Size = new System.Drawing.Size(89, 21);
             kHOAHOCLabel.TabIndex = 4;
-            kHOAHOCLabel.Text = "KHOAHOC:";
+            kHOAHOCLabel.Text = "Niên khóa:";
             // 
             // mAKHOALabel1
             // 
             mAKHOALabel1.AutoSize = true;
+            mAKHOALabel1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             mAKHOALabel1.Location = new System.Drawing.Point(463, 47);
             mAKHOALabel1.Name = "mAKHOALabel1";
-            mAKHOALabel1.Size = new System.Drawing.Size(62, 16);
+            mAKHOALabel1.Size = new System.Drawing.Size(58, 21);
             mAKHOALabel1.TabIndex = 0;
-            mAKHOALabel1.Text = "MAKHOA:";
+            mAKHOALabel1.Text = "Khoa :";
+            // 
+            // mAKHOALabel2
+            // 
+            mAKHOALabel2.AutoSize = true;
+            mAKHOALabel2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mAKHOALabel2.Location = new System.Drawing.Point(445, 160);
+            mAKHOALabel2.Name = "mAKHOALabel2";
+            mAKHOALabel2.Size = new System.Drawing.Size(78, 21);
+            mAKHOALabel2.TabIndex = 7;
+            mAKHOALabel2.Text = "Mã khoa:";
             // 
             // barDockControlRight
             // 
@@ -166,7 +180,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPhuchoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSave, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnHuy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnExit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
@@ -286,10 +299,11 @@
             // cmbMAKHOA
             // 
             this.cmbMAKHOA.Enabled = false;
+            this.cmbMAKHOA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMAKHOA.FormattingEnabled = true;
             this.cmbMAKHOA.Location = new System.Drawing.Point(531, 44);
             this.cmbMAKHOA.Name = "cmbMAKHOA";
-            this.cmbMAKHOA.Size = new System.Drawing.Size(195, 24);
+            this.cmbMAKHOA.Size = new System.Drawing.Size(195, 29);
             this.cmbMAKHOA.TabIndex = 1;
             this.cmbMAKHOA.SelectedIndexChanged += new System.EventHandler(this.cmbKHOA_SelectedIndexChanged);
             // 
@@ -357,6 +371,7 @@
             // 
             // colMALOP
             // 
+            this.colMALOP.Caption = "Mã lớp";
             this.colMALOP.FieldName = "MALOP";
             this.colMALOP.MinWidth = 25;
             this.colMALOP.Name = "colMALOP";
@@ -367,6 +382,7 @@
             // 
             // colTENLOP
             // 
+            this.colTENLOP.Caption = "Tên lớp";
             this.colTENLOP.FieldName = "TENLOP";
             this.colTENLOP.MinWidth = 25;
             this.colTENLOP.Name = "colTENLOP";
@@ -377,6 +393,7 @@
             // 
             // colKHOAHOC
             // 
+            this.colKHOAHOC.Caption = "Niên khóa";
             this.colKHOAHOC.FieldName = "KHOAHOC";
             this.colKHOAHOC.MinWidth = 25;
             this.colKHOAHOC.Name = "colKHOAHOC";
@@ -387,6 +404,7 @@
             // 
             // colMAKHOA
             // 
+            this.colMAKHOA.Caption = "Mã khoa";
             this.colMAKHOA.FieldName = "MAKHOA";
             this.colMAKHOA.MinWidth = 25;
             this.colMAKHOA.Name = "colMAKHOA";
@@ -406,33 +424,49 @@
             this.panelNhapLieu.Controls.Add(mALOPLabel);
             this.panelNhapLieu.Controls.Add(this.txtMALOP);
             this.panelNhapLieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNhapLieu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelNhapLieu.Location = new System.Drawing.Point(0, 350);
             this.panelNhapLieu.Name = "panelNhapLieu";
             this.panelNhapLieu.Size = new System.Drawing.Size(1282, 380);
             this.panelNhapLieu.TabIndex = 7;
+            this.panelNhapLieu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNhapLieu_Paint);
+            // 
+            // mAKHOAComboBox
+            // 
+            this.mAKHOAComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKHOA, "MAKHOA", true));
+            this.mAKHOAComboBox.Enabled = false;
+            this.mAKHOAComboBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mAKHOAComboBox.FormattingEnabled = true;
+            this.mAKHOAComboBox.Location = new System.Drawing.Point(532, 160);
+            this.mAKHOAComboBox.Name = "mAKHOAComboBox";
+            this.mAKHOAComboBox.Size = new System.Drawing.Size(235, 29);
+            this.mAKHOAComboBox.TabIndex = 8;
             // 
             // txtKHOAHOC
             // 
             this.txtKHOAHOC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLop, "KHOAHOC", true));
+            this.txtKHOAHOC.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKHOAHOC.Location = new System.Drawing.Point(532, 109);
             this.txtKHOAHOC.Name = "txtKHOAHOC";
-            this.txtKHOAHOC.Size = new System.Drawing.Size(235, 23);
+            this.txtKHOAHOC.Size = new System.Drawing.Size(235, 28);
             this.txtKHOAHOC.TabIndex = 5;
             // 
             // txtTENLOP
             // 
             this.txtTENLOP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLop, "TENLOP", true));
+            this.txtTENLOP.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTENLOP.Location = new System.Drawing.Point(532, 72);
             this.txtTENLOP.Name = "txtTENLOP";
-            this.txtTENLOP.Size = new System.Drawing.Size(235, 23);
+            this.txtTENLOP.Size = new System.Drawing.Size(235, 28);
             this.txtTENLOP.TabIndex = 3;
             // 
             // txtMALOP
             // 
             this.txtMALOP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLop, "MALOP", true));
+            this.txtMALOP.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMALOP.Location = new System.Drawing.Point(532, 34);
             this.txtMALOP.Name = "txtMALOP";
-            this.txtMALOP.Size = new System.Drawing.Size(235, 23);
+            this.txtMALOP.Size = new System.Drawing.Size(235, 28);
             this.txtMALOP.TabIndex = 1;
             // 
             // bdsSV
@@ -443,25 +477,6 @@
             // lOPTINCHITableAdapter
             // 
             this.lOPTINCHITableAdapter.ClearBeforeFill = true;
-            // 
-            // mAKHOALabel2
-            // 
-            mAKHOALabel2.AutoSize = true;
-            mAKHOALabel2.Location = new System.Drawing.Point(464, 160);
-            mAKHOALabel2.Name = "mAKHOALabel2";
-            mAKHOALabel2.Size = new System.Drawing.Size(62, 16);
-            mAKHOALabel2.TabIndex = 7;
-            mAKHOALabel2.Text = "MAKHOA:";
-            // 
-            // mAKHOAComboBox
-            // 
-            this.mAKHOAComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKHOA, "MAKHOA", true));
-            this.mAKHOAComboBox.Enabled = false;
-            this.mAKHOAComboBox.FormattingEnabled = true;
-            this.mAKHOAComboBox.Location = new System.Drawing.Point(532, 160);
-            this.mAKHOAComboBox.Name = "mAKHOAComboBox";
-            this.mAKHOAComboBox.Size = new System.Drawing.Size(235, 24);
-            this.mAKHOAComboBox.TabIndex = 8;
             // 
             // frmLop
             // 
@@ -477,7 +492,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmLop";
-            this.Text = "frmLop";
+            this.Text = "Lớp";
             this.Load += new System.EventHandler(this.frmLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);

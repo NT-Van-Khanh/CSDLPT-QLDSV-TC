@@ -46,10 +46,10 @@ namespace QLDSV_TC1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            rpDongHP rpt;
-            /*            = new rpDSLTC(cbNIENKHOA.Text, int.Parse(cbHOCKY.Text));
-                        ReportPrintTool print = new ReportPrintTool(rpt);*/
-            // rpt.lblTenNguoiTao.Text = Program.mHoten;
+            rpDongHP rpt = new rpDongHP(cmbMALOP.Text,cmbNIENKHOA.Text, cmbHOCKY.Text);
+            ReportPrintTool print = new ReportPrintTool(rpt);
+            print.ShowPreviewDialog();
+            // 
         }
     }
 }

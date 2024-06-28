@@ -1,44 +1,7 @@
 ﻿USE [QLDSV_TC]
 GO
-ALTER PROCEDURE [dbo].[sp_LayDSLopTinChiDeDangKy]
-	-- khai bao cac bien tam 
-	@NIENKHOA nchar(9), @HOCKY int
-AS
-BEGIN
-
-	SELECT ltc.MALTC, mh.MAMH, mh.TENMH, ltc.NHOM, (gv.HO + ' ' + gv.TEN) as 'HO TEN', ltc.SOSVTOITHIEU, COUNT(dk.MASV) as SOSVDK
-	FROM  LOPTINCHI as ltc
-
-	LEFT JOIN GIANGVIEN as gv ON gv.MAGV = ltc.MAGV
-	LEFT JOIN MONHOC as mh ON mh.MAMH = ltc.MAMH
-	LEFT JOIN (SELECT MASV, MALTC FROM DANGKY WHERE HUYDANGKY = 0) as dk ON dk.MALTC = ltc.MALTC
-
-	WHERE ltc.NIENKHOA = @NIENKHOA AND ltc.HOCKY = @HOCKY AND ltc.HUYLOP = 0
-	GROUP BY ltc.MALTC, ltc.NHOM, mh.MAMH, mh.TENMH, gv.HO, gv.TEN, ltc.SOSVTOITHIEU
-	ORDER BY mh.TENMH, ltc.NHOM  
-END
-GO
-exec sp_LayDSLopTinChiDeDangKy '2021-2022',1
-GO
-CREATE PROCEDURE [dbo].[sp_LayDSLopTinChiDaDangKy]
-	-- khai bao cac bien tam 
-	@MASV nchar(10), @NIENKHOA nchar(9), @HOCKY int
-AS
-BEGIN
-
-	SELECT ROW_NUMBER() over(ORDER BY MH.TENMH, LTC.NHOM) STT,LTC.MALTC, MH.MAMH, MH.TENMH, LTC.NHOM
-	FROM  LOPTINCHI as LTC
-
-	INNER JOIN MONHOC as MH ON MH.MAMH = LTC.MAMH
-	INNER JOIN (SELECT MASV, MALTC FROM DANGKY WHERE MASV = @MASV AND HUYDANGKY = 0) as DK ON DK.MALTC = LTC.MALTC
-
-	WHERE LTC.NIENKHOA = @NIENKHOA AND LTC.HOCKY = @HOCKY AND LTC.HUYLOP = 0 
-	GROUP BY LTC.NHOM, MH.MAMH, MH.TENMH, LTC.MALTC
-	ORDER BY MH.TENMH, LTC.NHOM  
-END
-GO
-
-ALTER   PROCEDURE [dbo].[sp_InBangDiemTongKet]
+-----------------------------------------------------
+ALTER  PROCEDURE [dbo].[sp_InBangDiemTongKet]
 	-- khai bao cac bien tam 
 	@MALOP nchar(10)
 AS
@@ -67,10 +30,9 @@ ORDER BY sv.TEN, sv.HO ASC
 END
 GO
 EXEC sp_InBangDiemTongKet 'D15CQIS01'
-SET QUOTED_IDENTIFIER ON
 GO
-
-CREATE PROCEDURE [dbo].[sp_PhieuDiem]
+------------------------------------------------------------------------------------------------------------
+ALTER PROCEDURE [dbo].[sp_PhieuDiem]
 	-- khai bao cac bien 
 	@MASV char(12)
 AS
@@ -88,8 +50,127 @@ BEGIN
 END
 
 GO
+---------------------------------------------------------------------------------------------------------------
 
-CREATE PROCEDURE sp_DangKyLopTinChi
+
+GRANT EXECUTE ON OBJECT::dbo.sp_LayDSLopTinChiDeDangKy TO SV;
+GRANT EXECUTE ON OBJECT::dbo.sp_LayDSLopTinChiDaDangKy TO SV;
+GRANT EXECUTE ON OBJECT::dbo.sp_InBangDiemTongKet TO SV;
+GRANT EXECUTE ON OBJECT::dbo.sp_PhieuDiem TO SV;
+GRANT EXECUTE ON OBJECT::dbo.sp_DangKyLopTinChi TO SV;
+GO
+
+/*
+ALTER PROCEDURE [dbo].[sp_LayDSLopTinChiDeDangKy]
+	-- khai bao cac bien tam 
+@Nienkhoa nchar(9),
+@Hocky int,
+@MaSV nchar(10)
+as
+BEGIN
+SELECT	LTC.MALTC, 
+		LTC.MAMH,MH.TENMH, 
+		GV.HO + ' '+GV.TEN AS HOTENGV, 
+		LTC.NHOM, LTC.SOSVTOITHIEU, 
+		ISNULL(DK.SOLUONGDK,0) AS SOLUONGDADK
+FROM (SELECT  LOPTINCHI.MALTC,MAMH,NHOM,MAGV,SOSVTOITHIEU
+	FROM LOPTINCHI 
+	LEFT JOIN (SELECT MALTC FROM DANGKY WHERE MASV=@MaSV AND (HUYDANGKY =0 or HUYDANGKY is null) GROUP BY MALTC) AS DK
+	ON LOPTINCHI.MALTC=DK.MALTC
+	WHERE DK.MALTC IS NULL  AND NIENKHOA=@Nienkhoa AND HOCKY=@Hocky AND (HUYLOP =0 OR HUYLOP IS NULL)) AS LTC	
+LEFT JOIN (SELECT MALTC, COUNT(*) AS SOLUONGDK FROM DANGKY WHERE (HUYDANGKY =0 or HUYDANGKY is null) GROUP BY MALTC )AS DK
+ON DK.MALTC=LTC.MALTC
+JOIN (SELECT MAMH,TENMH FROM MONHOC) MH 
+ON MH.MAMH =LTC.MAMH
+JOIN (SELECT MAGV,HO,TEN FROM GIANGVIEN) GV 
+ON GV.MAGV=LTC.MAGV
+END
+go
+*/
+--TEST--
+EXEC dbo.sp_LayDSLopTinChiDeDangKy '2021-2022',2,'N15DCCN001'
+EXEC sp_LayDSLopTinChiDeDangKy '2021-2022',2,'N15DCCN003'
+go
+-----------SP UDPATE--------------------------------------------------------------------------------------------------------
+ALTER proc [dbo].[sp_LayDSLopTinChiDeDangKy]
+@Nienkhoa nchar(9),
+@Hocky int,
+@MaSV nchar(10)
+as
+BEGIN
+	
+select  MALTC,MAMH,TENMH=(select TENMH from MONHOC a where a.MAMH=ltc.MAMH),
+		NHOM=ltc.NHOM, GIANGVIEN=(SELECT gv.HO+' '+gv.TEN FROM GIANGVIEN gv WHERE gv.MAGV=ltc.MAGV),
+		SOSVTOITHIEU,
+         DADANGKY=(select COUNT(*) from DANGKY dk where dk.MALTC = ltc.MALTC and (dk.HUYDANGKY =0 or dk.HUYDANGKY is null))
+  from LOPTINCHI ltc
+ WHERE ltc.NIENKHOA = @Nienkhoa and ltc.HOCKY = @Hocky and (ltc.HUYLOP = 0 OR ltc.HUYLOP is null) and 
+ @MaSV not in (select MASV from DANGKY where MALTC =ltc.MALTC and (HUYDANGKY =0 or HUYDANGKY is null))
+END
+GO
+--TEST--
+EXEC dbo.sp_LayDSLopTinChiDeDangKy '2021-2022',1,'N15DCCN008'
+EXEC sp_LayDSLopTinChiDeDangKy '2021-2022',2,'N15DCCN003'
+go
+/*
+ALTER PROCEDURE [dbo].[sp_LayDSLopTinChiDaDangKy]
+	-- khai bao cac bien tam 
+	@MASV nchar(10), @NIENKHOA nchar(9), @HOCKY int
+AS
+BEGIN
+
+	SELECT LTC.MALTC, MH.MAMH, MH.TENMH, LTC.NHOM
+	FROM  LOPTINCHI as LTC
+
+	INNER JOIN MONHOC as MH ON MH.MAMH = LTC.MAMH
+	INNER JOIN (SELECT MASV, MALTC FROM DANGKY WHERE MASV = @MASV AND HUYDANGKY = 0) as DK ON DK.MALTC = LTC.MALTC
+
+	WHERE LTC.NIENKHOA = @NIENKHOA AND LTC.HOCKY = @HOCKY AND LTC.HUYLOP = 0 
+	GROUP BY LTC.NHOM, MH.MAMH, MH.TENMH, LTC.MALTC
+	ORDER BY MH.TENMH, LTC.NHOM  
+END
+GO
+*/
+--------------------------SP UPDATE-----------------------------------------------
+ALTER proc [dbo].[sp_LayDSLopTinChiDaDangKy]
+@Nienkhoa nchar(9),
+@Hocky int,
+@MaSV nchar(10)
+as
+BEGIN
+	
+select  MALTC,MAMH,TENMH=(select TENMH from MONHOC a where a.MAMH=ltc.MAMH),
+		NHOM=ltc.NHOM, GIANGVIEN=(SELECT gv.HO+' '+gv.TEN FROM GIANGVIEN gv WHERE gv.MAGV=ltc.MAGV),
+         DADANGKY=(select COUNT(*) from DANGKY dk where dk.MALTC = ltc.MALTC and (dk.HUYDANGKY =0 or dk.HUYDANGKY is null))
+  from LOPTINCHI ltc
+ WHERE ltc.NIENKHOA = @Nienkhoa and ltc.HOCKY = @Hocky and ltc.HUYLOP = 0 and 
+ @MaSV in (select MASV from DANGKY where MALTC =ltc.MALTC and (HUYDANGKY =0 or HUYDANGKY is null))
+END
+GO
+/*
+
+ALTER proc sp_DangKyLopTinChi
+@MALTC int,
+@MASV nchar(10)
+AS
+BEGIN 
+  IF EXISTS ( SELECT * FROM DANGKY WHERE MALTC=@MALTC AND MASV=@MASV AND HUYDANGKY=1)
+    BEGIN 
+		UPDATE DANGKY 
+		SET HUYDANGKY=0
+		WHERE MALTC=@MALTC AND MASV=@MASV
+	END
+  ELSE
+	BEGIN
+		INSERT INTO DANGKY(MALTC,MASV) VALUES (@MALTC,@MASV)
+	END
+
+END
+GO
+*/
+--------------------------SP update -----------------------------------------------
+
+ALTER PROCEDURE sp_DangKyLopTinChi
 	@MALTC int, @MASV nchar(10), @MAMH nchar(10), @HOCKY int, @NIENKHOA nchar(9)
 AS
 BEGIN
@@ -117,10 +198,21 @@ BEGIN
 	  VALUES (@MALTC, @MASV , 0, 0, 0, 0)
 END
 GO
-
-GRANT EXECUTE ON OBJECT::dbo.sp_LayDSLopTinChiDeDangKy TO SV;
-GRANT EXECUTE ON OBJECT::dbo.sp_LayDSLopTinChiDaDangKy TO SV;
-GRANT EXECUTE ON OBJECT::dbo.sp_InBangDiemTongKet TO SV;
-GRANT EXECUTE ON OBJECT::dbo.sp_PhieuDiem TO SV;
-GRANT EXECUTE ON OBJECT::dbo.sp_DangKyLopTinChi TO SV;
+--------------------------TEST------------------------------------------------
+SELECT	LTC.MALTC, 
+		LTC.MAMH,MH.TENMH, 
+		GV.HO + ' '+GV.TEN AS HOTENGV, 
+		LTC.NHOM, LTC.SOSVTOITHIEU, 
+		ISNULL(DK.SOLUONGDK,0) AS SOLUONGDADK
+FROM (SELECT  LOPTINCHI.MALTC,MAMH,NHOM,MAGV,SOSVTOITHIEU
+	FROM LOPTINCHI 
+	LEFT JOIN (SELECT MALTC FROM DANGKY WHERE MASV='N15DCCN003' AND (HUYDANGKY =0 or HUYDANGKY is null) GROUP BY MALTC) AS DK
+	ON LOPTINCHI.MALTC=DK.MALTC
+	WHERE DK.MALTC IS NULL  AND NIENKHOA='2021-2022' AND HOCKY=2 AND (HUYLOP =0 OR HUYLOP IS NULL)) AS LTC	
+LEFT JOIN (SELECT MALTC, COUNT(*) AS SOLUONGDK FROM DANGKY WHERE (HUYDANGKY =0 or HUYDANGKY is null) GROUP BY MALTC )AS DK
+ON DK.MALTC=LTC.MALTC
+JOIN (SELECT MAMH,TENMH FROM MONHOC) MH 
+ON MH.MAMH =LTC.MAMH
+JOIN (SELECT MAGV,HO,TEN FROM GIANGVIEN) GV 
+ON GV.MAGV=LTC.MAGV
 GO

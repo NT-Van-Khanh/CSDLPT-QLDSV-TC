@@ -13,6 +13,7 @@ namespace QLDSV_TC1
 {
     public partial class frmMonHoc : DevExpress.XtraEditors.XtraForm
     {
+        private int vitri = 0;  
         private String flagmode = "";
         private int positionMH = -1;
         private String tenMH = "";  // Giữ tên Môn học lúc sửa
@@ -54,8 +55,6 @@ namespace QLDSV_TC1
             btnSave.Enabled = btnPhuchoi.Enabled = true;
             gcMonHoc.Enabled = false;
             txtMAMH.Enabled = true;
-            updownLT.Value = 0;
-            updownTH.Value = 0;
             flagmode = "ADDMH";
         }
 
@@ -247,6 +246,27 @@ namespace QLDSV_TC1
         {
             Close();
 
+        }
+
+        private void updownLT_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updownLT_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPhuchoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bdsMonHoc.CancelEdit();
+            if (btnThem.Enabled == false) bdsMonHoc.Position = vitri ;
+            gcMonHoc.Enabled = true;
+            panelNhapLieu.Enabled = false;
+            btnThem.Enabled = btnSua.Enabled = btnReload.Enabled = btnXoa.Enabled = true;
+            btnSave.Enabled = btnPhuchoi.Enabled = false;
+       
         }
     }
 }

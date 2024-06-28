@@ -56,9 +56,9 @@ namespace QLDSV_TC1
         }
         public void setStatusThongTin(String maTK, String hoTen, String nhom)
         {
-            statusMaTK.Text= "Mã: "+ maTK;
-            statusHoTen.Text = "Họ và tên: "+hoTen;
-            statusNhom.Text = "Nhóm: "+ nhom;
+            statusMaTK.Text=  maTK;
+            statusHoTen.Text = hoTen;
+            statusNhom.Text = nhom;
         }
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -226,6 +226,66 @@ namespace QLDSV_TC1
             else
             {
                 frmLop f = new frmLop();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnBCHocPhiQL_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.checkExists(typeof(rpfrmDongHP));
+            if (frm != null) frm.Activate();
+            else
+            {
+                rpfrmDongHP f = new rpfrmDongHP();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDSLTC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.checkExists(typeof(rpfrmDSLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                rpfrmDSLTC f = new rpfrmDSLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDangKy_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.checkExists(typeof(frmDangKy));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDangKy f = new frmDangKy();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDSSVDKLTC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.checkExists(typeof(rpfromDSSV_LTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                rpfromDSSV_LTC f = new rpfromDSSV_LTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnBangDiemLTC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.checkExists(typeof(rpfrmBangDiemLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                rpfrmBangDiemLTC f = new rpfrmBangDiemLTC();
                 f.MdiParent = this;
                 f.Show();
             }

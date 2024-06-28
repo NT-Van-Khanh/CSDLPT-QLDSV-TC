@@ -55,9 +55,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTimSV = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMALOPSV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtHOTENSV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMASV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.colHPCONLAI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlMenuHPCT = new System.Windows.Forms.Panel();
             this.pnlMenuFormHPCT = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.txtSoTienDong = new DevExpress.XtraEditors.TextEdit();
             this.bdsCTDongHocPhiSV = new System.Windows.Forms.BindingSource(this.components);
             this.dateNgayDong = new DevExpress.XtraEditors.DateEdit();
@@ -95,6 +95,8 @@
             this.txtHocPhi = new DevExpress.XtraEditors.TextEdit();
             this.spinHocKy = new DevExpress.XtraEditors.SpinEdit();
             this.txtNienKhoa = new DevExpress.XtraEditors.TextEdit();
+            this.bdsSinhVien = new System.Windows.Forms.BindingSource(this.components);
+            this.sINHVIENTableAdapter = new QLDSV_TC1.QLDSV_TCDataSet2TableAdapters.SINHVIENTableAdapter();
             nGAYDONGLabel = new System.Windows.Forms.Label();
             sOTIENDONGLabel1 = new System.Windows.Forms.Label();
             nIENKHOALabel = new System.Windows.Forms.Label();
@@ -126,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtHocPhi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinHocKy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
             // nGAYDONGLabel
@@ -318,7 +321,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1468, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1421, 30);
             // 
             // barDockControlBottom
             // 
@@ -327,7 +330,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 727);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1468, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1421, 0);
             // 
             // barDockControlLeft
             // 
@@ -342,7 +345,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1468, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1421, 30);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 697);
@@ -360,7 +363,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1468, 54);
+            this.panel1.Size = new System.Drawing.Size(1421, 54);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -378,9 +381,9 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel2.Controls.Add(this.btnTimSV);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtMALOPSV);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtHOTENSV);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtMASV);
             this.panel2.Controls.Add(this.label1);
@@ -388,7 +391,7 @@
             this.panel2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 84);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1468, 78);
+            this.panel2.Size = new System.Drawing.Size(1421, 78);
             this.panel2.TabIndex = 5;
             // 
             // btnTimSV
@@ -401,15 +404,16 @@
             this.btnTimSV.UseVisualStyleBackColor = true;
             this.btnTimSV.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox3
+            // txtMALOPSV
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(933, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(196, 28);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtMALOPSV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMALOPSV.Enabled = false;
+            this.txtMALOPSV.Location = new System.Drawing.Point(933, 25);
+            this.txtMALOPSV.Name = "txtMALOPSV";
+            this.txtMALOPSV.ReadOnly = true;
+            this.txtMALOPSV.Size = new System.Drawing.Size(196, 28);
+            this.txtMALOPSV.TabIndex = 5;
+            this.txtMALOPSV.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -421,14 +425,15 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Lớp:";
             // 
-            // textBox2
+            // txtHOTENSV
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(584, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(275, 28);
-            this.textBox2.TabIndex = 3;
+            this.txtHOTENSV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHOTENSV.Enabled = false;
+            this.txtHOTENSV.Location = new System.Drawing.Point(584, 24);
+            this.txtHOTENSV.Name = "txtHOTENSV";
+            this.txtHOTENSV.ReadOnly = true;
+            this.txtHOTENSV.Size = new System.Drawing.Size(275, 28);
+            this.txtHOTENSV.TabIndex = 3;
             // 
             // label3
             // 
@@ -494,7 +499,7 @@
             this.gcHocPhi_SV.MainView = this.gridView1;
             this.gcHocPhi_SV.MenuManager = this.barManager1;
             this.gcHocPhi_SV.Name = "gcHocPhi_SV";
-            this.gcHocPhi_SV.Size = new System.Drawing.Size(989, 285);
+            this.gcHocPhi_SV.Size = new System.Drawing.Size(942, 285);
             this.gcHocPhi_SV.TabIndex = 11;
             this.gcHocPhi_SV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -513,7 +518,8 @@
             // 
             // colNIENKHOA
             // 
-            this.colNIENKHOA.FieldName = "NIENKHOA";
+            this.colNIENKHOA.Caption = "NIÊN KHÓA";
+            this.colNIENKHOA.FieldName = "NIÊN KHÓA";
             this.colNIENKHOA.MinWidth = 25;
             this.colNIENKHOA.Name = "colNIENKHOA";
             this.colNIENKHOA.OptionsColumn.ReadOnly = true;
@@ -523,6 +529,7 @@
             // 
             // colHOCKY
             // 
+            this.colHOCKY.Caption = "HỌC KỲ";
             this.colHOCKY.FieldName = "HOCKY";
             this.colHOCKY.MinWidth = 25;
             this.colHOCKY.Name = "colHOCKY";
@@ -533,6 +540,7 @@
             // 
             // colHOCPHI
             // 
+            this.colHOCPHI.Caption = "HỌC PHÍ";
             this.colHOCPHI.FieldName = "HOCPHI";
             this.colHOCPHI.MinWidth = 25;
             this.colHOCPHI.Name = "colHOCPHI";
@@ -543,6 +551,7 @@
             // 
             // colHPDADONG
             // 
+            this.colHPDADONG.Caption = "ĐÃ ĐÓNG";
             this.colHPDADONG.FieldName = "HPDADONG";
             this.colHPDADONG.MinWidth = 25;
             this.colHPDADONG.Name = "colHPDADONG";
@@ -574,7 +583,7 @@
             // pnlMenuFormHPCT
             // 
             this.pnlMenuFormHPCT.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlMenuFormHPCT.Controls.Add(this.button2);
+            this.pnlMenuFormHPCT.Controls.Add(this.btnHuy);
             this.pnlMenuFormHPCT.Controls.Add(sOTIENDONGLabel1);
             this.pnlMenuFormHPCT.Controls.Add(this.txtSoTienDong);
             this.pnlMenuFormHPCT.Controls.Add(this.dateNgayDong);
@@ -587,16 +596,16 @@
             this.pnlMenuFormHPCT.Size = new System.Drawing.Size(479, 224);
             this.pnlMenuFormHPCT.TabIndex = 7;
             // 
-            // button2
+            // btnHuy
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(225, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 35);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(225, 114);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(107, 35);
+            this.btnHuy.TabIndex = 7;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtSoTienDong
             // 
@@ -606,6 +615,9 @@
             this.txtSoTienDong.Name = "txtSoTienDong";
             this.txtSoTienDong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTienDong.Properties.Appearance.Options.UseFont = true;
+            this.txtSoTienDong.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtSoTienDong.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtSoTienDong.Properties.MaskSettings.Set("mask", "c");
             this.txtSoTienDong.Size = new System.Drawing.Size(188, 28);
             this.txtSoTienDong.TabIndex = 6;
             // 
@@ -678,7 +690,7 @@
             this.gcHocPhiCT_SV.MainView = this.gridView2;
             this.gcHocPhiCT_SV.MenuManager = this.barManager1;
             this.gcHocPhiCT_SV.Name = "gcHocPhiCT_SV";
-            this.gcHocPhiCT_SV.Size = new System.Drawing.Size(989, 280);
+            this.gcHocPhiCT_SV.Size = new System.Drawing.Size(942, 280);
             this.gcHocPhiCT_SV.TabIndex = 13;
             this.gcHocPhiCT_SV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -693,6 +705,7 @@
             // 
             // colNGAYDONG
             // 
+            this.colNGAYDONG.Caption = "NGÀY ĐÓNG";
             this.colNGAYDONG.FieldName = "NGAYDONG";
             this.colNGAYDONG.MinWidth = 25;
             this.colNGAYDONG.Name = "colNGAYDONG";
@@ -703,6 +716,7 @@
             // 
             // colSOTIENDONG
             // 
+            this.colSOTIENDONG.Caption = "SỐ TIỀN ĐÓNG";
             this.colSOTIENDONG.FieldName = "SOTIENDONG";
             this.colSOTIENDONG.MinWidth = 25;
             this.colSOTIENDONG.Name = "colSOTIENDONG";
@@ -718,7 +732,7 @@
             this.pnlHPCT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHPCT.Location = new System.Drawing.Point(0, 447);
             this.pnlHPCT.Name = "pnlHPCT";
-            this.pnlHPCT.Size = new System.Drawing.Size(1468, 280);
+            this.pnlHPCT.Size = new System.Drawing.Size(1421, 280);
             this.pnlHPCT.TabIndex = 18;
             // 
             // pnlHP
@@ -728,7 +742,7 @@
             this.pnlHP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHP.Location = new System.Drawing.Point(0, 162);
             this.pnlHP.Name = "pnlHP";
-            this.pnlHP.Size = new System.Drawing.Size(1468, 285);
+            this.pnlHP.Size = new System.Drawing.Size(1421, 285);
             this.pnlHP.TabIndex = 19;
             // 
             // pnlThongTinHP
@@ -788,6 +802,7 @@
             this.lblTitleHPSV.Size = new System.Drawing.Size(214, 28);
             this.lblTitleHPSV.TabIndex = 6;
             this.lblTitleHPSV.Text = "Thông tin học phí";
+            this.lblTitleHPSV.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtHocPhi
             // 
@@ -797,6 +812,9 @@
             this.txtHocPhi.Name = "txtHocPhi";
             this.txtHocPhi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHocPhi.Properties.Appearance.Options.UseFont = true;
+            this.txtHocPhi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtHocPhi.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtHocPhi.Properties.MaskSettings.Set("mask", "c");
             this.txtHocPhi.Size = new System.Drawing.Size(197, 28);
             this.txtHocPhi.TabIndex = 5;
             // 
@@ -841,11 +859,21 @@
             this.txtNienKhoa.Size = new System.Drawing.Size(197, 28);
             this.txtNienKhoa.TabIndex = 1;
             // 
+            // bdsSinhVien
+            // 
+            this.bdsSinhVien.DataMember = "SINHVIEN";
+            this.bdsSinhVien.DataSource = this.dsDSV_TC;
+            this.bdsSinhVien.CurrentChanged += new System.EventHandler(this.bdsSinhVien_CurrentChanged);
+            // 
+            // sINHVIENTableAdapter
+            // 
+            this.sINHVIENTableAdapter.ClearBeforeFill = true;
+            // 
             // frmHocPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1468, 727);
+            this.ClientSize = new System.Drawing.Size(1421, 727);
             this.Controls.Add(this.pnlHPCT);
             this.Controls.Add(this.pnlHP);
             this.Controls.Add(this.panel2);
@@ -885,6 +913,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtHocPhi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinHocKy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsSinhVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -912,9 +941,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTimSV;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMALOPSV;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtHOTENSV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.BindingSource bdsHocPhiSV;
         private QLDSV_TCDataSet2 dsDSV_TC;
@@ -934,7 +963,7 @@
         private System.Windows.Forms.Button btnThemTTHPCT;
         private DevExpress.XtraEditors.DateEdit dateNgayDong;
         private System.Windows.Forms.Panel pnlMenuFormHPCT;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHuy;
         private DevExpress.XtraEditors.TextEdit txtSoTienDong;
         private System.Windows.Forms.Panel pnlHPCT;
         private System.Windows.Forms.Panel pnlHP;
@@ -950,5 +979,7 @@
         private DevExpress.XtraEditors.TextEdit txtDaDong;
         private System.Windows.Forms.Label lblTitleHPSV;
         private DevExpress.XtraEditors.TextEdit hPCONLAITextEdit;
+        private System.Windows.Forms.BindingSource bdsSinhVien;
+        private QLDSV_TCDataSet2TableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
     }
 }

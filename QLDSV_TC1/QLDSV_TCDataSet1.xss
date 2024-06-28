@@ -21,17 +21,17 @@
     <Shape ID="DesignTable:SP_LayMonHoc_HK" ZOrder="13" X="3498" Y="70" Height="135" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
     <Shape ID="DesignTable:SP_LayNienKhoa" ZOrder="12" X="3868" Y="70" Height="112" Width="285" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
     <Shape ID="DesignTable:SP_LayNhom_MH" ZOrder="11" X="4223" Y="70" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignSources:QueriesTableAdapter" ZOrder="17" X="1735" Y="70" Height="125" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="52" />
-    <Shape ID="DesignTable:sp_DangKyLopTinChi" ZOrder="10" X="4593" Y="69" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignTable:SP_GET_HOCKY" ZOrder="9" X="4963" Y="69" Height="112" Width="277" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignTable:SP_GET_NIENKHOA" ZOrder="8" X="5310" Y="69" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignTable:SP_GET_NHOM" ZOrder="7" X="5680" Y="69" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignTable:sp_InBangDiemTongKet" ZOrder="6" X="6050" Y="69" Height="158" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:sp_LayDSLopTinChiDaDangKy" ZOrder="5" X="6420" Y="69" Height="204" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:sp_LayDSLopTinChiDeDangKy" ZOrder="4" X="6790" Y="69" Height="273" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="214" />
-    <Shape ID="DesignTable:sp_PhieuDiem" ZOrder="3" X="7160" Y="69" Height="158" Width="267" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:SP_REPORT_DS_DANGKY_LOPTINCHI" ZOrder="2" X="7497" Y="69" Height="204" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:SP_REPORT_DS_LOPTINCHI" ZOrder="1" X="7867" Y="69" Height="204" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:sp_DangKyLopTinChi" ZOrder="2" X="4593" Y="69" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
+    <Shape ID="DesignTable:SP_GET_HOCKY" ZOrder="10" X="4963" Y="69" Height="112" Width="277" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
+    <Shape ID="DesignTable:SP_GET_NIENKHOA" ZOrder="9" X="5310" Y="69" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
+    <Shape ID="DesignTable:SP_GET_NHOM" ZOrder="8" X="5680" Y="69" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
+    <Shape ID="DesignTable:sp_InBangDiemTongKet" ZOrder="7" X="6050" Y="69" Height="158" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:sp_LayDSLopTinChiDaDangKy" ZOrder="6" X="6420" Y="69" Height="227" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
+    <Shape ID="DesignTable:sp_PhieuDiem" ZOrder="5" X="7160" Y="69" Height="158" Width="267" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:SP_REPORT_DS_DANGKY_LOPTINCHI" ZOrder="4" X="7497" Y="69" Height="204" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:SP_REPORT_DS_LOPTINCHI" ZOrder="3" X="7867" Y="69" Height="204" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:sp_LayDSLopTinChiDeDangKy" ZOrder="1" X="8237" Y="69" Height="250" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
+    <Shape ID="DesignSources:QueriesTableAdapter" ZOrder="17" X="1735" Y="70" Height="125" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_DANGKY_LOPTINCHI" ZOrder="25" LineWidth="11">
