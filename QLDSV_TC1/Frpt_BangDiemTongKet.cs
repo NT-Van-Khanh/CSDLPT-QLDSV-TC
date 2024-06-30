@@ -36,7 +36,7 @@ namespace QLDSV_TC1
             this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
             this.LOPTableAdapter.Fill(this.QLDSV_TCDataSet1.LOP);
 
-            cmbKhoa.DataSource = Program.bds_dspm;
+            cmbKhoa.DataSource = Program.dt_cmb;
             cmbKhoa.DisplayMember = "TENCN";
             cmbKhoa.ValueMember = "TENSERVER";
             cmbKhoa.SelectedIndex = Program.mChinhanh;
@@ -112,6 +112,20 @@ namespace QLDSV_TC1
                 print.ShowPreviewDialog();
             }
         }
- 
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaLop_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

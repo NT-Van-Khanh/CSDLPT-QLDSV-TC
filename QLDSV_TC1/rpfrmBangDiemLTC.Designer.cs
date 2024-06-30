@@ -255,7 +255,7 @@
             this.Controls.Add(mAKHOALabel);
             this.Controls.Add(this.cmbKHOA);
             this.Name = "rpfrmBangDiemLTC";
-            this.Text = "rpfrmBangDiemLTC";
+            this.Text = "Bảng điểm lớp tín chỉ";
             this.Load += new System.EventHandler(this.rpfrmBangDiemLTC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).EndInit();

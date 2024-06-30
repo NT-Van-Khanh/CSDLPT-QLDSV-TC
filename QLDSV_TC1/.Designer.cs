@@ -46,7 +46,7 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLLopTC = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhieuDiem = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCreateAccount = new DevExpress.XtraBars.BarButtonItem();
             this.btnHocPhiQL = new DevExpress.XtraBars.BarButtonItem();
             this.btnBDTK = new DevExpress.XtraBars.BarButtonItem();
             this.btnBCHocPhiQL = new DevExpress.XtraBars.BarButtonItem();
@@ -97,7 +97,7 @@
             this.barButtonItem2,
             this.btnQLLopTC,
             this.btnPhieuDiem,
-            this.barButtonItem4,
+            this.btnCreateAccount,
             this.btnHocPhiQL,
             this.btnBDTK,
             this.btnBCHocPhiQL,
@@ -112,7 +112,7 @@
             this.pageKeToan,
             this.pageSinhVien,
             this.pageTaiKhoan});
-            this.ribbon.Size = new System.Drawing.Size(1096, 217);
+            this.ribbon.Size = new System.Drawing.Size(1212, 217);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -230,13 +230,13 @@
             this.btnPhieuDiem.Name = "btnPhieuDiem";
             this.btnPhieuDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhieuDiem_ItemClick);
             // 
-            // barButtonItem4
+            // btnCreateAccount
             // 
-            this.barButtonItem4.Caption = "Tạo tài khoản";
-            this.barButtonItem4.Id = 20;
-            this.barButtonItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick_1);
+            this.btnCreateAccount.Caption = "Tạo tài khoản";
+            this.btnCreateAccount.Id = 20;
+            this.btnCreateAccount.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreateAccount.ImageOptions.SvgImage")));
+            this.btnCreateAccount.Name = "btnCreateAccount";
+            this.btnCreateAccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick_1);
             // 
             // btnHocPhiQL
             // 
@@ -355,7 +355,6 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.btnDangKy);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnDiemSV);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Môn học";
             // 
@@ -370,23 +369,22 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnCreateAccount);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Quản lý";
             // 
             // ribbonPageGroup6
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.btnThongTin);
             this.ribbonPageGroup6.ItemLinks.Add(this.btnDangXuat);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Tài khoản";
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 577);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 639);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1096, 30);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1212, 30);
             // 
             // statusStrip1
             // 
@@ -395,9 +393,9 @@
             this.statusMaTK,
             this.statusHoTen,
             this.statusNhom});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 551);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 613);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1096, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1212, 26);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -428,7 +426,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 607);
+            this.ClientSize = new System.Drawing.Size(1212, 669);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -484,7 +482,7 @@
         private DevExpress.XtraBars.BarButtonItem btnQLLopTC;
         private DevExpress.XtraBars.BarButtonItem btnPhieuDiem;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btnCreateAccount;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem btnHocPhiQL;
         private DevExpress.XtraBars.BarButtonItem btnBDTK;

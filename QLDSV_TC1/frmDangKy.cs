@@ -51,10 +51,13 @@ namespace QLDSV_TC1
                     cmbNienKhoa.SelectedValue.ToString(),
                     int.Parse(cmbHocKy.SelectedValue.ToString()));
             }
+
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            groupDaDK.Enabled = true;
+            groupDeDK.Enabled = true;
             /* string sqlquery = string.Format("exec sp_LayDSLopTinChiDeDangKy @NIENKHOA = N '{0}', @HOCKY = {1}", cmbNienKhoa.Text.Trim)*/
         }
         /*
@@ -83,6 +86,9 @@ namespace QLDSV_TC1
 
         private void frmDangKy_Load(object sender, EventArgs e)
         {
+            txtMASV.Text = Program.username;
+            txtHOTEN.Text = Program.mHoten;
+            txtMALOP.Text = Program.maLopSV;
             updateCmb = true;
             cmbNienKhoa.DataSource = Program.ExecSqlDataTable("EXEC SP_LayNienKhoa");
             cmbNienKhoa.DisplayMember = "NIENKHOA";
@@ -104,7 +110,10 @@ namespace QLDSV_TC1
         private void cmbNienKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (updateCmb == false)
+            {
                 loadCmbHocKy();
+            }
+              
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -147,7 +156,8 @@ namespace QLDSV_TC1
                 String MAMH = currentRowView["MAMH"].ToString();
                 int HOCKY = int.Parse(cmbHocKy.Text);
                 String NIENKHOA = cmbNienKhoa.Text;
-                String query = "EXEC sp_DangKyLopTinChi '"+ MALTC+"', '"+MASV+"', '"+MAMH+"', "+HOCKY+", '"+NIENKHOA+"'";
+                String query = "EXEC sp_DangKyLopTinChi "+ MALTC+", '"+MASV+"', '"+MAMH+"', "+HOCKY+", '"+NIENKHOA+"'";
+                Console.WriteLine(query);
                 try
                 {
                     Program.myReader = Program.ExecSqlDataReader(query);
@@ -172,6 +182,8 @@ namespace QLDSV_TC1
                     {
                         MessageBox.Show(ex.Message);
                     }
+                    if (Program.myReader == null) return;
+                    Program.myReader.Close();
                 }
                 catch (System.Exception ex)
                 {
@@ -181,7 +193,7 @@ namespace QLDSV_TC1
             }
         }
 
-        private void LoadData()
+/*        private void LoadData()
         {
             try
             {
@@ -204,34 +216,70 @@ namespace QLDSV_TC1
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }*/
         private void btnHuyDangKy_Click(object sender, EventArgs e)
         {
-          /*  DataRowView currentRowView = (DataRowView)bdsLayDSLopTinChiDaDangKy.Current;
-            if(currentRowView != null) {*/
-                if (XtraMessageBox.Show("Bạn có thực sự muốn hủy đăng ký lớp tín chỉ đã chọn?", "Xác nhận.", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                    gridView2.ShowLoadingPanel();
-                    gridView2.BeginSelection();
-                    int[] selectedRows = gridView2.GetSelectedRows();
-                    List<int> ltc_ID = new List<int>();
-                    for (int i = 0; i < selectedRows.Length; i++)
+          DataRowView currentRowView = (DataRowView)bdsLayDSLopTinChiDaDangKy.Current;
+            if(currentRowView != null) {
+                if (XtraMessageBox.Show("Bạn có thực sự muốn hủy đăng ký lớp tín chỉ đã chọn?", "Xác nhận.", MessageBoxButtons.OKCancel) == DialogResult.OK) { 
+                    String MALTC = currentRowView["MALTC"].ToString();
+                    String MASV = Program.username;
+                    String query = "EXEC SP_HUY_DKY_LTC '" + MALTC + "', '" + MASV + "'";
+                    try
                     {
-                        DataRow row = gridView2.GetDataRow(selectedRows[i]);
-                        ltc_ID.Add(Convert.ToInt32(row["MALTC"]));
+                        Program.myReader = Program.ExecSqlDataReader(query);
+                        try
+                        {
+                            this.sp_LayDSLopTinChiDeDangKyTableAdapter.Fill(this.dsDSV_TC.sp_LayDSLopTinChiDeDangKy,
+                              cmbNienKhoa.SelectedValue.ToString(),
+                              int.Parse(cmbHocKy.SelectedValue.ToString()), Program.username);
+                        }
+                        catch (System.Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        try
+                        {
+                            this.sp_LayDSLopTinChiDaDangKyTableAdapter.Fill(this.dsDSV_TC.sp_LayDSLopTinChiDaDangKy,
+                                Program.username,
+                                cmbNienKhoa.SelectedValue.ToString(),
+                                int.Parse(cmbHocKy.SelectedValue.ToString()));
+                        }
+                        catch (System.Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        if (Program.myReader == null) return;
+                        Program.myReader.Close();
                     }
-                    string query = string.Format("UPDATE DANGKY SET HUYDANGKY = {0} WHERE MASV = N'{1}' AND MALTC IN({2})", 1,
-                                                    Program.username, string.Join(", ", ltc_ID.ToArray()));
-                    var result = Program.ExecSqlNonQuery(query);
-                    gridView2.EndSelection();
-                    if (result == 0)
+                    catch (System.Exception ex)
                     {
-                        // làm mới lại data
-                        LoadData();
+                        MessageBox.Show("Lỗi hủy lớp tín chỉ, hãy thử lại!\n" + ex.Message, "", MessageBoxButtons.OK);
+                        return;
                     }
-                    gridView2.HideLoadingPanel();
                 }
-         /*   }*/
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn lớp tín chỉ để hủy đăng ký!\n", "", MessageBoxButtons.OK);
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbNienKhoa_MouseClick(object sender, MouseEventArgs e)
+        {
+            groupDaDK.Enabled = false;
+            groupDeDK.Enabled = false;  
+        }
+
+        private void cmbHocKy_MouseClick(object sender, MouseEventArgs e)
+        {
+            groupDaDK.Enabled = false;
+            groupDeDK.Enabled = false;
         }
     }
 }

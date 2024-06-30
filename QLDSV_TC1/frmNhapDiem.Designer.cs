@@ -110,6 +110,7 @@
             // 
             // cmbMAKHOA
             // 
+            this.cmbMAKHOA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMAKHOA.Enabled = false;
             this.cmbMAKHOA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMAKHOA.FormattingEnabled = true;
@@ -224,6 +225,7 @@
             // 
             // cmbMonHoc
             // 
+            this.cmbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonHoc.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMonHoc.FormattingEnabled = true;
             this.cmbMonHoc.Location = new System.Drawing.Point(587, 24);
@@ -244,6 +246,7 @@
             // 
             // cmbNhom
             // 
+            this.cmbNhom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNhom.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNhom.FormattingEnabled = true;
             this.cmbNhom.Location = new System.Drawing.Point(1301, 25);
@@ -264,6 +267,7 @@
             // 
             // cmbHocKy
             // 
+            this.cmbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHocKy.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHocKy.FormattingEnabled = true;
             this.cmbHocKy.Location = new System.Drawing.Point(388, 23);
@@ -285,6 +289,7 @@
             // 
             // cmbNienKhoa
             // 
+            this.cmbNienKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNienKhoa.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNienKhoa.FormattingEnabled = true;
             this.cmbNienKhoa.Location = new System.Drawing.Point(120, 23);
@@ -328,6 +333,7 @@
             this.gridView1});
             this.sP_LayDSSV_LTCGridControl.FocusedViewChanged += new DevExpress.XtraGrid.ViewFocusEventHandler(this.sP_LayDSSV_LTCGridControl_FocusedViewChanged);
             this.sP_LayDSSV_LTCGridControl.EditorKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sP_LayDSSV_LTCGridControl_EditorKeyPress);
+            this.sP_LayDSSV_LTCGridControl.Click += new System.EventHandler(this.sP_LayDSSV_LTCGridControl_Click);
             this.sP_LayDSSV_LTCGridControl.Validating += new System.ComponentModel.CancelEventHandler(this.sP_LayDSSV_LTCGridControl_Validating);
             // 
             // gridView1
@@ -346,6 +352,7 @@
             // 
             this.colMASV.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
             this.colMASV.AppearanceCell.Options.UseBackColor = true;
+            this.colMASV.Caption = "MÃ SINH VIÊN";
             this.colMASV.FieldName = "MASV";
             this.colMASV.MinWidth = 25;
             this.colMASV.Name = "colMASV";
@@ -358,6 +365,7 @@
             // 
             this.colHOTEN.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
             this.colHOTEN.AppearanceCell.Options.UseBackColor = true;
+            this.colHOTEN.Caption = "HỌ TÊN";
             this.colHOTEN.FieldName = "HOTEN";
             this.colHOTEN.MinWidth = 25;
             this.colHOTEN.Name = "colHOTEN";
@@ -368,6 +376,7 @@
             // 
             // colDIEM_CC
             // 
+            this.colDIEM_CC.Caption = "Điểm Chuyên cần";
             this.colDIEM_CC.ColumnEdit = this.repositoryItemTextEdit2;
             this.colDIEM_CC.FieldName = "DIEM_CC";
             this.colDIEM_CC.MinWidth = 25;
@@ -386,6 +395,7 @@
             // 
             // colDIEM_GK
             // 
+            this.colDIEM_GK.Caption = "Điểm Giữa kỳ";
             this.colDIEM_GK.ColumnEdit = this.repositoryItemTextEdit1;
             this.colDIEM_GK.FieldName = "DIEM_GK";
             this.colDIEM_GK.MinWidth = 25;
@@ -407,6 +417,7 @@
             // 
             // colDIEM_CK
             // 
+            this.colDIEM_CK.Caption = "Điểm cuối kỳ";
             this.colDIEM_CK.ColumnEdit = this.repositoryItemTextEdit1;
             this.colDIEM_CK.FieldName = "DIEM_CK";
             this.colDIEM_CK.MinWidth = 25;
@@ -419,6 +430,8 @@
             // 
             this.colDIEM_TK.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.colDIEM_TK.AppearanceCell.Options.UseBackColor = true;
+            this.colDIEM_TK.Caption = "Điểm Tổng kết";
+            this.colDIEM_TK.ColumnEdit = this.repositoryItemTextEdit1;
             this.colDIEM_TK.FieldName = "DIEM_TK";
             this.colDIEM_TK.MinWidth = 25;
             this.colDIEM_TK.Name = "colDIEM_TK";

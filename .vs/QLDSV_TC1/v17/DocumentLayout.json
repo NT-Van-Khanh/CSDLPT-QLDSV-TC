@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\qldsv_tc1\\frmdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmloptc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|d:\\hk6\\csdl_phan_tan\\1_bao_cao\\qldsv_tc1\\qldsv_tc1\\frmsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E430FB1F-182C-4C4A-B161-6510A13F510D}|QLDSV_TC1\\QLDSV_TC1.csproj|solutionrelative:qldsv_tc1\\frmsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmDangKy.cs",
-              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmDangKy.cs",
-              "RelativeDocumentMoniker": "QLDSV_TC1\\frmDangKy.cs",
-              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmDangKy.cs",
-              "RelativeToolTip": "QLDSV_TC1\\frmDangKy.cs",
-              "ViewState": "AQIAAKwAAAAAAAAAAAAAALoAAAANAAAA",
+              "DocumentIndex": 0,
+              "Title": "frmLopTC.cs",
+              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLopTC.cs",
+              "RelativeDocumentMoniker": "QLDSV_TC1\\frmLopTC.cs",
+              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLopTC.cs",
+              "RelativeToolTip": "QLDSV_TC1\\frmLopTC.cs",
+              "ViewState": "AQIAAP4AAAAAAAAAAADwvwMBAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T15:23:39.69Z",
+              "WhenOpened": "2024-06-30T06:52:38.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmDangKy.cs [Design]",
-              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmDangKy.cs",
-              "RelativeDocumentMoniker": "QLDSV_TC1\\frmDangKy.cs",
-              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmDangKy.cs [Design]",
-              "RelativeToolTip": "QLDSV_TC1\\frmDangKy.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "frmLopTC.cs [Design]",
+              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLopTC.cs",
+              "RelativeDocumentMoniker": "QLDSV_TC1\\frmLopTC.cs",
+              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmLopTC.cs [Design]",
+              "RelativeToolTip": "QLDSV_TC1\\frmLopTC.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T15:03:25.558Z",
+              "WhenOpened": "2024-06-30T06:52:32.802Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmSinhVien.cs [Design]",
+              "DocumentMoniker": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmSinhVien.cs",
+              "RelativeDocumentMoniker": "QLDSV_TC1\\frmSinhVien.cs",
+              "ToolTip": "D:\\HK6\\CSDL_Phan_tan\\1_Bao_Cao\\QLDSV_TC1\\QLDSV_TC1\\frmSinhVien.cs [Design]",
+              "RelativeToolTip": "QLDSV_TC1\\frmSinhVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T06:52:25.196Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -43,13 +43,13 @@
             this.btnSua = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhuchoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
-            this.btnHuy = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
             this.btnExit = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
+            this.btnHuy = new DevExpress.XtraBars.BarButtonItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbMAKHOA = new System.Windows.Forms.ComboBox();
             this.bdsKHOA = new System.Windows.Forms.BindingSource(this.components);
@@ -226,14 +226,6 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
-            // btnHuy
-            // 
-            this.btnHuy.Caption = "Hủy";
-            this.btnHuy.Id = 6;
-            this.btnHuy.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHuy.ImageOptions.SvgImage")));
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHuy_ItemClick);
-            // 
             // btnReload
             // 
             this.btnReload.Caption = "Làm mới";
@@ -286,6 +278,14 @@
             this.barDockControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.barDockControl1.Size = new System.Drawing.Size(0, 700);
             // 
+            // btnHuy
+            // 
+            this.btnHuy.Caption = "Hủy";
+            this.btnHuy.Id = 6;
+            this.btnHuy.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHuy.ImageOptions.SvgImage")));
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHuy_ItemClick);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(mAKHOALabel1);
@@ -298,6 +298,7 @@
             // 
             // cmbMAKHOA
             // 
+            this.cmbMAKHOA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMAKHOA.Enabled = false;
             this.cmbMAKHOA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMAKHOA.FormattingEnabled = true;

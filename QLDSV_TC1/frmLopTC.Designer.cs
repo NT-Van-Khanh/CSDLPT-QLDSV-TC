@@ -39,8 +39,8 @@
             System.Windows.Forms.Label hOCKYLabel;
             System.Windows.Forms.Label mALTCLabel;
             System.Windows.Forms.Label nIENKHOALabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLopTC));
             System.Windows.Forms.Label mAKHOALabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLopTC));
             this.bdsGIANGVIEN = new System.Windows.Forms.BindingSource(this.components);
             this.dsDSV_TC = new QLDSV_TC1.QLDSV_TCDataSet1();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -85,6 +85,7 @@
             this.colSOSVTOITHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHUYLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlThongTinChiTiet = new System.Windows.Forms.Panel();
+            this.cmbMAKHOATT = new System.Windows.Forms.ComboBox();
             this.cmbTENGV = new System.Windows.Forms.ComboBox();
             this.txtMAGV = new System.Windows.Forms.TextBox();
             this.cmbTENMH = new System.Windows.Forms.ComboBox();
@@ -96,7 +97,6 @@
             this.txtMALTC = new System.Windows.Forms.TextBox();
             this.txtNIENKHOA = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbMAKHOATT = new System.Windows.Forms.ComboBox();
             lblTENGV = new System.Windows.Forms.Label();
             mAGVLabel = new System.Windows.Forms.Label();
             tENMHLabel = new System.Windows.Forms.Label();
@@ -225,6 +225,16 @@
             nIENKHOALabel.TabIndex = 8;
             nIENKHOALabel.Text = "NIÊN KHÓA:";
             // 
+            // mAKHOALabel
+            // 
+            mAKHOALabel.AutoSize = true;
+            mAKHOALabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mAKHOALabel.Location = new System.Drawing.Point(87, 72);
+            mAKHOALabel.Name = "mAKHOALabel";
+            mAKHOALabel.Size = new System.Drawing.Size(84, 21);
+            mAKHOALabel.TabIndex = 27;
+            mAKHOALabel.Text = "MAKHOA:";
+            // 
             // bdsGIANGVIEN
             // 
             this.bdsGIANGVIEN.AllowNew = true;
@@ -245,7 +255,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1557, 86);
+            this.panel1.Size = new System.Drawing.Size(1776, 86);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -253,7 +263,7 @@
             // 
             this.mAKHOALabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mAKHOALabel1.AutoSize = true;
-            this.mAKHOALabel1.Location = new System.Drawing.Point(144, 35);
+            this.mAKHOALabel1.Location = new System.Drawing.Point(254, 35);
             this.mAKHOALabel1.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.mAKHOALabel1.Name = "mAKHOALabel1";
             this.mAKHOALabel1.Size = new System.Drawing.Size(60, 21);
@@ -265,7 +275,7 @@
             this.cmbMAKHOA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmbMAKHOA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMAKHOA.Enabled = false;
-            this.cmbMAKHOA.Location = new System.Drawing.Point(218, 32);
+            this.cmbMAKHOA.Location = new System.Drawing.Point(328, 32);
             this.cmbMAKHOA.Name = "cmbMAKHOA";
             this.cmbMAKHOA.Size = new System.Drawing.Size(427, 29);
             this.cmbMAKHOA.TabIndex = 1;
@@ -378,7 +388,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1557, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1776, 30);
             // 
             // barDockControlBottom
             // 
@@ -387,7 +397,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 809);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1557, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1776, 0);
             // 
             // barDockControlLeft
             // 
@@ -402,7 +412,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1557, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1776, 30);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 779);
@@ -501,7 +511,7 @@
             this.gcLOPTINCHI.MainView = this.gridView1;
             this.gcLOPTINCHI.MenuManager = this.barManager1;
             this.gcLOPTINCHI.Name = "gcLOPTINCHI";
-            this.gcLOPTINCHI.Size = new System.Drawing.Size(1557, 246);
+            this.gcLOPTINCHI.Size = new System.Drawing.Size(1776, 246);
             this.gcLOPTINCHI.TabIndex = 40;
             this.gcLOPTINCHI.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -524,6 +534,7 @@
             // 
             // colMALTC
             // 
+            this.colMALTC.Caption = "MÃ LỚP TÍN CHỈ";
             this.colMALTC.FieldName = "MALTC";
             this.colMALTC.MinWidth = 25;
             this.colMALTC.Name = "colMALTC";
@@ -534,6 +545,7 @@
             // 
             // colNIENKHOA
             // 
+            this.colNIENKHOA.Caption = "NIÊN KHÓA";
             this.colNIENKHOA.FieldName = "NIENKHOA";
             this.colNIENKHOA.MinWidth = 25;
             this.colNIENKHOA.Name = "colNIENKHOA";
@@ -544,6 +556,7 @@
             // 
             // colHOCKY
             // 
+            this.colHOCKY.Caption = "HỌC KỲ";
             this.colHOCKY.FieldName = "HOCKY";
             this.colHOCKY.MinWidth = 25;
             this.colHOCKY.Name = "colHOCKY";
@@ -554,6 +567,7 @@
             // 
             // colMAMH
             // 
+            this.colMAMH.Caption = "MÃ MÔN HỌC";
             this.colMAMH.FieldName = "MAMH";
             this.colMAMH.MinWidth = 25;
             this.colMAMH.Name = "colMAMH";
@@ -564,6 +578,7 @@
             // 
             // colNHOM
             // 
+            this.colNHOM.Caption = "NHÓM";
             this.colNHOM.FieldName = "NHOM";
             this.colNHOM.MinWidth = 25;
             this.colNHOM.Name = "colNHOM";
@@ -574,6 +589,7 @@
             // 
             // colMAGV
             // 
+            this.colMAGV.Caption = "MÃ GIẢNG VIÊN";
             this.colMAGV.FieldName = "MAGV";
             this.colMAGV.MinWidth = 25;
             this.colMAGV.Name = "colMAGV";
@@ -584,6 +600,7 @@
             // 
             // colMAKHOA
             // 
+            this.colMAKHOA.Caption = "MÃ KHOA";
             this.colMAKHOA.FieldName = "MAKHOA";
             this.colMAKHOA.MinWidth = 25;
             this.colMAKHOA.Name = "colMAKHOA";
@@ -594,6 +611,7 @@
             // 
             // colSOSVTOITHIEU
             // 
+            this.colSOSVTOITHIEU.Caption = "SỐ SINH VIÊN";
             this.colSOSVTOITHIEU.FieldName = "SOSVTOITHIEU";
             this.colSOSVTOITHIEU.MinWidth = 25;
             this.colSOSVTOITHIEU.Name = "colSOSVTOITHIEU";
@@ -604,6 +622,7 @@
             // 
             // colHUYLOP
             // 
+            this.colHUYLOP.Caption = "HỦY LỚP";
             this.colHUYLOP.FieldName = "HUYLOP";
             this.colHUYLOP.MinWidth = 25;
             this.colHUYLOP.Name = "colHUYLOP";
@@ -642,8 +661,18 @@
             this.pnlThongTinChiTiet.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlThongTinChiTiet.Location = new System.Drawing.Point(0, 362);
             this.pnlThongTinChiTiet.Name = "pnlThongTinChiTiet";
-            this.pnlThongTinChiTiet.Size = new System.Drawing.Size(1557, 447);
+            this.pnlThongTinChiTiet.Size = new System.Drawing.Size(1776, 447);
             this.pnlThongTinChiTiet.TabIndex = 41;
+            // 
+            // cmbMAKHOATT
+            // 
+            this.cmbMAKHOATT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKhoa, "MAKHOA", true));
+            this.cmbMAKHOATT.Enabled = false;
+            this.cmbMAKHOATT.FormattingEnabled = true;
+            this.cmbMAKHOATT.Location = new System.Drawing.Point(246, 66);
+            this.cmbMAKHOATT.Name = "cmbMAKHOATT";
+            this.cmbMAKHOATT.Size = new System.Drawing.Size(279, 32);
+            this.cmbMAKHOATT.TabIndex = 28;
             // 
             // cmbTENGV
             // 
@@ -811,32 +840,12 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Thông tin lớp tín chỉ";
             // 
-            // mAKHOALabel
-            // 
-            mAKHOALabel.AutoSize = true;
-            mAKHOALabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mAKHOALabel.Location = new System.Drawing.Point(87, 72);
-            mAKHOALabel.Name = "mAKHOALabel";
-            mAKHOALabel.Size = new System.Drawing.Size(84, 21);
-            mAKHOALabel.TabIndex = 27;
-            mAKHOALabel.Text = "MAKHOA:";
-            // 
-            // cmbMAKHOATT
-            // 
-            this.cmbMAKHOATT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKhoa, "MAKHOA", true));
-            this.cmbMAKHOATT.Enabled = false;
-            this.cmbMAKHOATT.FormattingEnabled = true;
-            this.cmbMAKHOATT.Location = new System.Drawing.Point(246, 66);
-            this.cmbMAKHOATT.Name = "cmbMAKHOATT";
-            this.cmbMAKHOATT.Size = new System.Drawing.Size(279, 32);
-            this.cmbMAKHOATT.TabIndex = 28;
-            // 
             // frmLopTC
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1557, 809);
+            this.ClientSize = new System.Drawing.Size(1776, 809);
             this.Controls.Add(this.pnlThongTinChiTiet);
             this.Controls.Add(this.gcLOPTINCHI);
             this.Controls.Add(this.panel1);

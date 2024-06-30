@@ -361,6 +361,8 @@
             // 
             // cmbMAKHOA
             // 
+            this.cmbMAKHOA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMAKHOA.Enabled = false;
             this.cmbMAKHOA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMAKHOA.FormattingEnabled = true;
             this.cmbMAKHOA.Location = new System.Drawing.Point(444, 33);

@@ -45,6 +45,7 @@ namespace QLDSV_TC1
                 pageKeToan.Visible = false;
                 pageSinhVien.Visible = true;
                 ribbon.SelectedPage = pageSinhVien;
+                btnCreateAccount.Enabled = false;
             }
             else if (Program.mGroup.Equals("PKT"))
             {

@@ -620,6 +620,8 @@
             this.txtSoTienDong.Properties.MaskSettings.Set("mask", "c");
             this.txtSoTienDong.Size = new System.Drawing.Size(188, 28);
             this.txtSoTienDong.TabIndex = 6;
+            this.txtSoTienDong.EditValueChanged += new System.EventHandler(this.txtSoTienDong_EditValueChanged);
+            this.txtSoTienDong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoTienDong_KeyPress);
             // 
             // bdsCTDongHocPhiSV
             // 
@@ -817,6 +819,7 @@
             this.txtHocPhi.Properties.MaskSettings.Set("mask", "c");
             this.txtHocPhi.Size = new System.Drawing.Size(197, 28);
             this.txtHocPhi.TabIndex = 5;
+            this.txtHocPhi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHocPhi_KeyPress);
             // 
             // spinHocKy
             // 
@@ -858,6 +861,8 @@
             this.txtNienKhoa.Properties.Appearance.Options.UseFont = true;
             this.txtNienKhoa.Size = new System.Drawing.Size(197, 28);
             this.txtNienKhoa.TabIndex = 1;
+            this.txtNienKhoa.EditValueChanged += new System.EventHandler(this.txtNienKhoa_EditValueChanged);
+            this.txtNienKhoa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNienKhoa_KeyPress);
             // 
             // bdsSinhVien
             // 

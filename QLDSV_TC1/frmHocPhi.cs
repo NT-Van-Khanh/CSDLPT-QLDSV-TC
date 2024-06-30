@@ -499,5 +499,39 @@ namespace QLDSV_TC1
         {
 
         }
+
+        private void txtNienKhoa_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHocPhi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNienKhoa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSoTienDong_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoTienDong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

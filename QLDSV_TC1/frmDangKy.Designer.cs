@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMASV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMALOP = new System.Windows.Forms.TextBox();
+            this.txtHOTEN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLoc = new System.Windows.Forms.Button();
             this.cmbHocKy = new System.Windows.Forms.ComboBox();
             this.cmbNienKhoa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.groupDeDK = new DevExpress.XtraEditors.GroupControl();
             this.sp_LayDSLopTinChiDeDangKyGridControl = new DevExpress.XtraGrid.GridControl();
             this.bdsLayDSLopTinChiDeDangKy = new System.Windows.Forms.BindingSource(this.components);
             this.dsDSV_TC = new QLDSV_TC1.QLDSV_TCDataSet1();
@@ -54,7 +54,7 @@
             this.colDADANGKY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDangKy = new System.Windows.Forms.Button();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.groupDaDK = new DevExpress.XtraEditors.GroupControl();
             this.sp_LayDSLopTinChiDaDangKyGridControl = new DevExpress.XtraGrid.GridControl();
             this.bdsLayDSLopTinChiDaDangKy = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -69,15 +69,15 @@
             this.sp_LayDSLopTinChiDeDangKyTableAdapter = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.sp_LayDSLopTinChiDeDangKyTableAdapter();
             this.sp_LayDSLopTinChiDaDangKyTableAdapter = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.sp_LayDSLopTinChiDaDangKyTableAdapter();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupDeDK)).BeginInit();
+            this.groupDeDK.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDeDangKyGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLayDSLopTinChiDeDangKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDSV_TC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupDaDK)).BeginInit();
+            this.groupDaDK.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLayDSLopTinChiDaDangKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -86,11 +86,11 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtMASV);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtMALOP);
+            this.panel2.Controls.Add(this.txtHOTEN);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnLoc);
             this.panel2.Controls.Add(this.cmbHocKy);
@@ -101,16 +101,17 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1780, 61);
+            this.panel2.Size = new System.Drawing.Size(1780, 53);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // textBox3
+            // txtMASV
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(1252, 15);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 23);
-            this.textBox3.TabIndex = 12;
+            this.txtMASV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMASV.Location = new System.Drawing.Point(1252, 15);
+            this.txtMASV.Name = "txtMASV";
+            this.txtMASV.Size = new System.Drawing.Size(121, 23);
+            this.txtMASV.TabIndex = 12;
             // 
             // label5
             // 
@@ -130,21 +131,21 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Họ Tên:";
             // 
-            // textBox2
+            // txtMALOP
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(1667, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 9;
+            this.txtMALOP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMALOP.Location = new System.Drawing.Point(1667, 15);
+            this.txtMALOP.Name = "txtMALOP";
+            this.txtMALOP.Size = new System.Drawing.Size(100, 23);
+            this.txtMALOP.TabIndex = 9;
             // 
-            // textBox1
+            // txtHOTEN
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(1438, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 23);
-            this.textBox1.TabIndex = 8;
+            this.txtHOTEN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHOTEN.Location = new System.Drawing.Point(1438, 15);
+            this.txtHOTEN.Name = "txtHOTEN";
+            this.txtHOTEN.Size = new System.Drawing.Size(185, 23);
+            this.txtHOTEN.TabIndex = 8;
             // 
             // label3
             // 
@@ -173,6 +174,7 @@
             this.cmbHocKy.Name = "cmbHocKy";
             this.cmbHocKy.Size = new System.Drawing.Size(80, 24);
             this.cmbHocKy.TabIndex = 5;
+            this.cmbHocKy.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbHocKy_MouseClick);
             // 
             // cmbNienKhoa
             // 
@@ -183,6 +185,7 @@
             this.cmbNienKhoa.Size = new System.Drawing.Size(138, 24);
             this.cmbNienKhoa.TabIndex = 4;
             this.cmbNienKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbNienKhoa_SelectedIndexChanged);
+            this.cmbNienKhoa.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbNienKhoa_MouseClick);
             // 
             // label2
             // 
@@ -205,17 +208,17 @@
             this.label1.Text = "Niên Khóa:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // groupControl2
+            // groupDeDK
             // 
-            this.groupControl2.Controls.Add(this.sp_LayDSLopTinChiDeDangKyGridControl);
-            this.groupControl2.Controls.Add(this.panel1);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl2.Location = new System.Drawing.Point(0, 61);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1780, 302);
-            this.groupControl2.TabIndex = 5;
-            this.groupControl2.Text = "Danh sách môn học";
+            this.groupDeDK.Controls.Add(this.sp_LayDSLopTinChiDeDangKyGridControl);
+            this.groupDeDK.Controls.Add(this.panel1);
+            this.groupDeDK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupDeDK.Location = new System.Drawing.Point(0, 53);
+            this.groupDeDK.Margin = new System.Windows.Forms.Padding(4);
+            this.groupDeDK.Name = "groupDeDK";
+            this.groupDeDK.Size = new System.Drawing.Size(1780, 302);
+            this.groupDeDK.TabIndex = 5;
+            this.groupDeDK.Text = "Danh sách môn học";
             // 
             // sp_LayDSLopTinChiDeDangKyGridControl
             // 
@@ -331,26 +334,26 @@
             this.btnDangKy.UseVisualStyleBackColor = true;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
-            // groupControl3
+            // groupDaDK
             // 
-            this.groupControl3.Controls.Add(this.sp_LayDSLopTinChiDaDangKyGridControl);
-            this.groupControl3.Controls.Add(this.panel3);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(0, 363);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1780, 478);
-            this.groupControl3.TabIndex = 6;
-            this.groupControl3.Text = "Danh sách môn học đã chọn";
+            this.groupDaDK.Controls.Add(this.sp_LayDSLopTinChiDaDangKyGridControl);
+            this.groupDaDK.Controls.Add(this.panel3);
+            this.groupDaDK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupDaDK.Location = new System.Drawing.Point(0, 355);
+            this.groupDaDK.Margin = new System.Windows.Forms.Padding(4);
+            this.groupDaDK.Name = "groupDaDK";
+            this.groupDaDK.Size = new System.Drawing.Size(1780, 486);
+            this.groupDaDK.TabIndex = 6;
+            this.groupDaDK.Text = "Danh sách môn học đã chọn";
             // 
             // sp_LayDSLopTinChiDaDangKyGridControl
             // 
             this.sp_LayDSLopTinChiDaDangKyGridControl.DataSource = this.bdsLayDSLopTinChiDaDangKy;
             this.sp_LayDSLopTinChiDaDangKyGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sp_LayDSLopTinChiDaDangKyGridControl.Location = new System.Drawing.Point(2, 80);
+            this.sp_LayDSLopTinChiDaDangKyGridControl.Location = new System.Drawing.Point(2, 85);
             this.sp_LayDSLopTinChiDaDangKyGridControl.MainView = this.gridView2;
             this.sp_LayDSLopTinChiDaDangKyGridControl.Name = "sp_LayDSLopTinChiDaDangKyGridControl";
-            this.sp_LayDSLopTinChiDaDangKyGridControl.Size = new System.Drawing.Size(1776, 396);
+            this.sp_LayDSLopTinChiDaDangKyGridControl.Size = new System.Drawing.Size(1776, 399);
             this.sp_LayDSLopTinChiDaDangKyGridControl.TabIndex = 1;
             this.sp_LayDSLopTinChiDaDangKyGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -428,12 +431,12 @@
             this.panel3.Location = new System.Drawing.Point(2, 28);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1776, 52);
+            this.panel3.Size = new System.Drawing.Size(1776, 57);
             this.panel3.TabIndex = 1;
             // 
             // btnHuyDangKy
             // 
-            this.btnHuyDangKy.Location = new System.Drawing.Point(14, 17);
+            this.btnHuyDangKy.Location = new System.Drawing.Point(14, 15);
             this.btnHuyDangKy.Name = "btnHuyDangKy";
             this.btnHuyDangKy.Size = new System.Drawing.Size(112, 29);
             this.btnHuyDangKy.TabIndex = 0;
@@ -467,23 +470,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1780, 841);
-            this.Controls.Add(this.groupControl3);
-            this.Controls.Add(this.groupControl2);
+            this.Controls.Add(this.groupDaDK);
+            this.Controls.Add(this.groupDeDK);
             this.Controls.Add(this.panel2);
             this.Name = "frmDangKy";
             this.Text = "Đăng ký tín chỉ";
             this.Load += new System.EventHandler(this.frmDangKy_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupDeDK)).EndInit();
+            this.groupDeDK.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDeDangKyGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLayDSLopTinChiDeDangKy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDSV_TC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupDaDK)).EndInit();
+            this.groupDaDK.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLayDSLopTinChiDaDangKy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -496,9 +499,9 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.GroupControl groupDeDK;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.GroupControl groupDaDK;
         private System.Windows.Forms.Panel panel3;
         private QLDSV_TCDataSet1 dsDSV_TC;
         private QLDSV_TCDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
@@ -508,15 +511,15 @@
         private System.Windows.Forms.Button btnLoc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMALOP;
+        private System.Windows.Forms.TextBox txtHOTEN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnHuyDangKy;
         private System.Windows.Forms.BindingSource bdsLayDSLopTinChiDeDangKy;
         private QLDSV_TCDataSet1TableAdapters.sp_LayDSLopTinChiDeDangKyTableAdapter sp_LayDSLopTinChiDeDangKyTableAdapter;
         private DevExpress.XtraGrid.GridControl sp_LayDSLopTinChiDeDangKyGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMASV;
         private System.Windows.Forms.Button btnDangKy;
         private DevExpress.XtraGrid.Columns.GridColumn colMAMH;
         private DevExpress.XtraGrid.Columns.GridColumn colTENMH;

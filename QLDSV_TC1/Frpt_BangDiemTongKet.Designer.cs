@@ -46,29 +46,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 77);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(148, 96);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Khoa";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbKhoa
             // 
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKhoa.Enabled = false;
+            this.cmbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(213, 74);
+            this.cmbKhoa.Location = new System.Drawing.Point(266, 92);
+            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(268, 24);
+            this.cmbKhoa.Size = new System.Drawing.Size(409, 28);
             this.cmbKhoa.TabIndex = 1;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 150);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(148, 188);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên lớp";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // QLDSV_TCDataSet1
             // 
@@ -98,9 +108,11 @@
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(238, 217);
+            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Location = new System.Drawing.Point(298, 271);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(75, 23);
+            this.btnIn.Size = new System.Drawing.Size(94, 29);
             this.btnIn.TabIndex = 5;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -111,34 +123,44 @@
             this.cmbTenLop.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPBindingSource, "TENLOP", true));
             this.cmbTenLop.DataSource = this.lOPBindingSource;
             this.cmbTenLop.DisplayMember = "TENLOP";
+            this.cmbTenLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenLop.FormattingEnabled = true;
-            this.cmbTenLop.Location = new System.Drawing.Point(213, 142);
+            this.cmbTenLop.Location = new System.Drawing.Point(266, 178);
+            this.cmbTenLop.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTenLop.Name = "cmbTenLop";
-            this.cmbTenLop.Size = new System.Drawing.Size(268, 24);
+            this.cmbTenLop.Size = new System.Drawing.Size(409, 28);
             this.cmbTenLop.TabIndex = 7;
             this.cmbTenLop.ValueMember = "MALOP";
             this.cmbTenLop.SelectedIndexChanged += new System.EventHandler(this.cmbTenLop_SelectedIndexChanged);
             // 
             // txtMaLop
             // 
-            this.txtMaLop.Location = new System.Drawing.Point(506, 142);
+            this.txtMaLop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaLop.Enabled = false;
+            this.txtMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Location = new System.Drawing.Point(696, 178);
+            this.txtMaLop.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(90, 22);
+            this.txtMaLop.Size = new System.Drawing.Size(208, 27);
             this.txtMaLop.TabIndex = 2;
+            this.txtMaLop.TextChanged += new System.EventHandler(this.txtMaLop_TextChanged);
             // 
             // Frpt_BangDiemTongKet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 269);
+            this.ClientSize = new System.Drawing.Size(1169, 336);
             this.Controls.Add(this.cmbTenLop);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaLop);
             this.Controls.Add(this.cmbKhoa);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frpt_BangDiemTongKet";
-            this.Text = "Frpt_BangDiemTongKet";
+            this.Text = "Bảng điểm tổng kết";
             this.Load += new System.EventHandler(this.Frpt_BangDiemTongKet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.QLDSV_TCDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();

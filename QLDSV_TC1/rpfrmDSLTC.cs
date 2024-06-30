@@ -69,7 +69,7 @@ namespace QLDSV_TC1
             else
             {
                 rpDSLTC rpt = new rpDSLTC(cmbNienKhoa.Text, int.Parse(cmbHocKy.Text));
-                rpt.lbKHOA.Text = "KHOA " + cmbKHOA.Text.ToUpper();
+                rpt.lbKHOA.Text =  cmbKHOA.Text.ToUpper();
                 rpt.lbNIENKHOA.Text = cmbNienKhoa.Text;
                 rpt.lbHOCKY.Text = cmbHocKy.Text;
                 ReportPrintTool print = new ReportPrintTool(rpt);

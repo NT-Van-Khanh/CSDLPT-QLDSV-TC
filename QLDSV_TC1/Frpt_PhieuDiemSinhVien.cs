@@ -14,6 +14,7 @@ namespace QLDSV_TC1
     public partial class Frpt_PhieuDiemSinhVien : Form
     {
         string masv;
+        
         public Frpt_PhieuDiemSinhVien()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace QLDSV_TC1
             this.SINHVIENTableAdapter.Fill(this.QLDSV_TCDataSet1.SINHVIEN);
 
 
-            cmbKhoa.DataSource = Program.bds_dspm;
+            cmbKhoa.DataSource = Program.dt_cmb; ;
             cmbKhoa.DisplayMember = "TENCN";
             cmbKhoa.ValueMember = "TENSERVER";
             cmbKhoa.SelectedIndex = Program.mChinhanh;
@@ -70,6 +71,46 @@ namespace QLDSV_TC1
                 ReportPrintTool print = new ReportPrintTool(rpt);
                 print.ShowPreviewDialog();
             }
+        }
+
+        private void txtMaSV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cmbKhoa.SelectedValue.ToString() == "System.Data.DataRowView")
+                return;
+            Program.servername = cmbKhoa.SelectedValue.ToString();
+
+            if (cmbKhoa.SelectedIndex != Program.mChinhanh)
+            {
+                Program.mlogin = Program.remotelogin;
+                Program.password = Program.remotepassword;
+            }
+            else
+            {
+                Program.mlogin = Program.mloginDN;
+                Program.password = Program.passwordDN;
+            }
+
+            if (Program.KetNoi() == 0)
+            {
+                MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                this.SINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.SINHVIENTableAdapter.Fill(this.QLDSV_TCDataSet1.SINHVIEN);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -235,7 +235,6 @@ namespace QLDSV_TC1
         {
             if (updatecmb == false) { 
                 Program.servername = cmbChiNhanh.SelectedValue.ToString();
-                Console.WriteLine(Program.servername);
             }
             /*            try
                         {

@@ -146,11 +146,12 @@
             // 
             // cmbKHOA
             // 
+            this.cmbKHOA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKHOA.Enabled = false;
             this.cmbKHOA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKHOA.FormattingEnabled = true;
             this.cmbKHOA.Location = new System.Drawing.Point(624, 29);
-            this.cmbKHOA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbKHOA.Margin = new System.Windows.Forms.Padding(4);
             this.cmbKHOA.Name = "cmbKHOA";
             this.cmbKHOA.Size = new System.Drawing.Size(246, 29);
             this.cmbKHOA.TabIndex = 2;
@@ -164,10 +165,11 @@
             // cmbNienKhoa
             // 
             this.cmbNienKhoa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "NIENKHOA", true));
+            this.cmbNienKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNienKhoa.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNienKhoa.FormattingEnabled = true;
             this.cmbNienKhoa.Location = new System.Drawing.Point(624, 89);
-            this.cmbNienKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbNienKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNienKhoa.Name = "cmbNienKhoa";
             this.cmbNienKhoa.Size = new System.Drawing.Size(246, 29);
             this.cmbNienKhoa.TabIndex = 3;
@@ -176,10 +178,11 @@
             // cmbHocKy
             // 
             this.cmbHocKy.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "HOCKY", true));
+            this.cmbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHocKy.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHocKy.FormattingEnabled = true;
             this.cmbHocKy.Location = new System.Drawing.Point(624, 146);
-            this.cmbHocKy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHocKy.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHocKy.Name = "cmbHocKy";
             this.cmbHocKy.Size = new System.Drawing.Size(246, 29);
             this.cmbHocKy.TabIndex = 5;
@@ -188,10 +191,11 @@
             // cmbNHOM
             // 
             this.cmbNHOM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "NHOM", true));
+            this.cmbNHOM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNHOM.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNHOM.FormattingEnabled = true;
             this.cmbNHOM.Location = new System.Drawing.Point(624, 262);
-            this.cmbNHOM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbNHOM.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNHOM.Name = "cmbNHOM";
             this.cmbNHOM.Size = new System.Drawing.Size(246, 29);
             this.cmbNHOM.TabIndex = 7;
@@ -203,10 +207,11 @@
             this.cmbMonHoc.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.lOPTINCHIBindingSource, "MAMH", true));
             this.cmbMonHoc.DataSource = this.lOPTINCHIBindingSource;
             this.cmbMonHoc.DisplayMember = "MAMH";
+            this.cmbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonHoc.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMonHoc.FormattingEnabled = true;
             this.cmbMonHoc.Location = new System.Drawing.Point(624, 203);
-            this.cmbMonHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMonHoc.Name = "cmbMonHoc";
             this.cmbMonHoc.Size = new System.Drawing.Size(244, 29);
             this.cmbMonHoc.TabIndex = 9;
@@ -219,7 +224,7 @@
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrint.ImageOptions.SvgImage")));
             this.btnPrint.Location = new System.Drawing.Point(499, 346);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(170, 50);
             this.btnPrint.TabIndex = 10;
@@ -232,7 +237,7 @@
             this.btnThoat.Appearance.Options.UseFont = true;
             this.btnThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThoat.ImageOptions.SvgImage")));
             this.btnThoat.Location = new System.Drawing.Point(843, 346);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(170, 50);
             this.btnThoat.TabIndex = 11;
@@ -258,9 +263,9 @@
             this.Controls.Add(mAKHOALabel);
             this.Controls.Add(this.cmbKHOA);
             this.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "rpfromDSSV_LTC";
-            this.Text = "frmReportDSSV_LTC";
+            this.Text = "Danh sách sinh viên đăng ký lớp tín chỉ";
             this.Load += new System.EventHandler(this.frmReportDSSV_LTC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).EndInit();

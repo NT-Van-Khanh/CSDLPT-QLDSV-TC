@@ -198,6 +198,22 @@ BEGIN
 	  VALUES (@MALTC, @MASV , 0, 0, 0, 0)
 END
 GO
+exec sp_DangKyLopTinChi 2,'N15DCCN001', 'CTDL      ', 1, '2021-2022'
+--------------------------------------------------------------------------
+
+CREATE proc [dbo].[SP_HUY_DKY_LTC]
+@MALTC int,
+@MASV nchar(10)
+AS
+BEGIN 
+  IF EXISTS ( SELECT * FROM DANGKY WHERE MALTC=@MALTC AND MASV=@MASV AND (HUYDANGKY=0 OR HUYDANGKY is null))
+    BEGIN 
+		UPDATE DANGKY 
+		SET HUYDANGKY=1
+		WHERE MALTC=@MALTC AND MASV=@MASV
+	END
+END
+GO
 --------------------------TEST------------------------------------------------
 SELECT	LTC.MALTC, 
 		LTC.MAMH,MH.TENMH, 
@@ -216,3 +232,40 @@ ON MH.MAMH =LTC.MAMH
 JOIN (SELECT MAGV,HO,TEN FROM GIANGVIEN) GV 
 ON GV.MAGV=LTC.MAGV
 GO
+CREATE proc [dbo].[SP_HUY_DKY_LTC]
+@MALTC int,
+@MASV nchar(10)
+AS
+BEGIN 
+  IF EXISTS ( SELECT * FROM DANGKY WHERE MALTC=@MALTC AND MASV=@MASV AND (HUYDANGKY=0 OR HUYDANGKY is null))
+    BEGIN 
+		UPDATE DANGKY 
+		SET HUYDANGKY=1
+		WHERE MALTC=@MALTC AND MASV=@MASV
+	END
+END
+
+ALTER proc [dbo].[SP_HUY_DKY_LTC]
+@MALTC int,
+@MASV nchar(10)
+AS
+BEGIN 
+  IF EXISTS ( 
+    SELECT * 
+    FROM DANGKY 
+    WHERE MALTC=@MALTC 
+      AND MASV=@MASV 
+      AND (HUYDANGKY=0 OR HUYDANGKY IS NULL)
+      AND DIEM_CC IS NULL 
+      AND DIEM_GK IS NULL 
+      AND DIEM_CK IS NULL
+  )
+  BEGIN 
+    UPDATE DANGKY 
+    SET HUYDANGKY=1
+    WHERE MALTC=@MALTC AND MASV=@MASV
+  END
+  ELSE
+	 RAISERROR ('Không thể hủy đăng ký vì đã có điểm môn học!', 16,1)
+END
+	

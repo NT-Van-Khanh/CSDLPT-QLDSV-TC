@@ -45,42 +45,56 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(120, 58);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(150, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Khoa";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbKhoa
             // 
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(230, 49);
+            this.cmbKhoa.Location = new System.Drawing.Point(288, 61);
+            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(121, 24);
+            this.cmbKhoa.Size = new System.Drawing.Size(292, 28);
             this.cmbKhoa.TabIndex = 1;
+            this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 132);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(150, 165);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã sinh viên";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtMaSV
             // 
-            this.txtMaSV.Location = new System.Drawing.Point(230, 125);
+            this.txtMaSV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSV.Location = new System.Drawing.Point(288, 156);
+            this.txtMaSV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSV.Name = "txtMaSV";
-            this.txtMaSV.Size = new System.Drawing.Size(121, 22);
+            this.txtMaSV.Size = new System.Drawing.Size(292, 27);
             this.txtMaSV.TabIndex = 3;
+            this.txtMaSV.TextChanged += new System.EventHandler(this.txtMaSV_TextChanged);
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(203, 217);
+            this.btnIn.Location = new System.Drawing.Point(258, 264);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(75, 23);
+            this.btnIn.Size = new System.Drawing.Size(120, 42);
             this.btnIn.TabIndex = 4;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -114,16 +128,18 @@
             // 
             // Frpt_PhieuDiemSinhVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 294);
+            this.ClientSize = new System.Drawing.Size(910, 368);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.txtMaSV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbKhoa);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frpt_PhieuDiemSinhVien";
-            this.Text = "Frpt_PhieuDiemSinhVien";
+            this.Text = "Phiếu điểm sinh viên";
             this.Load += new System.EventHandler(this.Frpt_PhieuDiemSinhVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.QLDSV_TCDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).EndInit();

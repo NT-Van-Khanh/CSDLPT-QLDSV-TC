@@ -223,12 +223,6 @@
     <Compile Include="XRPT_PhieuDiem.Designer.cs">
       <DependentUpon>XRPT_PhieuDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="frmHocPhi.resx">
       <DependentUpon>frmHocPhi.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XRPT_PhieuDiem.resx">
       <DependentUpon>XRPT_PhieuDiem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

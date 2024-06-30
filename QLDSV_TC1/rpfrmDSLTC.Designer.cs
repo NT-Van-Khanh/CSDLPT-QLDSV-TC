@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nIENKHOALabel;
             System.Windows.Forms.Label hOCKYLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rpfrmDSLTC));
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rpfrmDSLTC));
             this.qLDSV_TCDataSet = new QLDSV_TC1.QLDSV_TCDataSet1();
             this.bdsKhoa = new System.Windows.Forms.BindingSource(this.components);
             this.kHOATableAdapter = new QLDSV_TC1.QLDSV_TCDataSet1TableAdapters.KHOATableAdapter();
@@ -76,6 +76,17 @@
             hOCKYLabel.TabIndex = 4;
             hOCKYLabel.Text = "Học kỳ:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(507, 60);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(53, 21);
+            label1.TabIndex = 10;
+            label1.Text = "Khoa:";
+            // 
             // qLDSV_TCDataSet
             // 
             this.qLDSV_TCDataSet.DataSetName = "QLDSV_TCDataSet";
@@ -118,10 +129,11 @@
             // cmbNienKhoa
             // 
             this.cmbNienKhoa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "NIENKHOA", true));
+            this.cmbNienKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNienKhoa.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNienKhoa.FormattingEnabled = true;
             this.cmbNienKhoa.Location = new System.Drawing.Point(571, 112);
-            this.cmbNienKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbNienKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNienKhoa.Name = "cmbNienKhoa";
             this.cmbNienKhoa.Size = new System.Drawing.Size(379, 29);
             this.cmbNienKhoa.TabIndex = 3;
@@ -130,10 +142,11 @@
             // cmbHocKy
             // 
             this.cmbHocKy.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPTINCHIBindingSource, "HOCKY", true));
+            this.cmbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHocKy.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHocKy.FormattingEnabled = true;
             this.cmbHocKy.Location = new System.Drawing.Point(571, 178);
-            this.cmbHocKy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHocKy.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHocKy.Name = "cmbHocKy";
             this.cmbHocKy.Size = new System.Drawing.Size(379, 29);
             this.cmbHocKy.TabIndex = 5;
@@ -144,7 +157,7 @@
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrint.ImageOptions.SvgImage")));
             this.btnPrint.Location = new System.Drawing.Point(437, 318);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(170, 64);
             this.btnPrint.TabIndex = 8;
@@ -157,30 +170,20 @@
             this.btnThoat.Appearance.Options.UseFont = true;
             this.btnThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThoat.ImageOptions.SvgImage")));
             this.btnThoat.Location = new System.Drawing.Point(856, 318);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(170, 64);
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(507, 60);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(53, 21);
-            label1.TabIndex = 10;
-            label1.Text = "Khoa:";
-            // 
             // cmbKHOA
             // 
+            this.cmbKHOA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKHOA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKHOA.FormattingEnabled = true;
             this.cmbKHOA.Location = new System.Drawing.Point(572, 60);
-            this.cmbKHOA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbKHOA.Margin = new System.Windows.Forms.Padding(4);
             this.cmbKHOA.Name = "cmbKHOA";
             this.cmbKHOA.Size = new System.Drawing.Size(378, 29);
             this.cmbKHOA.TabIndex = 11;
@@ -201,7 +204,7 @@
             this.Controls.Add(nIENKHOALabel);
             this.Controls.Add(this.cmbNienKhoa);
             this.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "rpfrmDSLTC";
             this.Text = "Báo cáo danh sách lớp tín chỉ";
             this.Load += new System.EventHandler(this.frmReportDSLTC_Load);

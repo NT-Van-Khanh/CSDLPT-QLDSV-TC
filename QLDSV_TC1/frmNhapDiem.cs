@@ -76,6 +76,7 @@ namespace QLDSV_TC1
                 cmbMAKHOA.Enabled = true;
             }
             this.kHOATableAdapter.Connection.ConnectionString = Program.connstr;
+            this.sP_LayDSSV_LTCTableAdapter.Connection.ConnectionString = Program.connstr;
             this.kHOATableAdapter.Fill(this.dsDSV_TC.KHOA);
             cmbNienKhoa.DataSource = Program.ExecSqlDataTable("EXEC SP_LayNienKhoa");
             cmbNienKhoa.DisplayMember = "NIENKHOA";
@@ -130,6 +131,7 @@ namespace QLDSV_TC1
                     btnTimLTC.Enabled = false;
                     btnCapNhat.Enabled = true;
                     btnHuy.Enabled = true;
+                    cmbMAKHOA.Enabled = false;
                 }
             }
             catch (System.Exception ex)
@@ -212,7 +214,12 @@ namespace QLDSV_TC1
                 sqlcmd.CommandType = CommandType.StoredProcedure;
                 sqlcmd.Parameters.Add(para);
                 sqlcmd.ExecuteNonQuery();
+                this.sP_LayDSSV_LTCTableAdapter.Fill(this.dsDSV_TC.SP_LayDSSV_LTC,
+                   cmbNienKhoa.SelectedValue.ToString(),
+                   int.Parse(cmbHocKy.SelectedValue.ToString()),
+                   txtMaMH.Text, int.Parse(cmbNhom.SelectedValue.ToString()));
                 MessageBox.Show("Cập nhật điểm thành công!\n", "", MessageBoxButtons.OK);
+                cmbMAKHOA.Enabled = cmbNienKhoa.Enabled = cmbHocKy.Enabled = cmbNhom.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -226,6 +233,7 @@ namespace QLDSV_TC1
             btnTimLTC.Enabled = true;
             btnCapNhat.Enabled = false;
             btnHuy.Enabled = false;
+            cmbMAKHOA.Enabled = cmbNienKhoa.Enabled = cmbHocKy.Enabled = cmbNhom.Enabled = true;
             this.dsDSV_TC.SP_LayDSSV_LTC.Clear();
         }
 
@@ -323,6 +331,12 @@ namespace QLDSV_TC1
                  this.dANGKYTableAdapter.Fill(this.dsDSV_TC.DANGKY);*/
 
             }
+        }
+
+        private void sP_LayDSSV_LTCGridControl_Click(object sender, EventArgs e)
+        {
+            cmbMAKHOA.Enabled = cmbNienKhoa.Enabled=cmbHocKy.Enabled=cmbNhom.Enabled=  false;
+            
         }
     }
 }

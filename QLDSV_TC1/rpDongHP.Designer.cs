@@ -77,8 +77,7 @@
             this.sP_BaoCaoHocPhiTableAdapter = new QLDSV_TC1.QLDSV_TCDataSet2TableAdapters.SP_BaoCaoHocPhiTableAdapter();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTongHPDD = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
@@ -199,13 +198,15 @@
             // 
             // lblKhoa
             // 
-            this.lblKhoa.Font = new DevExpress.Drawing.DXFont("Arial", 14F);
+            this.lblKhoa.Font = new DevExpress.Drawing.DXFont("Arial", 14F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.lblKhoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblKhoa.LocationFloat = new DevExpress.Utils.PointFloat(0.8333715F, 28.66666F);
             this.lblKhoa.Multiline = true;
             this.lblKhoa.Name = "lblKhoa";
             this.lblKhoa.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblKhoa.SizeF = new System.Drawing.SizeF(649.1667F, 21.33333F);
             this.lblKhoa.StylePriority.UseFont = false;
+            this.lblKhoa.StylePriority.UseForeColor = false;
             this.lblKhoa.StylePriority.UseTextAlignment = false;
             this.lblKhoa.Text = "lblKhoa";
             this.lblKhoa.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -464,8 +465,7 @@
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.lblTenNguoiTao,
             this.xrLabel1,
-            this.xrLabel8,
-            this.xrLabel7,
+            this.lblTongHPDD,
             this.xrLabel6,
             this.xrLabel4,
             this.xrLabel5});
@@ -485,31 +485,21 @@
             this.xrLabel1.Text = "Giảng viên:";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
-            // xrLabel8
+            // lblTongHPDD
             // 
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(312.9223F, 36.60527F);
-            this.xrLabel8.Multiline = true;
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(337.0778F, 23F);
-            this.xrLabel8.StylePriority.UseTextAlignment = false;
-            this.xrLabel8.Text = "lblTongTienChu";
-            this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel7
-            // 
-            this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.lblTongHPDD.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([HPDADONG])")});
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(165.4223F, 36.60527F);
-            this.xrLabel7.Multiline = true;
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(147.5F, 23F);
-            this.xrLabel7.StylePriority.UseTextAlignment = false;
+            this.lblTongHPDD.LocationFloat = new DevExpress.Utils.PointFloat(165.4223F, 36.60527F);
+            this.lblTongHPDD.Multiline = true;
+            this.lblTongHPDD.Name = "lblTongHPDD";
+            this.lblTongHPDD.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTongHPDD.SizeF = new System.Drawing.SizeF(147.5F, 23F);
+            this.lblTongHPDD.StylePriority.UseTextAlignment = false;
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
-            this.xrLabel7.Summary = xrSummary2;
-            this.xrLabel7.Text = "lblTongTienSo";
-            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.lblTongHPDD.Summary = xrSummary2;
+            this.lblTongHPDD.Text = "lblTongTienSo";
+            this.lblTongHPDD.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.lblTongHPDD.TextFormatString = "{0:C}";
             // 
             // xrLabel6
             // 
@@ -627,8 +617,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.UI.XRLabel lblTongHPDD;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         public DevExpress.XtraReports.UI.XRLabel lblKhoa;
     }

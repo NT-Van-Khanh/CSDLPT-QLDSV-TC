@@ -15,6 +15,7 @@ namespace QLDSV_TC1
             this.sqlDataSource1.Queries[0].Parameters[0].Value = malop;
             this.sqlDataSource1.Fill();
             this.lblHoTen.Text = "Người lập: " + Program.mHoten;
+            lblLop.Text = malop;
         }
 
         private void XRPT_BangDiemTongKet_BeforePrint(object sender, CancelEventArgs e)

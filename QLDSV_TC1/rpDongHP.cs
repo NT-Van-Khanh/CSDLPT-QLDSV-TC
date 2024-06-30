@@ -21,8 +21,9 @@ namespace QLDSV_TC1
             lblLop.Text = MALOP;
             lblNienKhoa.Text = NIENKHOA;
             lblHocKy.Text = HOCKY;
+          
         }
-    }
-
-    }
+          
+     }
+}
 

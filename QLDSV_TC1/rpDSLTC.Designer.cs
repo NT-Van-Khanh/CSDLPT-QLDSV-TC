@@ -229,7 +229,7 @@
             this.tableCell1.Name = "tableCell1";
             this.tableCell1.StyleName = "DetailCaption1";
             this.tableCell1.StylePriority.UseBorders = false;
-            this.tableCell1.Text = "TENMH";
+            this.tableCell1.Text = "TÊN MÔN HỌC";
             this.tableCell1.Weight = 0.26199114255618511D;
             // 
             // tableCell2
@@ -237,7 +237,7 @@
             this.tableCell2.Name = "tableCell2";
             this.tableCell2.StyleName = "DetailCaption1";
             this.tableCell2.StylePriority.UseTextAlignment = false;
-            this.tableCell2.Text = "NHOM";
+            this.tableCell2.Text = "NHÓM";
             this.tableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.tableCell2.Weight = 0.09582145996635677D;
             // 
@@ -245,7 +245,7 @@
             // 
             this.tableCell3.Name = "tableCell3";
             this.tableCell3.StyleName = "DetailCaption1";
-            this.tableCell3.Text = "GIANGVIEN";
+            this.tableCell3.Text = "GIẢNG VIÊN";
             this.tableCell3.Weight = 0.3153018345858406D;
             // 
             // tableCell4
@@ -253,18 +253,18 @@
             this.tableCell4.Name = "tableCell4";
             this.tableCell4.StyleName = "DetailCaption1";
             this.tableCell4.StylePriority.UseTextAlignment = false;
-            this.tableCell4.Text = "SOSVTOITHIEU";
+            this.tableCell4.Text = "SỐ SV TỐI THIỂU";
             this.tableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.tableCell4.Weight = 0.17583210471704402D;
+            this.tableCell4.Weight = 0.22009592283552612D;
             // 
             // tableCell5
             // 
             this.tableCell5.Name = "tableCell5";
             this.tableCell5.StyleName = "DetailCaption1";
             this.tableCell5.StylePriority.UseTextAlignment = false;
-            this.tableCell5.Text = "DADANGKY";
+            this.tableCell5.Text = "ĐÃ ĐĂNG KÝ";
             this.tableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.tableCell5.Weight = 0.22180276724008413D;
+            this.tableCell5.Weight = 0.17753894912160204D;
             // 
             // Detail
             // 
@@ -344,7 +344,7 @@
             this.tableCell9.StyleName = "DetailData1";
             this.tableCell9.StylePriority.UseTextAlignment = false;
             this.tableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.tableCell9.Weight = 0.17583210270369504D;
+            this.tableCell9.Weight = 0.22009592172460454D;
             // 
             // tableCell10
             // 
@@ -354,7 +354,7 @@
             this.tableCell10.StyleName = "DetailData1";
             this.tableCell10.StylePriority.UseTextAlignment = false;
             this.tableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.tableCell10.Weight = 0.22180279071514422D;
+            this.tableCell10.Weight = 0.17753897169423472D;
             // 
             // sqlDataSource1
             // 
